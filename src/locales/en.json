@@ -1,0 +1,2003 @@
+{
+  "nav": {
+    "home": "Home",
+    "home1": "Home 1",
+    "home2": "Home 2",
+    "about": "About Us",
+    "services": "Services",
+    "allServices": "All Services",
+    "luxuryVillas": "Luxury Villas",
+    "contemporaryTownhouse": "Contemporary Townhouse",
+    "luxuryCondo": "Luxury Condo",
+    "modernPenthouse": "Modern Penthouse",
+    "waterfrontMansion": "Waterfront Mansion",
+    "estateHome": "Estate Home",
+    "ecommerceSolutions": "E-Commerce Solutions",
+    "brandingDesign": "Branding & Design",
+    "contentCopywriting": "Content & Copywriting",
+    "digitalMarketing": "Digital Marketing",
+    "ongoingSupport": "Ongoing Support",
+    "blog": "Blog",
+    "contact": "Contact Us",
+    "logout": "Log Out"
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "arabic": "Arabic",
+    "hebrew": "Hebrew",
+    "videoNotSupported": "Your browser does not support the video tag.",
+    "viewDetails": "View Details"
+  },
+  "login": {
+    "welcomeBack": "Welcome Back",
+    "loginToContinue": "Please sign in to your account to continue",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "signIn": "Sign In",
+    "forgotPassword": "Forgot your password?",
+    "noAccount": "Don't have an account?",
+    "register": "Sign up here",
+    "errorEmailPassword": "Please enter both email and password"
+  },
+  "register": {
+    "createAccount": "Create your account",
+    "joinUs": "Join us and get started",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "First name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Last name",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "At least 6 characters",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter your password",
+    "createAccountButton": "Create Account",
+    "forgotPassword": "Forgot your password?",
+    "reset": "Reset",
+    "alreadyHaveAccount": "Already have an account?",
+    "login": "Login",
+    "errorFirstNameRequired": "Please enter your first and last name",
+    "errorEmailInvalid": "Please enter a valid email",
+    "errorPasswordLength": "Password must be at least 6 characters",
+    "errorPasswordsMismatch": "Passwords do not match"
+  },
+  "forgotPassword": {
+    "resetPassword": "Reset Password",
+    "setNewPassword": "Set New Password",
+    "enterEmailToContinue": "Enter your email address to continue",
+    "createNewPassword": "Create a new password for your account",
+    "email": "Email Address",
+    "emailPlaceholder": "Enter your email address",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your new password",
+    "continue": "Continue",
+    "back": "Back",
+    "resetPasswordButton": "Reset Password",
+    "rememberPassword": "Remember your password?",
+    "signIn": "Sign In",
+    "errorEmailRequired": "Email address is required",
+    "errorEmailNotFound": "Email address not found",
+    "errorPasswordLength": "Password must be at least 6 characters long",
+    "errorPasswordsMismatch": "Passwords do not match",
+    "successEmailVerified": "Email verified successfully. Please set your new password.",
+    "successPasswordReset": "Password reset successfully! Redirecting to login..."
+  },
+  "footer": {
+    "companyDescription": "Connecting businesses with top talent worldwide to get projects done efficiently and effectively.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "home1": "Home1",
+    "home2": "Home2",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "luxuryVillas": "Luxury Villas",
+    "contemporaryTownhouse": "Contemporary Townhouse",
+    "luxuryCondo": "Luxury Condo",
+    "modernPenthouse": "Modern Penthouse",
+    "waterfrontMansion": "Waterfront Mansion",
+    "estateHome": "Estate Home",
+    "phone": "+192 123 4567",
+    "email": "info@enkonix.in",
+    "address": "123 Enkonix Street, City, Country",
+    "copyright": "© 2025 Stackly. All rights reserved."
+  },
+  "luxuryVillasPage": {
+    "hero": {
+      "title": "Luxury Villa",
+      "subtitle": "Excellence",
+      "description": "Discover extraordinary luxury villas in the world's most prestigious locations.",
+      "ctaExplore": "Explore Features",
+      "ctaSchedule": "Schedule Viewing"
+      },
+      "features": {
+      "badge": "Premium Features",
+      "title": "Unparalleled Luxury Amenities",
+      "subtitle": "Every detail has been carefully crafted to provide the ultimate in luxury living",
+      "items": {
+        "infinityPool": {
+          "title": "Infinity Pool",
+          "description": "Stunning infinity pool with panoramic views and integrated spa features"
+        },
+        "wineCellar": {
+          "title": "Wine Cellar",
+          "description": "Temperature-controlled wine cellar with capacity for 500+ bottles"
+        },
+        "homeTheater": {
+          "title": "Home Theater",
+          "description": "State-of-the-art home theater with 4K projection and surround sound"
+        },
+        "privateGym": {
+          "title": "Private Gym",
+          "description": "Fully equipped fitness center with personal trainer consultation"
+        },
+        "landscapedGardens": {
+          "title": "Landscaped Gardens",
+          "description": "Professionally designed gardens with exotic plants and water features"
+        },
+        "garageSpace": {
+          "title": "Garage Space",
+          "description": "Underground parking for 6 vehicles with electric charging stations"
+        }
+      }
+    },
+    "gallery": {
+      "badge": "Visual Tour",
+      "title": "Luxury Villa Gallery",
+      "subtitle": "Take a virtual tour through our most exquisite villa properties",
+      "viewDetails": "View Details",
+      "viewAll": "View All Properties",
+      "items": {
+        "grandEntrance": {
+          "title": "Grand Entrance",
+          "category": "Luxury Villa"
+        },
+        "masterSuite": {
+          "title": "Master Suite", 
+          "category": "Penthouse"
+        },
+        "livingArea": {
+          "title": "Living Area",
+          "category": "Townhouse"
+        },
+        "oceanView": {
+          "title": "Ocean View",
+          "category": "Mansion"
+        },
+        "modernKitchen": {
+          "title": "Modern Kitchen",
+          "category": "Condo"
+        },
+        "gardenTerrace": {
+          "title": "Garden Terrace",
+          "category": "Estate"
+        }
+      }
+    },
+    "location": {
+      "badge": "Prime Location",
+      "title": "Exclusive Neighborhood Amenities",
+      "subtitle": "Located in the heart of prestigious communities with world-class amenities",
+      "locations": {
+        "beverlyHills": {
+          "title": "Beverly Hills",
+          "subtitle": "California",
+          "description": "The epitome of luxury living in one of the world's most prestigious addresses",
+          "highlights": ["Rodeo Drive", "Hollywood Hills", "Celebrity Neighbors", "Luxury Shopping"]
+        },
+        "manhattan": {
+          "title": "Manhattan",
+          "subtitle": "New York",
+          "description": "Urban sophistication meets timeless elegance in the heart of NYC",
+          "highlights": ["Central Park", "Fifth Avenue", "Broadway", "Fine Dining"]
+        },
+        "miamiBeach": {
+          "title": "Miami Beach",
+          "subtitle": "Florida",
+          "description": "Oceanfront luxury with year-round sunshine and vibrant nightlife",
+          "highlights": ["South Beach", "Art Deco", "Marina", "Nightlife"]
+        },
+        "hamptons": {
+          "title": "Hamptons",
+          "subtitle": "New York",
+          "description": "Exclusive beachfront estates with unparalleled privacy and elegance",
+          "highlights": ["Ocean Views", "Private Beaches", "Wine Country", "Art Galleries"]
+        }
+      },
+      "amenities": {
+        "privateGolf": {
+          "title": "Private Golf Course",
+          "description": "18-hole championship course"
+        },
+        "countryClub": {
+          "title": "Country Club",
+          "description": "Full-service club with dining"
+        },
+        "luxuryShopping": {
+          "title": "Luxury Shopping",
+          "description": "High-end boutiques and galleries"
+        },
+        "fineDining": {
+          "title": "Fine Dining",
+          "description": "Michelin-starred restaurants"
+        },
+        "medicalCenter": {
+          "title": "Medical Center",
+          "description": "24/7 concierge medical services"
+        },
+        "topSchools": {
+          "title": "Top Schools",
+          "description": "Elite private and public schools"
+        }
+      }
+    },
+    "investment": {
+      "badge": "Investment Opportunity",
+      "title": "Your Gateway to Luxury Living",
+      "subtitle": "Invest in one of the world's most prestigious addresses with exceptional returns and unparalleled lifestyle",
+      "collection": {
+        "title": "Exclusive Villa Collection",
+        "price": "$2,500,000",
+        "subtitle": "Starting Investment",
+        "specs": {
+          "sqft": "Sq Ft",
+          "bedrooms": "Bedrooms",
+        "bathrooms": "Bathrooms",
+          "acres": "Acres"
+        },
+        "cta": "Get Investment Details"
+      },
+      "benefits": {
+        "strongROI": {
+          "title": "Strong ROI",
+          "value": "8-12%",
+          "description": "Annual appreciation rate"
+        },
+        "primeLocation": {
+          "title": "Prime Location",
+          "value": "Beverly Hills",
+          "description": "World's most prestigious address"
+        },
+        "taxAdvantages": {
+          "title": "Tax Advantages",
+          "value": "Significant",
+          "description": "Property tax benefits"
+        },
+        "globalDemand": {
+          "title": "Global Demand",
+          "value": "High",
+          "description": "International buyer appeal"
+        }
+      },
+      "marketInsights": {
+        "title": "Market Insights",
+        "yearsExperience": "Years Experience",
+        "propertiesSold": "Properties Sold",
+        "totalSales": "Total Sales",
+        "experienceDesc": "In luxury real estate",
+        "propertiesDesc": "In Beverly Hills area",
+        "salesDesc": "Luxury properties"
+      }
+    },
+    "contact": {
+      "badge": "Get In Touch",
+      "title": "Schedule Your Private Viewing",
+      "subtitle": "Experience luxury living firsthand with a personalized tour of our villa collection",
+      "cta": {
+        "ready": "Ready to Experience Luxury Living?",
+        "description": "Contact our luxury real estate specialists to schedule your private viewing and discover your dream villa today.",
+        "contactUs": "Contact Us Now",
+        "call": "Call (555) 123-4567"
+      }
+    }
+  },
+  "contemporaryTownhousePage": {
+    "hero": {
+      "title": "Contemporary Townhouse",
+      "description": "Experience modern urban living in our stunning contemporary townhouses designed.",
+      "ctaExplore": "Explore Features",
+      "ctaSchedule": "Schedule Viewing"
+    },
+    "features": {
+      "badge": "Modern Features",
+      "title": "Contemporary Living Amenities",
+      "subtitle": "Every detail has been carefully crafted to provide the ultimate in modern urban living",
+      "items": {
+        "modernArchitecture": {
+          "title": "Modern Architecture",
+          "description": "Sleek lines, floor-to-ceiling windows, and contemporary materials create stunning urban residences"
+        },
+        "smartHomeTechnology": {
+          "title": "Smart Home Technology",
+          "description": "Integrated smart systems for lighting, climate control, security, and entertainment at your fingertips"
+        },
+        "primeUrbanLocation": {
+          "title": "Prime Urban Location",
+          "description": "Strategically located in vibrant neighborhoods with easy access to amenities and transportation"
+        },
+        "luxuryFinishes": {
+          "title": "Luxury Finishes",
+          "description": "Premium materials, designer fixtures, and custom details throughout every space"
+        },
+        "energyEfficient": {
+          "title": "Energy Efficient",
+          "description": "Sustainable design with energy-efficient systems and eco-friendly materials for modern living"
+        },
+        "conciergeServices": {
+          "title": "Concierge Services",
+          "description": "Full-service amenities including concierge, maintenance, and exclusive resident services"
+        }
+      }
+    },
+    "gallery": {
+      "badge": "Visual Tour",
+      "title": "Contemporary Townhouse Gallery",
+      "subtitle": "Take a virtual tour through our most stunning contemporary townhouse properties",
+      "viewDetails": "View Details",
+      "viewAll": "View All Properties",
+      "items": {
+        "modernExterior": {
+          "title": "Modern Exterior",
+          "category": "Townhouse"
+        },
+        "openLivingSpace": {
+          "title": "Open Living Space",
+          "category": "Penthouse"
+        },
+        "gourmetKitchen": {
+          "title": "Gourmet Kitchen",
+          "category": "Condo"
+        },
+        "masterSuite": {
+          "title": "Master Suite",
+          "category": "Mansion"
+        },
+        "privateTerrace": {
+          "title": "Private Terrace",
+          "category": "Estate"
+        },
+        "spaLikeBathroom": {
+          "title": "Spa-like Bathroom",
+          "category": "Villa"
+        }
+      }
+    },
+    "location": {
+      "badge": "Urban Location",
+      "title": "Vibrant Neighborhood Amenities",
+      "subtitle": "Located in the heart of dynamic urban communities with world-class amenities",
+      "locations": {
+        "brooklynHeights": {
+          "title": "Brooklyn Heights",
+          "subtitle": "New York",
+          "description": "Historic charm meets modern luxury in this iconic Brooklyn neighborhood",
+          "highlights": ["Brooklyn Bridge", "Waterfront Views", "Historic District", "Cultural Scene"]
+        },
+        "silverLake": {
+          "title": "Silver Lake",
+          "subtitle": "Los Angeles",
+          "description": "Creative energy and modern living in LA's most vibrant neighborhood",
+          "highlights": ["Art Galleries", "Trendy Cafes", "Music Venues", "Hipster Culture"]
+        },
+        "southLoop": {
+          "title": "South Loop",
+          "subtitle": "Chicago",
+          "description": "Urban sophistication in Chicago's fastest-growing neighborhood",
+          "highlights": ["Museum Campus", "Grant Park", "Lakefront", "Cultural District"]
+        },
+        "missionDistrict": {
+          "title": "Mission District",
+          "subtitle": "San Francisco",
+          "description": "Vibrant culture and modern amenities in the heart of SF",
+          "highlights": ["Mission Dolores", "Street Art", "Food Scene", "Tech Hub"]
+        }
+      },
+      "amenities": {
+        "publicTransit": {
+          "title": "Public Transit",
+          "description": "Easy access to subway and bus lines"
+        },
+        "shoppingDistricts": {
+          "title": "Shopping Districts",
+          "description": "Trendy boutiques and modern malls"
+        },
+        "diningScene": {
+          "title": "Dining Scene",
+          "description": "Michelin-starred restaurants and cafes"
+        },
+        "culturalVenues": {
+          "title": "Cultural Venues",
+          "description": "Theaters, galleries, and music venues"
+        },
+        "medicalServices": {
+          "title": "Medical Services",
+          "description": "24/7 concierge medical services"
+        },
+        "topSchools": {
+          "title": "Top Schools",
+          "description": "Elite private and public schools"
+        }
+      }
+    },
+    "investment": {
+      "badge": "Investment Opportunity",
+      "title": "Your Gateway to Urban Living",
+      "subtitle": "Invest in one of the city's most desirable neighborhoods with exceptional returns and modern lifestyle",
+      "collection": {
+        "title": "Contemporary Townhouse Collection",
+        "price": "$1,200,000",
+        "subtitle": "Starting Investment",
+        "specs": {
+          "sqft": "Sq Ft",
+          "bedrooms": "Bedrooms",
+          "bathrooms": "Bathrooms",
+          "parking": "Parking"
+        },
+        "cta": "Get Investment Details"
+      },
+      "benefits": {
+        "strongROI": {
+          "title": "Strong ROI",
+          "value": "6-10%",
+          "description": "Annual appreciation rate"
+        },
+        "primeLocation": {
+          "title": "Prime Location",
+          "value": "Brooklyn Heights",
+          "description": "Historic and trendy neighborhood"
+        },
+        "taxAdvantages": {
+          "title": "Tax Advantages",
+          "value": "Significant",
+          "description": "Property tax benefits"
+        },
+        "urbanDemand": {
+          "title": "Urban Demand",
+          "value": "High",
+          "description": "Growing millennial appeal"
+        }
+      },
+      "marketInsights": {
+        "title": "Market Insights",
+        "yearsExperience": "Years Experience",
+        "propertiesSold": "Properties Sold",
+        "totalSales": "Total Sales",
+        "experienceDesc": "In urban real estate",
+        "propertiesDesc": "In Brooklyn Heights",
+        "salesDesc": "Contemporary properties"
+      }
+    },
+    "contact": {
+      "badge": "Get In Touch",
+      "title": "Schedule Your Private Viewing",
+      "subtitle": "Experience contemporary living firsthand with a personalized tour of our townhouse collection",
+      "cta": {
+        "ready": "Ready to Experience Contemporary Living?",
+        "description": "Contact our contemporary real estate specialists to schedule your private viewing and discover your dream townhouse today.",
+        "contactUs": "Contact Us Now",
+        "call": "Call (555) 123-4567"
+      }
+    }
+  },
+  "home1": {
+    "hero": {
+      "title": "Premium Real Estate",
+      "subtitle": "Discover Your Dream Property",
+      "reserveTable": "View Properties"
+    },
+    "welcome": {
+      "title": "Welcome to Premium Real Estate",
+      "subtitle": "Your Gateway to Luxury Living",
+      "description": "Experience the finest in real estate with our exclusive collection of luxury properties. From modern apartments to sprawling estates, we offer exceptional properties in the world's most prestigious locations.",
+      "viewButton": "Explore Properties"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Our Real Estate Services",
+      "subtitle": "Excellence in every transaction",
+      "items": {
+        "easyStart": {
+          "title": "Expert Guidance",
+          "description": "Professional real estate agents with years of experience in luxury markets"
+        },
+        "preBuilt": {
+          "title": "Prime Locations",
+          "description": "Exclusive access to properties in the world's most desirable neighborhoods"
+        },
+        "customizable": {
+          "title": "Personalized Service",
+          "description": "Tailored solutions to meet your unique real estate needs and preferences"
+        }
+      }
+    },
+    "signatureDishes": {
+      "title": "Featured Properties",
+      "subtitle": "Discover our exclusive collection of premium real estate",
+      "all": "All Properties",
+      "categories": {
+        "apartment": "Apartment",
+        "villa": "Villa", 
+        "penthouse": "Penthouse",
+        "familyHome": "Family Home",
+        "commercial": "Commercial",
+        "studio": "Studio"
+      },
+      "dishes": {
+        "grilledSalmon": {
+          "name": "Modern 2BHK City Apartment",
+          "description": "Contemporary living space with premium finishes and city views"
+        },
+        "beefTenderloin": {
+          "name": "Premium Lakeview Villa",
+          "description": "Luxurious waterfront property with private amenities and stunning views"
+        },
+        "lobsterRisotto": {
+          "name": "Luxury Penthouse Suite",
+          "description": "Exclusive penthouse with panoramic views and premium amenities"
+        },
+        "gardenBowl": {
+          "name": "Suburban Family Home",
+          "description": "Spacious family residence with garden space and modern conveniences"
+        },
+        "seafoodPasta": {
+          "name": "Downtown Office Space",
+          "description": "Prime commercial space in the heart of the business district"
+        },
+        "lavaCake": {
+          "name": "Cozy Studio Loft",
+          "description": "Modern studio living with efficient design and urban convenience"
+        }
+      },
+      "contact": "Contact Agent",
+      "details": "View Details"
+    },
+    "culinaryJourney": {
+      "title": "Our Real Estate Journey",
+      "description": "With over 5 years of excellence in luxury real estate, we have helped thousands of clients find their perfect properties. Our commitment to quality and service has made us a trusted name in premium real estate.",
+      "stats": {
+        "yearsExcellence": "Years of Excellence",
+        "happyCustomers": "Happy Clients",
+        "signatureDishes": "Properties Sold",
+        "customerSatisfaction": "Client Satisfaction"
+      }
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Real experiences from satisfied property owners",
+      "guests": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "role": "Property Owner",
+          "content": "The team helped us find our dream home in the perfect location. Their expertise and attention to detail made the entire process seamless."
+        },
+        "michael": {
+          "name": "Michael Chen",
+          "role": "Investor",
+          "content": "Outstanding service and market knowledge. They found us an excellent investment property that has exceeded our expectations."
+        },
+        "emily": {
+          "name": "Emily Rodriguez",
+          "role": "First-time Buyer",
+          "content": "As first-time buyers, we were nervous about the process. The team guided us through every step and found us the perfect starter home."
+        }
+      }
+    },
+    "contact": {
+      "title": "Ready to Find Your Dream Property?",
+      "subtitle": "Contact our real estate experts today and let us help you discover the perfect property for your needs.",
+      "bookNow": "Contact Us",
+      "viewMenu": "View Properties"
+    }
+  },
+  "luxuryCondoPage": {
+    "hero": {
+      "title": "Luxury Condo",
+      "description": "Experience sophisticated urban living in our exclusive luxury condominium collection.",
+      "ctaExplore": "Explore Features",
+      "ctaSchedule": "Schedule Viewing"
+    },
+    "features": {
+      "badge": "Premium Features",
+      "title": "Urban Luxury Amenities",
+      "subtitle": "Every detail has been carefully crafted to provide the ultimate in sophisticated urban living",
+      "items": {
+        "conciergeServices": {
+          "title": "Concierge Services",
+          "description": "24/7 personalized concierge service for all your needs"
+        },
+        "rooftopPool": {
+          "title": "Rooftop Pool",
+          "description": "Infinity pool with panoramic city views"
+        },
+        "fitnessCenter": {
+          "title": "Fitness Center",
+          "description": "State-of-the-art gym with personal training"
+        },
+        "privateDining": {
+          "title": "Private Dining",
+          "description": "Chef's kitchen and wine cellar access"
+        },
+        "valetParking": {
+          "title": "Valet Parking",
+          "description": "Secure underground parking with valet service"
+        },
+        "cityViews": {
+          "title": "City Views",
+          "description": "Floor-to-ceiling windows with stunning vistas"
+        }
+      }
+    },
+    "gallery": {
+      "badge": "Visual Tour",
+      "title": "Luxury Condo Gallery",
+      "subtitle": "Take a virtual tour through our most exquisite condominium properties",
+      "viewDetails": "View Details",
+      "items": {
+        "modernPenthouse": {
+          "title": "Modern Penthouse",
+          "category": "Penthouse"
+        },
+        "executiveSuite": {
+          "title": "Executive Suite",
+          "category": "Condo"
+        },
+        "waterfrontCondo": {
+          "title": "Waterfront Condo",
+          "category": "Waterfront"
+        },
+        "skyVilla": {
+          "title": "Sky Villa",
+          "category": "Sky Villa"
+        },
+        "designerLoft": {
+          "title": "Designer Loft",
+          "category": "Loft"
+        },
+        "presidentialSuite": {
+          "title": "Presidential Suite",
+          "category": "Presidential"
+        }
+      }
+    },
+    "location": {
+      "badge": "Prime Locations",
+      "title": "Urban Excellence Locations",
+      "subtitle": "Discover luxury condominiums in the world's most prestigious urban centers",
+      "locations": {
+        "manhattan": {
+          "title": "Manhattan",
+          "subtitle": "New York",
+          "description": "Ultra-luxury condos in the heart of Manhattan with Central Park views",
+          "highlights": ["Central Park", "Fifth Avenue", "Broadway", "Fine Dining"]
+        },
+        "downtownLA": {
+          "title": "Downtown",
+          "subtitle": "Los Angeles",
+          "description": "Modern high-rise living in downtown LA with city skyline views",
+          "highlights": ["LA Live", "Staples Center", "Arts District", "Nightlife"]
+        },
+        "miamiBeach": {
+          "title": "Miami Beach",
+          "subtitle": "Florida",
+          "description": "Oceanfront luxury condos with year-round sunshine and beach access",
+          "highlights": ["South Beach", "Art Deco", "Marina", "Beach Access"]
+        },
+        "goldCoast": {
+          "title": "Gold Coast",
+          "subtitle": "Chicago",
+          "description": "Premium condos along Lake Michigan with stunning waterfront views",
+          "highlights": ["Lake Michigan", "Magnificent Mile", "Navy Pier", "Shopping"]
+        }
+      },
+      "amenities": {
+        "businessCenter": {
+          "title": "Business Center",
+          "description": "Full-service business facilities"
+        },
+        "rooftopDining": {
+          "title": "Rooftop Dining",
+          "description": "Fine dining with city views"
+        },
+        "shoppingDistrict": {
+          "title": "Shopping District",
+          "description": "High-end boutiques and galleries"
+        },
+        "publicTransit": {
+          "title": "Public Transit",
+          "description": "Easy access to metro and buses"
+        },
+        "medicalCenter": {
+          "title": "Medical Center",
+          "description": "24/7 concierge medical services"
+        },
+        "topSchools": {
+          "title": "Top Schools",
+          "description": "Elite private and public schools"
+        }
+      }
+    },
+    "investment": {
+      "badge": "Investment Opportunity",
+      "title": "Your Gateway to Urban Luxury",
+      "subtitle": "Invest in one of the world's most prestigious urban addresses with exceptional returns and unparalleled lifestyle",
+      "collection": {
+        "title": "Exclusive Condo Collection",
+        "price": "$1,200,000",
+        "subtitle": "Starting Investment",
+        "specs": {
+          "sqft": "Sq Ft",
+          "bedrooms": "Bedrooms",
+          "bathrooms": "Bathrooms",
+          "floor": "Floor"
+        },
+        "cta": "Get Investment Details"
+      },
+      "benefits": {
+        "strongROI": {
+          "title": "Strong ROI",
+          "value": "6-10%",
+          "description": "Annual appreciation rate"
+        },
+        "primeLocation": {
+          "title": "Prime Location",
+          "value": "Manhattan",
+          "description": "World's most prestigious urban address"
+        },
+        "taxAdvantages": {
+          "title": "Tax Advantages",
+          "value": "Significant",
+          "description": "Property tax benefits"
+        },
+        "globalDemand": {
+          "title": "Global Demand",
+          "value": "High",
+          "description": "International buyer appeal"
+        }
+      },
+      "marketInsights": {
+        "title": "Market Insights",
+        "yearsExperience": "Years Experience",
+        "condosSold": "Condos Sold",
+        "totalSales": "Total Sales",
+        "experienceDesc": "In luxury urban real estate",
+        "condosDesc": "In Manhattan area",
+        "salesDesc": "Luxury condominiums"
+      }
+    },
+    "contact": {
+      "badge": "Get In Touch",
+      "title": "Schedule Your Private Viewing",
+      "subtitle": "Experience luxury urban living firsthand with a personalized tour of our condominium collection",
+      "cta": {
+        "ready": "Ready to Experience Urban Luxury?",
+        "description": "Contact our luxury real estate specialists to schedule your private viewing and discover your dream condominium today.",
+        "contactUs": "Contact Us Now",
+        "call": "Call (555) 123-4567"
+      }
+    }
+  },
+  "home2": {
+    "hero": {
+      "title": "Find Your Dream Home",
+      "subtitle": "Discover exceptional properties in the world's most desirable locations",
+      "searchButton": "Search Properties"
+    },
+    "featured": {
+      "title": "Featured Properties",
+      "subtitle": "Handpicked selections from our premium collection",
+      "browseAll": "Browse All",
+      "forSale": "For Sale",
+      "beds": "Beds",
+      "baths": "Baths",
+      "sqft": "Sq Ft",
+      "scheduleTour": "Schedule Tour",
+      "contactAgent": "Contact Agent",
+      "properties": {
+        "modernFamilyHome": {
+          "title": "Modern Family Home",
+          "location": "Suburban Heights"
+        },
+        "luxuryDowntownCondo": {
+          "title": "Luxury Downtown Condo",
+          "location": "City Center"
+        },
+        "cozySuburbanCottage": {
+          "title": "Cozy Suburban Cottage",
+          "location": "Garden District"
+        },
+        "beachfrontVilla": {
+          "title": "Beachfront Villa",
+          "location": "Ocean View"
+        },
+        "smartEcoHouse": {
+          "title": "Smart Eco House",
+          "location": "Green Valley"
+        },
+        "penthouseSkylineView": {
+          "title": "Penthouse Skyline View",
+          "location": "Sky District"
+        }
+      }
+    },
+    "neighborhoods": {
+      "title": "Explore Neighborhoods",
+      "subtitle": "Discover the unique character of each area",
+      "riverside": "Riverside",
+      "downtown": "Downtown",
+      "hillside": "Hillside",
+      "tags": {
+        "parks": "Parks",
+        "schools": "Schools",
+        "family": "Family",
+        "nightlife": "Nightlife",
+        "transit": "Transit",
+        "dining": "Dining",
+        "views": "Views",
+        "trails": "Trails",
+        "quiet": "Quiet"
+      }
+    },
+    "stats": {
+      "homesListed": "Homes Listed",
+      "happyBuyers": "Happy Buyers",
+      "expertAgents": "Expert Agents",
+      "citiesCovered": "Cities Covered"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "subtitle": "Real experiences from satisfied homeowners",
+      "testimonial1": {
+        "name": "Sarah Johnson",
+        "role": "Homeowner",
+        "quote": "The team helped us find our perfect home in the ideal location. Their expertise made the entire process seamless and stress-free."
+      },
+      "testimonial2": {
+        "name": "Michael Chen",
+        "role": "Investor",
+        "quote": "Outstanding service and market knowledge. They found us an excellent investment property that has exceeded our expectations."
+      },
+      "testimonial3": {
+        "name": "Emily Rodriguez",
+        "role": "First-time Buyer",
+        "quote": "As first-time buyers, we were nervous about the process. The team guided us through every step and found us the perfect starter home."
+      }
+    },
+    "cta": {
+      "title": "Ready to Find Your Dream Home?",
+      "subtitle": "Let our expert agents help you discover the perfect property for your needs and budget.",
+      "button": "Get Started Today"
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "titleLine1": "Premium Real Estate",
+      "titleLine2": "Services",
+      "description": "Discover exceptional properties and expert guidance for all your real estate needs",
+      "ctaExplore": "Explore Services",
+      "ctaBook": "Book Consultation"
+    },
+    "capabilities": {
+      "marketAnalysis": {
+        "title": "Market Analysis",
+        "points": [
+          "Comprehensive market research and analysis",
+          "Property valuation and pricing strategies",
+          "Investment opportunity assessment",
+          "Market trend forecasting"
+        ]
+      },
+      "transactionManagement": {
+        "title": "Transaction Management",
+        "points": [
+          "End-to-end transaction support",
+          "Legal documentation assistance",
+          "Negotiation and deal structuring",
+          "Closing coordination and support"
+        ]
+      },
+      "propertyMarketing": {
+        "title": "Property Marketing",
+        "points": [
+          "Professional photography and staging",
+          "Digital marketing campaigns",
+          "Multi-platform listing management",
+          "Targeted buyer outreach"
+        ]
+      },
+      "clientServices": {
+        "title": "Client Services",
+        "points": [
+          "Personalized property search",
+          "Buyer and seller representation",
+          "Relocation assistance",
+          "Post-purchase support"
+        ]
+      },
+      "investmentAdvisory": {
+        "title": "Investment Advisory",
+        "points": [
+          "Real estate investment strategies",
+          "Portfolio diversification advice",
+          "ROI analysis and projections",
+          "Tax optimization guidance"
+        ]
+      },
+      "propertyManagement": {
+        "title": "Property Management",
+        "points": [
+          "Tenant screening and management",
+          "Maintenance coordination",
+          "Rent collection and accounting",
+          "Property performance optimization"
+        ]
+      }
+    },
+    "benefits": [
+      "Expert market knowledge and insights",
+      "Personalized service tailored to your needs",
+      "Access to exclusive off-market properties",
+      "Comprehensive support throughout the process",
+      "Strong negotiation skills for better deals",
+      "Extensive network of industry professionals"
+    ],
+    "properties": {
+      "badge": "Featured Properties",
+      "title": "Exclusive Property Collection",
+      "subtitle": "Discover our handpicked selection of premium properties in the world's most desirable locations",
+      "items": {
+        "luxuryVilla": {
+          "title": "Luxury Villa",
+          "category": "Luxury"
+        },
+        "penthouse": {
+          "title": "Modern Penthouse",
+          "category": "Penthouse"
+        },
+        "modernTownhouse": {
+          "title": "Contemporary Townhouse",
+          "category": "Townhouse"
+        },
+        "waterfrontMansion": {
+          "title": "Waterfront Mansion",
+          "category": "Mansion"
+        },
+        "luxuryCondo": {
+          "title": "Luxury Condo",
+          "category": "Condo"
+        },
+        "estateHome": {
+          "title": "Estate Home",
+          "category": "Estate"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Client Testimonials",
+      "title": "What Our Clients Say",
+      "subtitle": "Real experiences from satisfied property owners and investors",
+      "items": [
+        {
+          "name": "Sarah Johnson",
+          "role": "Property Owner",
+          "text": "The team helped us find our dream home in the perfect location. Their expertise and attention to detail made the entire process seamless.",
+          "rating": 5
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Real Estate Investor",
+          "text": "Outstanding service and market knowledge. They found us an excellent investment property that has exceeded our expectations.",
+          "rating": 5
+        },
+        {
+          "name": "Emily Rodriguez",
+          "role": "First-time Buyer",
+          "text": "As first-time buyers, we were nervous about the process. The team guided us through every step and found us the perfect starter home.",
+          "rating": 5
+        }
+      ]
+    },
+    "gallery": {
+      "badge": "Property Gallery",
+      "title": "Exclusive Property Showcase",
+      "subtitle": "Take a virtual tour through our most exquisite property collection",
+      "alt": "Luxury Property",
+      "propertyTitle": "Property {{number}}",
+      "propertyPrice": "Starting from $1.2M"
+    },
+    "whyChooseUs": {
+      "badge": "Why Choose Us",
+      "title": "Your Trusted Real Estate Partner",
+      "subtitle": "Experience the difference with our comprehensive real estate services and personalized approach"
+    },
+    "stats": {
+      "propertiesSold": "Properties Sold",
+      "propertiesSoldDesc": "Successfully closed transactions",
+      "totalSales": "Total Sales Volume",
+      "totalSalesDesc": "In luxury real estate",
+      "yearsExperience": "Years Experience",
+      "yearsExperienceDesc": "In the real estate industry",
+      "clientSatisfaction": "Client Satisfaction",
+      "clientSatisfactionDesc": "Based on client feedback"
+    },
+    "features": {
+      "marketExpertise": {
+        "title": "Market Expertise",
+        "description": "Deep understanding of local markets, trends, and opportunities to help you make informed decisions."
+      },
+      "professionalNetwork": {
+        "title": "Professional Network",
+        "description": "Extensive network of industry professionals including lenders, inspectors, and legal experts."
+      },
+      "personalizedService": {
+        "title": "Personalized Service",
+        "description": "Tailored approach to meet your unique needs, preferences, and real estate goals."
+      },
+      "technologyAdvantage": {
+        "title": "Technology Advantage",
+        "description": "Cutting-edge tools and platforms for property search, virtual tours, and transaction management."
+      },
+      "expertNegotiation": {
+        "title": "Expert Negotiation",
+        "description": "Skilled negotiators who work to secure the best possible terms and prices for your transactions."
+      },
+      "support24": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock availability to address your questions and concerns throughout the process."
+      }
+    },
+    "office": {
+      "badge": "Visit Our Office",
+      "title": "Our Office",
+      "subtitle": "Premium Real Estate Services",
+      "description": "Visit our state-of-the-art office to meet our team, discuss your real estate needs, and explore our exclusive property collection. We're here to provide personalized service and expert guidance for all your real estate goals.",
+      "ctaReserve": "Schedule Visit",
+      "hoursTitle": "Office Hours",
+      "hours": [
+        {
+          "day": "Monday - Friday",
+          "hours": "9:00 AM - 6:00 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10:00 AM - 4:00 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "By Appointment"
+        }
+      ]
+    },
+    "common": {
+      "viewDetails": "View Details"
+    }
+  },
+  "realEstateBlog": {
+    "hero": {
+      "title": "Premium Real Estate Blog",
+      "subtitle": "Discover the latest news and tips in the luxury real estate world",
+      "explorePropertiesButton": "Explore Properties",
+      "getConsultationButton": "Get Consultation"
+    },
+    "categories": {
+      "title": "Real Estate Categories",
+      "subtitle": "Explore the different types of properties we offer",
+      "readArticles": "Read Articles",
+      "all": "All Articles",
+      "luxury": "Luxury Properties",
+      "commercial": "Commercial Real Estate",
+      "homeSelling": "Home Selling",
+      "homeBuying": {
+        "title": "Home Buying",
+        "description": "Comprehensive guide to buying your dream home",
+        "count": "6 Articles"
+      },
+      "investmentProperties": {
+        "title": "Investment Properties",
+        "description": "Tips for investing in real estate",
+        "count": "5 Articles"
+      },
+      "marketAnalysis": {
+        "title": "Market Analysis",
+        "description": "Latest real estate market analysis",
+        "count": "4 Articles"
+      }
+    },
+    "trendingTopics": {
+      "firstTimeBuyers": "First-Time Buyers",
+      "investmentProperties": "Investment Properties",
+      "marketTrends": "Market Trends",
+      "luxuryHomes": "Luxury Homes",
+      "commercialSpaces": "Commercial Spaces",
+      "homeStaging": "Home Staging",
+      "mortgageRates": "Mortgage Rates",
+      "propertyManagement": "Property Management"
+    },
+    "featuredPosts": {
+      "title": "Featured Articles",
+      "subtitle": "Latest articles and tips from our experts",
+      "featured": "Featured",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "expertTitle": "Real Estate Expert",
+      "posts": {
+        "firstTimeBuyer": {
+          "title": "First-Time Buyer's Guide",
+          "excerpt": "Everything you need to know when buying your first home",
+          "category": "Home Buying",
+          "author": "Sarah Ahmed",
+          "date": "January 15, 2025",
+          "readTime": "5 min read",
+          "price": "$450,000",
+          "location": "New York",
+          "bedrooms": "3",
+          "bathrooms": "2"
+        },
+        "investmentProperties": {
+          "title": "Best Real Estate Investment Strategies",
+          "excerpt": "How to choose the right investment properties",
+          "category": "Investment",
+          "author": "Mohammed Ali",
+          "date": "January 12, 2025",
+          "readTime": "7 min read",
+          "price": "$1,200,000",
+          "location": "Los Angeles",
+          "bedrooms": "4",
+          "bathrooms": "3"
+        },
+        "marketTrends": {
+          "title": "Real Estate Market Trends 2025",
+          "excerpt": "Comprehensive analysis of current real estate market trends",
+          "category": "Market Analysis",
+          "author": "Fatima Saad",
+          "date": "January 10, 2025",
+          "readTime": "6 min read",
+          "price": "$800,000",
+          "location": "Chicago",
+          "bedrooms": "3",
+          "bathrooms": "2"
+        }
+      }
+    },
+    "whyChooseUs": {
+      "tagline": "Why Choose Us",
+      "title": "Trusted Real Estate Experts",
+      "description1": "We provide comprehensive real estate services with a focus on client satisfaction and professional excellence.",
+      "description2": "Our team of experts has years of experience in both local and international real estate markets.",
+      "scheduleConsultationButton": "Schedule Consultation"
+    },
+    "testimonials": {
+      "tagline": "Client Testimonials",
+      "title": "What Our Clients Say",
+      "testimonial1": {
+        "quote": "The team helped us find our dream home. Their professional service was exceptional.",
+        "author": "Ahmed Mohammed",
+        "title": "Homeowner"
+      },
+      "testimonial2": {
+        "quote": "Their expertise in the real estate market helped us make excellent investment decisions.",
+        "author": "Nora Said",
+        "title": "Real Estate Investor"
+      },
+      "testimonial3": {
+        "quote": "The buying process was smooth and comfortable thanks to their professional guidance.",
+        "author": "Khalid Al-Otaibi",
+        "title": "First-Time Buyer"
+      }
+    },
+    "altTexts": {
+      "modernHomeExterior": "Modern home exterior",
+      "luxuryRealEstateProperty": "Luxury real estate property"
+    },
+    "cta": {
+      "title": "Ready to Start Your Real Estate Journey?",
+      "subtitle": "Contact us today and get a free consultation from our experts",
+      "getConsultationButton": "Get Consultation",
+      "browsePropertiesButton": "Browse Properties"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Our Real Estate Experts",
+      "description": "Get in touch with our professional real estate team for personalized assistance with your property needs",
+      "button": "Start Your Inquiry"
+    },
+    "inquiryForm": {
+      "title": "Property Inquiry Form",
+      "subtitle": "Tell us about your real estate requirements and we'll help you find the perfect property",
+      "successMessage": "Thank you! Your inquiry has been submitted successfully. We'll contact you within 24 hours.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Enter your full name",
+      "emailAddress": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phoneNumber": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "propertyType": "Property Type",
+      "selectPropertyType": "Select property type",
+      "apartment": "Apartment",
+      "house": "House",
+      "villa": "Villa",
+      "commercial": "Commercial",
+      "land": "Land",
+      "other": "Other",
+      "budget": "Budget Range",
+      "selectBudget": "Select your budget range",
+      "under100k": "Under $100,000",
+      "100k250k": "$100,000 - $250,000",
+      "250k500k": "$250,000 - $500,000",
+      "500k1m": "$500,000 - $1,000,000",
+      "1m2m": "$1,000,000 - $2,000,000",
+      "over2m": "Over $2,000,000",
+      "preferredLocation": "Preferred Location",
+      "locationPlaceholder": "Enter your preferred location",
+      "message": "Additional Requirements",
+      "messagePlaceholder": "Tell us about your specific requirements, timeline, or any questions you have",
+      "processingInquiry": "Processing Your Inquiry...",
+      "submitInquiry": "Submit Property Inquiry"
+    },
+    "officeInfo": {
+      "title": "Visit Our Real Estate Office",
+      "subtitle": "Connect with our expert real estate professionals for personalized service",
+      "callUs": "Call Us",
+      "phone": "+1 (555) 123-4567",
+      "businessHours": "Mon-Fri: 9AM-6PM, Sat: 10AM-4PM",
+      "emailUs": "Email Us",
+      "email": "info@realestate.com",
+      "emailResponse": "We respond within 2 hours",
+      "visitUs": "Visit Our Office",
+      "address": "123 Real Estate Plaza, Suite 200",
+      "city": "Downtown Business District"
+    },
+    "map": {
+      "title": "Find Our Office",
+      "subtitle": "Located in the heart of the business district for your convenience"
+    },
+    "cta": {
+      "title": "Ready to Find Your Dream Property?",
+      "subtitle": "Our expert real estate team is here to help you every step of the way. Contact us today for personalized assistance with buying, selling, or investing in real estate.",
+      "button": "Get Started Today"
+    }
+  },
+  "blogPost1": {
+    "hero": {
+      "category": "Real Estate Guide",
+      "readTime": "8 min read",
+      "date": "January 15, 2025",
+      "title": "First-Time Home Buyer's Complete Guide",
+      "author": "Sarah Johnson",
+      "authorRole": "Senior Real Estate Agent"
+    },
+    "content": {
+      "intro": "Buying your first home is one of the most exciting and important decisions you'll make. This comprehensive guide will walk you through every step of the process, from initial planning to closing day.",
+      "section1": {
+        "title": "Understanding Your Budget",
+        "description": "Before you start looking at properties, it's crucial to understand what you can afford. This includes not just the purchase price, but also closing costs, moving expenses, and ongoing maintenance."
+      },
+      "section2": {
+        "title": "Essential Documents You'll Need",
+        "ingredients": [
+          {
+            "name": "Pre-approval Letter",
+            "description": "Get pre-approved for a mortgage to know your exact budget and show sellers you're serious"
+          },
+          {
+            "name": "Tax Returns",
+            "description": "Last 2 years of tax returns to verify your income"
+          },
+          {
+            "name": "Bank Statements",
+            "description": "Recent bank statements to show your financial stability"
+          },
+          {
+            "name": "Employment Verification",
+            "description": "Letter from your employer confirming your job status and income"
+          }
+        ]
+      },
+      "section3": {
+        "title": "Choosing the Right Location",
+        "description": "Location is everything in real estate. Consider factors like commute time, school districts, neighborhood safety, and future development plans.",
+        "guideTitle": "Top Neighborhoods for First-Time Buyers",
+        "regions": [
+          "Suburban Heights: Family-friendly with excellent schools",
+          "Downtown District: Urban living with great amenities",
+          "Riverside: Affordable with growing property values",
+          "Garden District: Quiet streets with community feel"
+        ]
+      },
+      "section4": {
+        "title": "Property Types Explained",
+        "description": "Understanding different property types will help you make the right choice for your lifestyle and budget.",
+        "subtitle": "Popular Options for First-Time Buyers",
+        "pastaTypes": [
+          {
+            "name": "Condos",
+            "description": "Low maintenance, shared amenities, perfect for busy professionals"
+          },
+          {
+            "name": "Townhouses",
+            "description": "More space than condos, some outdoor area, good investment potential"
+          },
+          {
+            "name": "Single-Family Homes",
+            "description": "Complete privacy, yard space, but higher maintenance costs"
+          },
+          {
+            "name": "Duplexes",
+            "description": "Live in one unit, rent the other for income potential"
+          }
+        ]
+      },
+      "section5": {
+        "title": "The Home Buying Process",
+        "description": "Once you're ready to buy, here's the step-by-step process you'll follow.",
+        "subtitle": "Step-by-Step Guide",
+        "techniques": [
+          {
+            "name": "Find a Real Estate Agent",
+            "description": "Work with a professional who understands your needs and local market"
+          },
+          {
+            "name": "Start House Hunting",
+            "description": "Visit properties, take notes, and compare features and prices"
+          },
+          {
+            "name": "Make an Offer",
+            "description": "Your agent will help you craft a competitive offer based on market analysis"
+          },
+          {
+            "name": "Home Inspection",
+            "description": "Hire a professional inspector to identify any potential issues"
+          },
+          {
+            "name": "Final Walkthrough",
+            "description": "Verify the property condition before closing"
+          },
+          {
+            "name": "Closing Day",
+            "description": "Sign final documents and receive keys to your new home"
+          }
+        ]
+      },
+      "section6": {
+        "title": "Financing Your Home",
+        "description": "Understanding your financing options is crucial for making informed decisions about your home purchase.",
+        "subtitle": "Mortgage Options",
+        "pairings": [
+          {
+            "wine": "Conventional Loans",
+            "description": "Traditional mortgages with competitive rates, typically require 20% down payment"
+          },
+          {
+            "wine": "FHA Loans",
+            "description": "Government-backed loans with lower down payment requirements (3.5%)"
+          },
+          {
+            "wine": "VA Loans",
+            "description": "Zero down payment loans for eligible veterans and active military"
+          },
+          {
+            "wine": "USDA Loans",
+            "description": "Rural development loans with no down payment for qualifying areas"
+          }
+        ]
+      },
+      "section7": {
+        "title": "Closing Costs and Fees",
+        "description": "Be prepared for additional costs beyond the purchase price. Understanding these fees helps you budget accurately.",
+        "subtitle": "Common Closing Costs",
+        "methods": [
+          {
+            "name": "Loan Origination Fees",
+            "description": "Typically 1% of the loan amount, covers processing and underwriting"
+          },
+          {
+            "name": "Title Insurance",
+            "description": "Protects against ownership disputes, usually $500-$1,500"
+          },
+          {
+            "name": "Home Inspection",
+            "description": "Professional inspection costs $300-$500 depending on property size"
+          },
+          {
+            "name": "Appraisal",
+            "description": "Required by lenders, typically costs $300-$600"
+          },
+          {
+            "name": "Escrow Fees",
+            "description": "Third-party handling of funds and documents, varies by location"
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Your Journey to Homeownership",
+        "mainText": "Buying your first home is a significant milestone that requires careful planning and preparation. By following this guide and working with experienced professionals, you'll be well-equipped to make informed decisions throughout the process.",
+        "finalText": "Remember, every home buying journey is unique. Take your time, ask questions, and don't hesitate to seek professional guidance. Your dream home is waiting for you!"
+      }
+    },
+    "author": {
+      "name": "Sarah Johnson",
+      "bio": "Sarah is a senior real estate agent with over 12 years of experience helping first-time buyers achieve their homeownership dreams. She specializes in residential properties and has helped over 500 families find their perfect homes.",
+      "expertise": ["First-Time Buyers", "Residential Properties", "Market Analysis", "Mortgage Guidance"]
+    },
+    "sidebar": {
+      "relatedPosts": "Related Articles",
+      "post1": {
+        "title": "Understanding Mortgage Rates in 2025",
+        "description": "Everything you need to know about current mortgage trends"
+      },
+      "post2": {
+        "title": "Home Inspection Checklist",
+        "description": "A comprehensive guide to what inspectors look for"
+      },
+      "chefTips": "Expert Tips",
+      "tips": [
+        {
+          "title": "Get Pre-approved Early",
+          "description": "Start the mortgage pre-approval process before you begin house hunting"
+        },
+        {
+          "title": "Save for Closing Costs",
+          "description": "Set aside 2-5% of the purchase price for closing costs and fees"
+        },
+        {
+          "title": "Consider Future Needs",
+          "description": "Think about your 5-10 year plans when choosing a property"
+        },
+        {
+          "title": "Don't Skip the Inspection",
+          "description": "Always invest in a professional home inspection before closing"
+        }
+      ]
+    }
+  },
+  "blogPost2": {
+    "hero": {
+      "category": "Investment Strategy",
+      "readTime": "10 min read",
+      "date": "January 20, 2025",
+      "title": "Real Estate Investment Strategies for Maximum Returns",
+      "author": "Michael Rodriguez",
+      "authorRole": "Senior Investment Advisor"
+    },
+    "content": {
+      "intro": "Real estate investment has long been considered one of the most reliable ways to build wealth and generate passive income. This comprehensive guide explores proven strategies that successful investors use to maximize their returns while minimizing risks.",
+      "section1": {
+        "title": "Understanding Real Estate Investment Fundamentals",
+        "description": "Before diving into specific strategies, it's crucial to understand the fundamental principles that govern successful real estate investing.",
+        "subtitle": "Core Investment Principles",
+        "fundamentals": [
+          {
+            "name": "Location Analysis",
+            "description": "Thoroughly research neighborhood growth, employment rates, and future development plans"
+          },
+          {
+            "name": "Cash Flow Management",
+            "description": "Ensure rental income exceeds all expenses including mortgage, taxes, insurance, and maintenance"
+          },
+          {
+            "name": "Market Timing",
+            "description": "Understand market cycles and identify optimal entry and exit points"
+          },
+          {
+            "name": "Risk Assessment",
+            "description": "Evaluate potential risks including vacancy rates, market volatility, and economic factors"
+          }
+        ]
+      },
+      "section2": {
+        "title": "Investment Strategy Framework",
+        "description": "Successful real estate investment requires a systematic approach that aligns with your financial goals and risk tolerance.",
+        "subtitle": "Strategic Investment Principles",
+        "principles": [
+          "Diversify across different property types and locations",
+          "Focus on cash-flow positive properties",
+          "Plan for long-term appreciation",
+          "Maintain adequate cash reserves",
+          "Stay informed about market trends and regulations"
+        ]
+      },
+      "section3": {
+        "title": "Property Types and Investment Opportunities",
+        "description": "Different property types offer unique advantages and challenges. Understanding these differences helps you choose the right investment for your portfolio.",
+        "subtitle": "Investment Property Categories",
+        "propertyTypes": [
+          {
+            "name": "Single-Family Rentals",
+            "description": "Stable cash flow with lower maintenance complexity, ideal for beginners"
+          },
+          {
+            "name": "Multi-Family Properties",
+            "description": "Higher cash flow potential with economies of scale in management"
+          },
+          {
+            "name": "Commercial Real Estate",
+            "description": "Long-term leases and professional tenants, but higher entry costs"
+          },
+          {
+            "name": "Vacation Rentals",
+            "description": "High rental rates but seasonal fluctuations and intensive management"
+          },
+          {
+            "name": "Fix-and-Flip Properties",
+            "description": "Quick returns through renovation but requires significant capital and expertise"
+          }
+        ]
+      },
+      "section4": {
+        "title": "Market Analysis and Location Selection",
+        "description": "Choosing the right market and location is critical for investment success. This section covers key factors to consider when evaluating potential investment areas.",
+        "subtitle": "Prime Investment Markets",
+        "markets": [
+          {
+            "name": "Emerging Markets",
+            "description": "High growth potential with lower entry costs but higher risk"
+          },
+          {
+            "name": "Established Markets",
+            "description": "Stable returns with proven track records and lower volatility"
+          },
+          {
+            "name": "College Towns",
+            "description": "Consistent rental demand from students and faculty"
+          },
+          {
+            "name": "Tech Hubs",
+            "description": "Strong job growth driving housing demand and appreciation"
+          },
+          {
+            "name": "Retirement Communities",
+            "description": "Stable tenant base with predictable rental patterns"
+          }
+        ]
+      },
+      "section5": {
+        "title": "Financing Strategies for Real Estate Investment",
+        "description": "Understanding your financing options is crucial for maximizing returns and managing cash flow effectively.",
+        "subtitle": "Investment Financing Options",
+        "financing": [
+          {
+            "name": "Conventional Mortgages",
+            "description": "Traditional financing with competitive rates, typically requiring 20-25% down payment"
+          },
+          {
+            "name": "Portfolio Loans",
+            "description": "Bank-held loans with more flexible terms for experienced investors"
+          },
+          {
+            "name": "Hard Money Loans",
+            "description": "Short-term financing for fix-and-flip projects with higher rates"
+          },
+          {
+            "name": "Private Money",
+            "description": "Alternative financing from private investors with flexible terms"
+          },
+          {
+            "name": "Seller Financing",
+            "description": "Direct financing from property sellers, often with favorable terms"
+          }
+        ]
+      },
+      "section6": {
+        "title": "Property Management and Optimization",
+        "description": "Effective property management is essential for maintaining cash flow and maximizing property value over time.",
+        "subtitle": "Management Best Practices",
+        "management": [
+          {
+            "name": "Tenant Screening",
+            "description": "Thorough background checks and income verification to minimize risk"
+          },
+          {
+            "name": "Maintenance Systems",
+            "description": "Proactive maintenance schedules to prevent costly repairs"
+          },
+          {
+            "name": "Rent Optimization",
+            "description": "Regular market analysis to ensure competitive rental rates"
+          },
+          {
+            "name": "Technology Integration",
+            "description": "Use property management software for efficient operations"
+          },
+          {
+            "name": "Legal Compliance",
+            "description": "Stay updated on landlord-tenant laws and regulations"
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Building Your Real Estate Investment Portfolio",
+        "mainText": "Real estate investment success comes from combining solid fundamentals with strategic execution. By following these proven strategies and maintaining discipline in your approach, you can build a profitable portfolio that generates both cash flow and long-term appreciation."
+      }
+    },
+    "author": {
+      "name": "Michael Rodriguez",
+      "role": "Senior Investment Advisor",
+      "bio": "Michael is a seasoned real estate investment advisor with over 15 years of experience helping investors build profitable portfolios. He specializes in market analysis and has guided over 200 investors in achieving their financial goals through strategic real estate investments.",
+      "expertise": ["Investment Strategy", "Market Analysis", "Portfolio Management", "Risk Assessment"]
+    },
+    "sidebar": {
+      "relatedPosts": "Related Articles",
+      "post1": {
+        "title": "Market Analysis Tools for Real Estate Investors",
+        "description": "Essential tools and techniques for analyzing investment opportunities"
+      },
+      "post2": {
+        "title": "Tax Strategies for Real Estate Investors",
+        "description": "Maximize your returns with smart tax planning strategies"
+      },
+      "expertTips": "Investment Expert Tips",
+      "tips": [
+        {
+          "title": "Start with Market Research",
+          "description": "Always begin with comprehensive market analysis before investing"
+        },
+        {
+          "title": "Build Your Network",
+          "description": "Connect with local real estate professionals and other investors"
+        },
+        {
+          "title": "Calculate All Costs",
+          "description": "Include all expenses in your cash flow calculations"
+        },
+        {
+          "title": "Plan for Vacancies",
+          "description": "Factor in vacancy rates when projecting rental income"
+        }
+      ],
+      "marketTrends": "Current Market Trends",
+      "trends": [
+        {
+          "name": "Urban Suburbs",
+          "status": "Rising"
+        },
+        {
+          "name": "Tech Cities",
+          "status": "Stable"
+        },
+        {
+          "name": "College Towns",
+          "status": "Growing"
+        },
+        {
+          "name": "Retirement Areas",
+          "status": "Steady"
+        },
+        {
+          "name": "Emerging Markets",
+          "status": "Volatile"
+        }
+      ]
+    }
+  },
+  "blogPost3": {
+    "hero": {
+      "category": "Property Management",
+      "readTime": "12 min read",
+      "date": "January 25, 2025",
+      "title": "Property Management Excellence: A Complete Guide",
+      "author": "Sarah Chen",
+      "authorRole": "Property Management Specialist"
+    },
+    "content": {
+      "intro": "Effective property management is the cornerstone of successful real estate investment. This comprehensive guide explores the essential strategies, tools, and best practices that property managers use to maximize returns while ensuring tenant satisfaction and property value appreciation.",
+      "section1": {
+        "title": "Understanding Property Management Fundamentals",
+        "description": "Property management encompasses a wide range of responsibilities, from tenant relations to maintenance coordination. Understanding these fundamentals is crucial for both property owners and managers.",
+        "subtitle": "Core Management Principles",
+        "fundamentals": [
+          {
+            "name": "Tenant Relations",
+            "description": "Building positive relationships with tenants through clear communication and responsive service"
+          },
+          {
+            "name": "Maintenance Management",
+            "description": "Implementing proactive maintenance schedules to prevent costly repairs and ensure property longevity"
+          },
+          {
+            "name": "Financial Management",
+            "description": "Tracking income, expenses, and profitability to make informed investment decisions"
+          },
+          {
+            "name": "Legal Compliance",
+            "description": "Staying updated on landlord-tenant laws and ensuring all operations comply with regulations"
+          }
+        ]
+      },
+      "section2": {
+        "title": "Essential Property Maintenance Strategies",
+        "description": "Proactive maintenance is key to preserving property value and minimizing unexpected costs. This section covers the most effective maintenance strategies used by successful property managers.",
+        "subtitle": "Preventive Maintenance Programs",
+        "maintenance": [
+          {
+            "name": "HVAC Systems",
+            "description": "Regular filter changes, seasonal inspections, and professional servicing"
+          },
+          {
+            "name": "Plumbing Systems",
+            "description": "Routine inspections, leak detection, and preventive pipe maintenance"
+          },
+          {
+            "name": "Electrical Systems",
+            "description": "Safety inspections, outlet testing, and electrical panel maintenance"
+          },
+          {
+            "name": "Structural Elements",
+            "description": "Foundation checks, roof inspections, and exterior maintenance"
+          }
+        ],
+        "successFactors": [
+          "Regular Inspections: Conduct quarterly property inspections to identify issues early",
+          "Documentation: Maintain detailed records of all maintenance activities and expenses",
+          "Vendor Relationships: Build reliable networks of qualified contractors and service providers",
+          "Budget Planning: Allocate adequate funds for both routine and emergency maintenance"
+        ]
+      },
+      "section3": {
+        "title": "Technology Integration in Property Management",
+        "description": "Modern property management relies heavily on technology to streamline operations and improve efficiency. This section explores the latest technological solutions available to property managers.",
+        "subtitle": "Essential Property Management Technologies",
+        "technologies": [
+          {
+            "name": "Property Management Software",
+            "description": "Comprehensive platforms for rent collection, maintenance tracking, and tenant communication"
+          },
+          {
+            "name": "Smart Building Systems",
+            "description": "IoT devices for monitoring energy usage, security, and building performance"
+          },
+          {
+            "name": "Mobile Applications",
+            "description": "Apps for property managers and tenants to streamline communication and service requests"
+          },
+          {
+            "name": "Financial Management Tools",
+            "description": "Software for accounting, budgeting, and financial reporting"
+          }
+        ]
+      },
+      "section4": {
+        "title": "Tenant Management Best Practices",
+        "description": "Successful tenant management requires a balance of professionalism, empathy, and firmness. This section outlines proven strategies for maintaining positive tenant relationships while protecting property interests.",
+        "subtitle": "Tenant Management Tools and Techniques",
+        "tools": [
+          {
+            "name": "Screening Processes",
+            "description": "Comprehensive background checks, income verification, and reference checks"
+          },
+          {
+            "name": "Lease Management",
+            "description": "Clear lease agreements, renewal processes, and compliance monitoring"
+          },
+          {
+            "name": "Communication Systems",
+            "description": "Regular newsletters, online portals, and responsive customer service"
+          },
+          {
+            "name": "Retention Programs",
+            "description": "Incentive programs, community events, and tenant appreciation initiatives"
+          }
+        ]
+      },
+      "section5": {
+        "title": "Financial Management and Reporting",
+        "description": "Effective financial management is crucial for property profitability and investment success. This section covers essential financial practices and reporting requirements.",
+        "subtitle": "Key Financial Metrics",
+        "trends": [
+          "Monthly Cash Flow Analysis",
+          "Occupancy Rate Tracking",
+          "Maintenance Cost Monitoring",
+          "Rent Collection Efficiency",
+          "Property Value Appreciation"
+        ],
+        "seasonalCare": "Seasonal property care involves preparing properties for different weather conditions, ensuring energy efficiency, and maintaining curb appeal throughout the year. This includes winterization, spring cleaning, summer maintenance, and fall preparations."
+      },
+      "section6": {
+        "title": "Legal Compliance and Risk Management",
+        "description": "Staying compliant with local, state, and federal regulations is essential for property management success. This section covers key legal requirements and risk management strategies.",
+        "subtitle": "Compliance Checklist",
+        "checklist": [
+          {
+            "name": "Fair Housing Laws",
+            "description": "Ensuring equal treatment of all applicants and tenants regardless of protected characteristics"
+          },
+          {
+            "name": "Safety Regulations",
+            "description": "Maintaining smoke detectors, carbon monoxide detectors, and other safety equipment"
+          },
+          {
+            "name": "Environmental Compliance",
+            "description": "Proper handling of lead paint, asbestos, and other environmental hazards"
+          },
+          {
+            "name": "Insurance Requirements",
+            "description": "Maintaining adequate property and liability insurance coverage"
+          }
+        ]
+      },
+      "conclusion": {
+        "title": "Building a Successful Property Management Practice",
+        "mainText": "Property management excellence requires a combination of technical knowledge, interpersonal skills, and business acumen. By implementing the strategies and best practices outlined in this guide, property managers can build successful portfolios that generate consistent returns while providing excellent service to tenants.",
+        "finalText": "Remember, successful property management is an ongoing process that requires continuous learning, adaptation, and improvement. Stay informed about industry trends, regulatory changes, and technological advances to maintain your competitive edge."
+      }
+    },
+    "author": {
+      "name": "Sarah Chen",
+      "bio": "Sarah is a certified property management specialist with over 10 years of experience managing residential and commercial properties. She has successfully managed portfolios worth over $50 million and specializes in implementing technology solutions for property management efficiency.",
+      "expertise": ["Property Management", "Tenant Relations", "Maintenance Coordination", "Financial Analysis"]
+    },
+    "sidebar": {
+      "relatedPosts": "Related Articles",
+      "post1": {
+        "title": "Tenant Screening Best Practices",
+        "description": "Learn how to effectively screen potential tenants"
+      },
+      "post2": {
+        "title": "Property Maintenance Scheduling",
+        "description": "Create effective maintenance schedules for your properties"
+      },
+      "expertTips": "Property Management Expert Tips",
+      "tips": [
+        {
+          "title": "Document Everything",
+          "description": "Keep detailed records of all property management activities"
+        },
+        {
+          "title": "Build Vendor Relationships",
+          "description": "Develop reliable networks of contractors and service providers"
+        },
+        {
+          "title": "Use Technology Wisely",
+          "description": "Invest in property management software that fits your needs"
+        },
+        {
+          "title": "Stay Compliant",
+          "description": "Regularly review and update your knowledge of housing laws"
+        }
+      ],
+      "propertyTypes": "Property Management Types",
+      "propertiesList": [
+        {
+          "name": "Single Family Homes",
+          "type": "Residential"
+        },
+        {
+          "name": "Multi-Family Units",
+          "type": "Residential"
+        },
+        {
+          "name": "Commercial Properties",
+          "type": "Commercial"
+        },
+        {
+          "name": "Mixed-Use Buildings",
+          "type": "Mixed"
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "title": "About Our Real Estate Excellence",
+      "subtitle": "Discover the story behind our commitment to exceptional real estate services and client satisfaction",
+      "exploreButton": "Explore Our Story",
+      "browseButton": "Browse Properties"
+    },
+    "journey": {
+      "tagline": "Our Journey",
+      "title": "Building Excellence Since 2006",
+      "subtitle": "From humble beginnings to becoming a trusted name in luxury real estate, our journey has been marked by dedication, integrity, and unwavering commitment to our clients.",
+      "timeline": {
+        "foundation": {
+          "year": "2006",
+          "title": "Foundation",
+          "description": "Started with a vision to provide exceptional real estate services with a focus on client satisfaction and market expertise."
+        },
+        "expansion": {
+          "year": "2012",
+          "title": "Expansion",
+          "description": "Expanded our services to include luxury properties and established partnerships with top developers and architects."
+        },
+        "innovation": {
+          "year": "2018",
+          "title": "Innovation",
+          "description": "Introduced cutting-edge technology and virtual tours, revolutionizing how clients experience and explore properties."
+        },
+        "excellence": {
+          "year": "2024",
+          "title": "Excellence",
+          "description": "Today, we stand as a leading real estate company with a reputation for excellence, innovation, and unparalleled client service."
+        }
+      },
+      "stats": {
+        "yearsExperience": "Years of Experience",
+        "propertiesSold": "Properties Sold",
+        "happyClients": "Happy Clients",
+        "teamMembers": "Team Members"
+      }
+    },
+    "foundation": {
+      "tagline": "Our Foundation",
+      "title": "Mission, Vision & Values",
+      "subtitle": "The principles that guide our every decision and drive our commitment to excellence in real estate services.",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To provide exceptional real estate services that exceed client expectations while building lasting relationships based on trust, integrity, and professional excellence.",
+        "tagline": "Excellence in Every Transaction"
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the most trusted and innovative real estate company, recognized for our commitment to client success and our contribution to building better communities.",
+        "tagline": "Building Tomorrow's Communities"
+      },
+      "values": {
+        "title": "Our Core Values",
+        "subtitle": "The principles that define who we are and how we operate",
+        "integrity": {
+          "title": "Integrity",
+          "description": "We conduct all business with the highest ethical standards, ensuring transparency and honesty in every interaction."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "We strive for excellence in everything we do, from property selection to client service, setting the industry standard."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "We embrace new technologies and innovative approaches to provide cutting-edge real estate solutions for our clients."
+        }
+      }
+    },
+    "team": {
+      "tagline": "Meet Our Team",
+      "title": "Expert Real Estate Professionals",
+      "subtitle": "Our team of experienced professionals is dedicated to helping you find the perfect property and achieve your real estate goals.",
+      "specialties": "Specialties",
+      "achievements": "Achievements",
+      "contactAgent": "Contact Agent",
+      "agents": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "title": "Senior Real Estate Agent",
+          "experience": "12+ Years",
+          "specialties": ["Luxury Properties", "First-time Buyers", "Investment Properties", "Market Analysis"],
+          "achievements": ["Top 1% Agent", "500+ Properties Sold", "Client Satisfaction Award", "Market Expert"],
+          "description": "Sarah brings over 12 years of experience in luxury real estate with a proven track record of helping clients find their dream properties.",
+          "phone": "+1 (555) 123-4567",
+          "email": "sarah@realestate.com"
+        },
+        "michael": {
+          "name": "Michael Chen",
+          "title": "Commercial Real Estate Specialist",
+          "experience": "15+ Years",
+          "specialties": ["Commercial Properties", "Investment Analysis", "Property Management", "Development Projects"],
+          "achievements": ["Commercial Expert", "200+ Deals Closed", "Investment Advisor", "Development Specialist"],
+          "description": "Michael specializes in commercial real estate and investment properties, helping clients make informed decisions for maximum returns.",
+          "phone": "+1 (555) 234-5678",
+          "email": "michael@realestate.com"
+        },
+        "emma": {
+          "name": "Emma Rodriguez",
+          "title": "Residential Specialist",
+          "experience": "8+ Years",
+          "specialties": ["Family Homes", "Condos", "Townhouses", "Relocation Services"],
+          "achievements": ["Relocation Expert", "300+ Families Helped", "Community Specialist", "Client Advocate"],
+          "description": "Emma focuses on helping families find their perfect homes, with expertise in residential properties and relocation services.",
+          "phone": "+1 (555) 345-6789",
+          "email": "emma@realestate.com"
+        }
+      }
+    },
+    "cta": {
+      "tagline": "Ready to Work With Us?",
+      "title": "Let's Find Your Perfect Property Together",
+      "subtitle": "Our expert team is ready to help you navigate the real estate market and find the property that perfectly matches your needs and budget.",
+      "button": "Get Started Today"
+    }
+  }
+}
