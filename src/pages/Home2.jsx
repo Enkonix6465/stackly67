@@ -36,48 +36,70 @@ export default function Home2() {
   ]
 
   return (
-    <div className={`${isDark ? 'bg-gray-900 text-white' : 'bg-white text-black'} transition-colors duration-300`}>
+    <div className={isDark ? 'bg-gray-900 text-white transition-colors' : 'bg-white text-black transition-colors'}>
       <Navbar user={user} />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden h-screen flex items-center justify-center text-center bg-black">
         {/* Background Video */}
-        <video
+        <motion.video
           autoPlay
           loop
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <source src="/HOME2.mp4" type="video/mp4" />
           {t('common.videoNotSupported')}
-        </video>
+        </motion.video>
 
         {/* Dynamic Overlay */}
-        <div className={`absolute inset-0 ${isDark ? 'bg-black/70' : 'bg-black/60'}`}></div>
+        <motion.div 
+          className={`absolute inset-0 ${isDark ? 'bg-black/70' : 'bg-black/60'}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
 
         {/* Content */}
         <div className="relative z-10 px-6 max-w-4xl">
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 60, scale: 0.9 }} 
+            animate={{ opacity: 1, y: 0, scale: 1 }} 
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6 whitespace-nowrap" style={{ fontFamily: 'serif' }}>
               {t('home2.hero.title')}
             </h1>
           </motion.div>
           
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
             <p className="mt-6 text-xl text-white/90 max-w-3xl mx-auto mb-8 whitespace-nowrap">
               {t('home2.hero.subtitle')}
             </p>
           </motion.div>
           
-          <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+          <motion.div 
+            initial={{ opacity: 0, y: 40, scale: 0.8 }} 
+            animate={{ opacity: 1, y: 0, scale: 1 }} 
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <div className="mt-8 flex gap-6 justify-center items-center flex-wrap">
-              <button
+              <motion.button
                 onClick={() => navigate('/services')}
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 {t('home2.hero.searchButton')}
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -86,37 +108,92 @@ export default function Home2() {
       {/* Featured listings */}
       <section className={`py-20 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <h2 className={`text-3xl md:text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('home2.featured.title')}</h2>
-              <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mt-2`}>{t('home2.featured.subtitle')}</p>
-            </div>
-            <button onClick={() => navigate('/services')} className="px-5 py-2.5 rounded-lg border border-gray-300 hover:border-gray-400 text-sm">{t('home2.featured.browseAll')}</button>
-          </div>
+          <motion.div 
+            className="mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className={`text-3xl md:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'serif' }}>{t('home2.featured.title')}</h2>
+            <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mt-2`}>{t('home2.featured.subtitle')}</p>
+          </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProperties.map((p, idx) => (
-              <motion.div key={p.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: idx * 0.05 }} className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition`}>
-                <div className="relative aspect-video overflow-hidden">
+              <motion.div 
+                key={p.id} 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }} 
+                whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className={`${isDark ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer`}
+              >
+                <motion.div 
+                  className="relative aspect-video overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <img src={p.image} alt={t(p.titleKey)} className="w-full h-full object-cover" />
-                  <div className="absolute top-3 left-3 bg-white/90 text-gray-900 text-xs font-semibold px-2.5 py-1 rounded-full">{t('home2.featured.forSale')}</div>
-                </div>
+                  <motion.div 
+                    className="absolute top-3 left-3 bg-white/90 text-gray-900 text-xs font-semibold px-2.5 py-1 rounded-full"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.3 }}
+                  >
+                    {t('home2.featured.forSale')}
+                  </motion.div>
+                </motion.div>
                 <div className="p-5">
-                  <div className="flex items-start justify-between">
+                  <motion.div 
+                    className="flex items-start justify-between"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
+                  >
                     <div>
                       <h3 className={`${isDark ? 'text-white' : 'text-gray-900'} text-lg font-semibold`}>{t(p.titleKey)}</h3>
                       <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} text-sm`}>{t(p.locationKey)}</p>
                     </div>
-                    <div className="text-red-500 font-bold">{p.price}</div>
-                  </div>
-                  <div className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mt-3 text-sm flex gap-4`}>
+                    <motion.div 
+                      className="text-red-500 font-bold"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {p.price}
+                    </motion.div>
+                  </motion.div>
+                  <motion.div 
+                    className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mt-3 text-sm flex gap-4`}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.3 }}
+                  >
                     <span>{p.beds} {t('home2.featured.beds')}</span>
                     <span>{p.baths} {t('home2.featured.baths')}</span>
                     <span>{p.area} {t('home2.featured.sqft')}</span>
-                  </div>
-                  <div className="mt-5 flex gap-3">
-                    <button onClick={() => navigate('/contact')} className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg text-sm">{t('home2.featured.scheduleTour')}</button>
-                    <button onClick={() => navigate('/contact')} className="px-4 py-2 border rounded-lg text-sm">{t('home2.featured.contactAgent')}</button>
-                  </div>
+                  </motion.div>
+                  <motion.div 
+                    className="mt-5 flex gap-3"
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.4 }}
+                  >
+                    <motion.button 
+                      onClick={() => navigate('/contact')} 
+                      className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 font-semibold text-sm rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                    >
+                      {t('home2.featured.scheduleTour')}
+                    </motion.button>
+                  </motion.div>
                 </div>
               </motion.div>
             ))}
@@ -125,31 +202,86 @@ export default function Home2() {
       </section>
 
       {/* Neighborhoods */}
-      <section className={`${isDark ? 'bg-gray-800' : 'bg-gray-50'} py-20`}>
+      <section className="bg-gray-50 py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className={`text-3xl md:text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('home2.neighborhoods.title')}</h2>
-            <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mt-3`}>{t('home2.neighborhoods.subtitle')}</p>
-          </div>
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900" style={{ fontFamily: 'serif' }}>{t('home2.neighborhoods.title')}</h2>
+            <p className="text-gray-600 mt-3">{t('home2.neighborhoods.subtitle')}</p>
+          </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: t('home2.neighborhoods.riverside'), image: '/images/River Side.jpg', tags: [t('home2.neighborhoods.tags.parks'), t('home2.neighborhoods.tags.schools'), t('home2.neighborhoods.tags.family')] },
               { name: t('home2.neighborhoods.downtown'), image: '/images/downtown.jpg', tags: [t('home2.neighborhoods.tags.nightlife'), t('home2.neighborhoods.tags.transit'), t('home2.neighborhoods.tags.dining')] },
               { name: t('home2.neighborhoods.hillside'), image: '/images/Hillside.jpg', tags: [t('home2.neighborhoods.tags.views'), t('home2.neighborhoods.tags.trails'), t('home2.neighborhoods.tags.quiet')] }
             ].map((n, i) => (
-              <motion.div key={n.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl overflow-hidden shadow-lg group">
-                <div className="relative h-56">
-                  <img src={n.image} alt={n.name} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="text-xl font-semibold">{n.name}</div>
-                    <div className="flex gap-2 mt-1 text-xs opacity-90">
-                      {n.tags.map((t) => (
-                        <span key={t} className="bg-white/20 px-2 py-0.5 rounded-full">{t}</span>
+              <motion.div 
+                key={n.name} 
+                initial={{ opacity: 0, y: 40, scale: 0.9 }} 
+                whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -15,
+                  scale: 1.03,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className="rounded-2xl overflow-hidden shadow-lg group cursor-pointer"
+              >
+                <motion.div 
+                  className="relative h-56"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <img src={n.image} alt={n.name} className="w-full h-full object-cover" />
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                    initial={{ opacity: 0.6 }}
+                    whileHover={{ opacity: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                  ></motion.div>
+                  <motion.div 
+                    className="absolute bottom-4 left-4 text-white"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.2 + 0.3 }}
+                  >
+                    <motion.div 
+                      className="text-xl font-semibold"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {n.name}
+                    </motion.div>
+                    <motion.div 
+                      className="flex gap-2 mt-1 text-xs opacity-90"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 0.9, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: i * 0.2 + 0.4 }}
+                    >
+                      {n.tags.map((tag, tagIdx) => (
+                        <motion.span 
+                          key={tag} 
+                          className="bg-white/20 px-2 py-0.5 rounded-full"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: i * 0.2 + 0.5 + tagIdx * 0.1 }}
+                          whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.3)" }}
+                        >
+                          {tag}
+                        </motion.span>
                       ))}
-                    </div>
-                  </div>
-                </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -159,8 +291,9 @@ export default function Home2() {
       {/* Stats */}
       <section className={`py-16 ${isDark ? 'bg-gray-900' : 'bg-white'}`}>
         <div className="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 text-center`}>
-            <div className="flex items-center justify-center mb-3">
+          {[
+            {
+              icon: (
               <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 128 128" className="text-purple-600">
                 <path fill="#ab5832" d="M19.16 48.94V28.58l-1.64.1V16.14l15.82-.1v12.35H31.7v11.96z"></path>
                 <path fill="#fff3e1" d="M64.11 23.33L18.67 68.99l.35 42.21l89.75-.85l.13-45z"></path>
@@ -177,12 +310,13 @@ export default function Home2() {
                 <path fill="#b0b0b0" d="m44.92 125.17l.07-8.85h.65l-.01-9.86h34.73l-.12 9.86H81v8.62c-.01-.01-36.08.28-36.08.23"></path>
                 <path fill="#9b9b9b" d="M80.99 121.3v3.63l-36.08.24l.03-3.9zm-35.37-8.82l34.65.01v3.82H45.62z"></path>
               </svg>
-            </div>
-            <div className="text-3xl font-bold text-purple-600"><Counter target={1200} suffix="+" /></div>
-            <div className={`${isDark ? 'text-gray-300' : 'text-gray-700'} text-sm mt-1`}>{t('home2.stats.homesListed')}</div>
-          </div>
-          <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 text-center`}>
-            <div className="flex items-center justify-center mb-3">
+              ),
+              target: 1200,
+              suffix: "+",
+              label: t('home2.stats.homesListed')
+            },
+            {
+              icon: (
               <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 24 24">
                 <g fill="none">
                   <path fill="#ffef5e" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1S1 5.925 1 12s4.925 11 11 11"></path>
@@ -192,12 +326,13 @@ export default function Home2() {
                   <path fill="#ff808c" stroke="#191919" strokeLinecap="round" strokeLinejoin="round" d="M15.705 15.348a.957.957 0 0 1 .927 1.194a4.782 4.782 0 0 1-9.264 0a.956.956 0 0 1 .927-1.194z" strokeWidth={1}></path>
                 </g>
               </svg>
-            </div>
-            <div className="text-3xl font-bold text-purple-600"><Counter target={980} suffix="+" /></div>
-            <div className={`${isDark ? 'text-gray-300' : 'text-gray-700'} text-sm mt-1`}>{t('home2.stats.happyBuyers')}</div>
-          </div>
-          <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 text-center`}>
-            <div className="flex items-center justify-center mb-3">
+              ),
+              target: 980,
+              suffix: "+",
+              label: t('home2.stats.happyBuyers')
+            },
+            {
+              icon: (
               <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 72 72">
                 <path fill="#92d3f5" d="M17 61v-4c0-4.994 5.008-9 10-9q9 7.5 18 0c4.994 0 10 4.006 10 9v4"></path>
                 <path fill="#f1b31c" d="M26 39c-4 0-4-6-4-13s4-14 14-14s14 7 14 14s0 13-4 13"></path>
@@ -207,56 +342,167 @@ export default function Home2() {
                 <path fill="none" stroke="#000" strokeLinejoin="round" strokeWidth={2} d="M24.937 31c0 9 4.936 14 11 14C41.872 45 47 40 47 31c0-3-1-5-1-5c-3-3-7-8-7-8c-4 3-7 6-13 7c0 0-1.064 1-1.064 6z"></path>
                 <path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M33 38c1.939.939 4 1 6 0"></path>
               </svg>
-            </div>
-            <div className="text-3xl font-bold text-purple-600"><Counter target={250} suffix="+" /></div>
-            <div className={`${isDark ? 'text-gray-300' : 'text-gray-700'} text-sm mt-1`}>{t('home2.stats.expertAgents')}</div>
-          </div>
-          <div className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 text-center`}>
-            <div className="flex items-center justify-center mb-3">
+              ),
+              target: 250,
+              suffix: "+",
+              label: t('home2.stats.expertAgents')
+            },
+            {
+              icon: (
               <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 48 48">
                 <path fill="#7cb342" d="M24 4C13 4 4 13 4 24s9 20 20 20s20-9 20-20S35 4 24 4"></path>
                 <path fill="#0277bd" d="M45 24c0 11.7-9.5 21-21 21S3 35.7 3 24S12.3 3 24 3s21 9.3 21 21m-21.2 9.7c0-.4-.2-.6-.6-.8c-1.3-.4-2.5-.4-3.6-1.5c-.2-.4-.2-.8-.4-1.3c-.4-.4-1.5-.6-2.1-.8h-4.2c-.6-.2-1.1-1.1-1.5-1.7c0-.2 0-.6-.4-.6c-.4-.2-.8.2-1.3 0c-.2-.2-.2-.4-.2-.6c0-.6.4-1.3.8-1.7c.6-.4 1.3.2 1.9.2c.2 0 .2 0 .4.2c.6.2.8 1 .8 1.7v.4c0 .2.2.2.4.2c.2-1.1.2-2.1.4-3.2c0-1.3 1.3-2.5 2.3-2.9c.4-.2.6.2 1.1 0c1.3-.4 4.4-1.7 3.8-3.4c-.4-1.5-1.7-2.9-3.4-2.7c-.4.2-.6.4-1 .6c-.6.4-1.9 1.7-2.5 1.7c-1.1-.2-1.1-1.7-.8-2.3c.2-.8 2.1-3.6 3.4-3.1l.8.8c.4.2 1.1.2 1.7.2c.2 0 .4 0 .6-.2s.2-.2.2-.4c0-.6-.6-1.3-1-1.7s-1.1-.8-1.7-1.1c-2.1-.6-5.5.2-7.1 1.7s-2.9 4-3.8 6.1c-.4 1.3-.8 2.9-1 4.4c-.2 1-.4 1.9.2 2.9c.6 1.3 1.9 2.5 3.2 3.4c.8.6 2.5.6 3.4 1.7c.6.8.4 1.9.4 2.9c0 1.3.8 2.3 1.3 3.4c.2.6.4 1.5.6 2.1c0 .2.2 1.5.2 1.7c1.3.6 2.3 1.3 3.8 1.7c.2 0 1-1.3 1-1.5c.6-.6 1.1-1.5 1.7-1.9c.4-.2.8-.4 1.3-.8c.4-.4.6-1.3.8-1.9c.1-.5.3-1.3.1-1.9m.4-19.4c.2 0 .4-.2.8-.4c.6-.4 1.3-1.1 1.9-1.5s1.3-1.1 1.7-1.5c.6-.4 1.1-1.3 1.3-1.9c.2-.4.8-1.3.6-1.9c-.2-.4-1.3-.6-1.7-.8c-1.7-.4-3.1-.6-4.8-.6c-.6 0-1.5.2-1.7.8c-.2 1.1.6.8 1.5 1.1c0 0 .2 1.7.2 1.9c.2 1-.4 1.7-.4 2.7c0 .6 0 1.7.4 2.1zM41.8 29c.2-.4.2-1.1.4-1.5c.2-1 .2-2.1.2-3.1c0-2.1-.2-4.2-.8-6.1c-.4-.6-.6-1.3-.8-1.9c-.4-1.1-1-2.1-1.9-2.9c-.8-1.1-1.9-4-3.8-3.1c-.6.2-1 1-1.5 1.5c-.4.6-.8 1.3-1.3 1.9c-.2.2-.4.6-.2.8c0 .2.2.2.4.2c.4.2.6.2 1 .4c.2 0 .4.2.2.4c0 0 0 .2-.2.2c-1 1.1-2.1 1.9-3.1 2.9c-.2.2-.4.6-.4.8s.2.2.2.4s-.2.2-.4.4c-.4.2-.8.4-1.1.6c-.2.4 0 1.1-.2 1.5c-.2 1.1-.8 1.9-1.3 2.9c-.4.6-.6 1.3-1 1.9c0 .8-.2 1.5.2 2.1c1 1.5 2.9.6 4.4 1.3c.4.2.8.2 1.1.6c.6.6.6 1.7.8 2.3c.2.8.4 1.7.8 2.5c.2 1 .6 2.1.8 2.9c1.9-1.5 3.6-3.1 4.8-5.2c1.5-1.3 2.1-3 2.7-4.7"></path>
               </svg>
-            </div>
-            <div className="text-3xl font-bold text-purple-600"><Counter target={48} /></div>
-            <div className={`${isDark ? 'text-gray-300' : 'text-gray-700'} text-sm mt-1`}>{t('home2.stats.citiesCovered')}</div>
-          </div>
+              ),
+              target: 48,
+              suffix: "",
+              label: t('home2.stats.citiesCovered')
+            }
+          ].map((stat, idx) => (
+            <motion.div 
+              key={idx}
+              className={`${isDark ? 'bg-gray-800' : 'bg-gray-100'} rounded-xl p-6 text-center`}
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              whileHover={{ 
+                y: -10,
+                scale: 1.05,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+            >
+              <motion.div 
+                className="flex items-center justify-center mb-3"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
+                whileHover={{ rotate: 360 }}
+                style={{ transition: "rotate 0.6s ease-in-out" }}
+              >
+                {stat.icon}
+              </motion.div>
+              <motion.div 
+                className="text-3xl font-bold text-purple-600"
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 + 0.3 }}
+              >
+                <Counter target={stat.target} suffix={stat.suffix} />
+              </motion.div>
+              <motion.div 
+                className={`${isDark ? 'text-gray-300' : 'text-gray-700'} text-sm mt-1`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 + 0.4 }}
+              >
+                {stat.label}
+              </motion.div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
       {/* Testimonials */}
       <section className={`${isDark ? 'bg-gray-800' : 'bg-gray-50'} py-20`}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className={`text-3xl md:text-4xl font-light ${isDark ? 'text-white' : 'text-gray-900'}`}>{t('home2.testimonials.title')}</h2>
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className={`text-3xl md:text-4xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`} style={{ fontFamily: 'serif' }}>{t('home2.testimonials.title')}</h2>
             <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} mt-3`}>{t('home2.testimonials.subtitle')}</p>
-          </div>
+          </motion.div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { name: t('home2.testimonials.testimonial1.name'), role: t('home2.testimonials.testimonial1.role'), img: '/images/H2t1.jpg', quote: t('home2.testimonials.testimonial1.quote') },
               { name: t('home2.testimonials.testimonial2.name'), role: t('home2.testimonials.testimonial2.role'), img: '/images/H2t2.jpg', quote: t('home2.testimonials.testimonial2.quote') },
               { name: t('home2.testimonials.testimonial3.name'), role: t('home2.testimonials.testimonial3.role'), img: '/images/H2t3.jpg', quote: t('home2.testimonials.testimonial3.quote') }
             ].map((c, i) => (
-              <motion.div key={c.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.05 }} className={`${isDark ? 'bg-gray-900' : 'bg-white'} p-8 rounded-2xl shadow-lg`}>
-                <div className="flex items-center mb-5">
+              <motion.div 
+                key={c.name} 
+                initial={{ opacity: 0, y: 50, scale: 0.9 }} 
+                whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.6, delay: i * 0.2, ease: "easeOut" }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -15,
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
+                className={`${isDark ? 'bg-gray-900' : 'bg-white'} p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer`}
+              >
+                <motion.div 
+                  className="flex items-center mb-5"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.2 + 0.2 }}
+                >
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, idx) => (
-                      <svg key={idx} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                      <motion.svg 
+                        key={idx} 
+                        className="w-5 h-5 fill-current" 
+                        viewBox="0 0 20 20"
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: i * 0.2 + 0.3 + idx * 0.1 }}
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                      >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 0 0 .95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 0 0-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 0 0-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 0 0-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 0 0 .951-.69l1.07-3.292z" />
-                      </svg>
+                      </motion.svg>
                     ))}
                   </div>
-                </div>
-                <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'} text-lg`}>“{c.quote}”</p>
-                <div className="flex items-center mt-6">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                </motion.div>
+                <motion.p 
+                  className={`${isDark ? 'text-gray-300' : 'text-gray-600'} text-lg`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.2 + 0.3 }}
+                >
+                  "{c.quote}"
+                </motion.p>
+                <motion.div 
+                  className="flex items-center mt-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.2 + 0.4 }}
+                >
+                  <motion.div 
+                    className="w-12 h-12 rounded-full overflow-hidden mr-4"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
-                  </div>
+                  </motion.div>
                   <div>
-                    <div className={`${isDark ? 'text-white' : 'text-gray-900'} font-semibold`}>{c.name}</div>
-                    <div className={`${isDark ? 'text-gray-400' : 'text-gray-500'} text-sm`}>{c.role}</div>
+                    <motion.div 
+                      className={`${isDark ? 'text-white' : 'text-gray-900'} font-semibold`}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {c.name}
+                    </motion.div>
+                    <motion.div 
+                      className={`${isDark ? 'text-gray-400' : 'text-gray-500'} text-sm`}
+                      initial={{ opacity: 0.7 }}
+                      whileHover={{ opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {c.role}
+                    </motion.div>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -265,17 +511,62 @@ export default function Home2() {
 
       {/* CTA: valuation */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0">
+        <motion.div 
+          className="absolute inset-0"
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        >
           <div className="w-full h-full" style={{ backgroundImage: 'url(/images/HOME2CTA.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
+          <motion.div 
+            className="absolute inset-0 bg-black/60"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          ></motion.div>
+        </motion.div>
         <div className="relative max-w-7xl mx-auto px-6 text-center text-white">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="text-3xl md:text-5xl font-light">{t('home2.cta.title')}</h2>
-            <p className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto">{t('home2.cta.subtitle')}</p>
-            <div className="mt-8 flex justify-center">
-              <button onClick={() => navigate('/contact')} className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg">{t('home2.cta.button')}</button>
-            </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 50, scale: 0.9 }} 
+            whileInView={{ opacity: 1, y: 0, scale: 1 }} 
+            viewport={{ once: true }} 
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h2 
+              className="text-3xl md:text-5xl font-bold"
+              style={{ fontFamily: 'serif' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              {t('home2.cta.title')}
+            </motion.h2>
+            <motion.p 
+              className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              {t('home2.cta.subtitle')}
+            </motion.p>
+            <motion.div 
+              className="mt-8 flex justify-center"
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <motion.button 
+                onClick={() => navigate('/contact')} 
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                {t('home2.cta.button')}
+              </motion.button>
+            </motion.div>
           </motion.div>
         </div>
       </section>

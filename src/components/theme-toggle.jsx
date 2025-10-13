@@ -9,7 +9,8 @@ export function ThemeToggle({ className }) {
     <button
       onClick={toggleTheme}
       className={cn(
-        "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50 h-9 w-9 relative",
+        "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors h-9 w-9 relative",
+        theme === "light" && "hover:bg-gray-100 hover:text-gray-900",
         className
       )}
     >

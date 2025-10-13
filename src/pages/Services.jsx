@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { getCurrentUser, logoutUser, isAuthenticated } from '../utils/auth'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import ScrollAnimation from '../components/ScrollAnimation'
+import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 
 export default function Services() {
@@ -78,50 +78,70 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative overflow-hidden h-screen flex items-center justify-center text-center bg-black">
         {/* Background Video */}
-        <video
+        <motion.video
           autoPlay
           loop
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <source src="/Services R.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </motion.video>
 
         {/* Dynamic Overlay */}
-        <div className={`absolute inset-0 ${isDark ? 'bg-black/70' : 'bg-black/60'}`}></div>
+        <motion.div 
+          className={`absolute inset-0 ${isDark ? 'bg-black/70' : 'bg-black/60'}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
 
         {/* Content */}
         <div className="relative z-10 px-6 max-w-4xl">
-          <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
+          <motion.div
+            initial={{ opacity: 0, y: 60, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6 whitespace-nowrap" style={{ fontFamily: 'serif' }}>
               {t('servicesPage.hero.titleLine1')} {t('servicesPage.hero.titleLine2')}
             </h1>
-          </ScrollAnimation>
+          </motion.div>
           
-          <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
             <p className="mt-6 text-xl text-white/90 max-w-3xl mx-auto mb-8 whitespace-nowrap">
               {t('servicesPage.hero.description')}
             </p>
-          </ScrollAnimation>
+          </motion.div>
           
-          <ScrollAnimation animation="fade-in" stagger="scroll-stagger-3">
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          >
             <div className="mt-8 flex gap-6 justify-center items-center flex-wrap">
-              <a
+              <motion.a
                 href="#services"
                 className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 {t('servicesPage.hero.ctaExplore')}
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="/contact"
-                className="bg-transparent text-white px-8 py-4 font-bold text-lg border-2 border-white rounded-lg transition-all duration-300 hover:bg-white hover:text-black"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300"
               >
                 {t('servicesPage.hero.ctaBook')}
-              </a>
+              </motion.a>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
 
@@ -132,15 +152,45 @@ export default function Services() {
       className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-white'}
     >        
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('servicesPage.properties.badge')}</span>
-            <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
+          <motion.div 
+            className="text-center mb-20"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.span 
+              className="text-red-500 text-sm font-semibold tracking-wider uppercase"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              {t('servicesPage.properties.badge')}
+            </motion.span>
+            <motion.h2 
+              className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}
+              style={{ fontFamily: 'serif' }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
               {t('servicesPage.properties.title')}
-            </h2>
-            <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
+            </motion.h2>
+            <motion.p 
+              className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ y: -5 }}
+            >
               {t('servicesPage.properties.subtitle')}
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* Property Listings Grid */}
           <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
@@ -200,38 +250,86 @@ export default function Services() {
                 sqft: '5,200'
               },
             ].map((property, idx) => (
-              <div
+              <motion.div
                 key={property.key}
-                className={isDark ? 'break-inside-avoid bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group' : 'break-inside-avoid bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group'}
-                style={{ animationDelay: `${idx * 150}ms` }}
+                className={isDark ? 'break-inside-avoid bg-gray-800 rounded-2xl shadow-lg overflow-hidden group' : 'break-inside-avoid bg-white rounded-2xl shadow-lg overflow-hidden group'}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)"
+                }}
               >
-                <div className="relative overflow-hidden">
+                <motion.div 
+                  className="relative overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <img
                     src={property.image}
                     alt={t(`servicesPage.properties.items.${property.key}.title`)}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 object-cover"
                   />
-                  <div className="absolute top-4 left-4">
+                  <motion.div 
+                    className="absolute top-4 left-4"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.2 }}
+                    whileHover={{ scale: 1.1 }}
+                  >
                     <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {t(`servicesPage.properties.items.${property.key}.category`)}
                     </span>
-                  </div>
-                  <div className="absolute top-4 right-4">
+                  </motion.div>
+                  <motion.div 
+                    className="absolute top-4 right-4"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                  >
                     <span className="bg-white/90 text-black px-3 py-1 rounded-full text-sm font-bold">
                       {property.price}
                     </span>
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
                 
-                <div className="p-6">
-                  <h3 className={isDark ? 'text-xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors duration-300' : 'text-xl font-bold text-black mb-2 group-hover:text-red-600 transition-colors duration-300'}>
+                <motion.div 
+                  className="p-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.1 + 0.4 }}
+                >
+                  <motion.h3 
+                    className={isDark ? 'text-xl font-bold text-white mb-2' : 'text-xl font-bold text-black mb-2'}
+                    whileHover={{ color: "#dc2626" }}
+                    transition={{ duration: 0.2 }}
+                  >
                     {t(`servicesPage.properties.items.${property.key}.title`)}
-                  </h3>
-                  <p className={isDark ? 'text-gray-300 mb-4 text-sm' : 'text-gray-600 mb-4 text-sm'}>
+                  </motion.h3>
+                  <motion.p 
+                    className={isDark ? 'text-gray-300 mb-4 text-sm' : 'text-gray-600 mb-4 text-sm'}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.5 }}
+                  >
                     📍 {property.location}
-                  </p>
+                  </motion.p>
                   
-                  <div className="flex justify-between items-center mb-4">
+                  <motion.div 
+                    className="flex justify-between items-center mb-4"
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.6 }}
+                  >
                     <div className="flex items-center gap-4 text-sm">
                       <span className={isDark ? 'text-gray-300' : 'text-gray-600'}>
                         🛏️ {property.bedrooms} bed
@@ -243,9 +341,9 @@ export default function Services() {
                         📐 {property.sqft} sqft
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                   
-                  <button
+                  <motion.button
                     onClick={() => {
                       if (property.key === 'luxuryVilla') {
                         navigate('/luxury-villa')
@@ -255,70 +353,156 @@ export default function Services() {
                         navigate('/contact')
                       }
                     }}
-                    className={isDark ? 'w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300' : 'w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors duration-300'}
+                    className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.1 + 0.7 }}
                   >
                     {(property.key === 'luxuryVilla' || property.key === 'estateHome') ? 'View Details' : t('servicesPage.common.viewDetails')}
-                  </button>
-                </div>
-              </div>
+                  </motion.button>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Customer Testimonials */}
-      <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
+      <section className={isDark ? 'py-24 bg-gray-50' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('servicesPage.testimonials.badge')}</span>
-            <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              {t('servicesPage.testimonials.title')}
-            </h2>
-            <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              {t('servicesPage.testimonials.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(() => {
-              const testimonialImages = [
-                "/images/T1R.jpeg",
-                "/images/T2R.jpeg",
-                "/images/T3R.jpeg"
-              ]
-              const testimonials = t('servicesPage.testimonials.items', { returnObjects: true })
-              return testimonials.map((testimonial, idx) => ({ ...testimonial, image: testimonialImages[idx] }))
-            })().map((testimonial, idx) => (
-              <div
-                key={testimonial.name}
-                className={isDark ? 'bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300' : 'bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300'}
-                style={{ animationDelay: `${idx * 200}ms` }}
-              >
-                <div className="flex items-center mb-6">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className={isDark ? 'font-bold text-white' : 'font-bold text-black'}>{testimonial.name}</h4>
-                    <p className={isDark ? 'text-gray-300 text-sm' : 'text-gray-600 text-sm'}>{testimonial.role}</p>
-                  </div>
-                </div>
-                
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                
-                <p className={isDark ? 'text-gray-300 leading-relaxed italic' : 'text-gray-600 leading-relaxed italic'}>
-                  "{testimonial.text}"
-                </p>
+          <div className="grid lg:grid-cols-4 gap-12 items-start">
+            {/* Left Side - Title Section */}
+            <motion.div 
+              className="lg:col-span-1"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="space-y-4">
+                <motion.span 
+                  className="text-gray-500 text-sm font-semibold tracking-wider uppercase"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {t('servicesPage.testimonials.badge')}
+                </motion.span>
+                <motion.h2 
+                  className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
+                  style={{ fontFamily: 'serif' }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {t('servicesPage.testimonials.title')}
+                </motion.h2>
+                <motion.p 
+                  className="text-gray-600 leading-relaxed"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {t('servicesPage.testimonials.subtitle')}
+                </motion.p>
+                {/* Red underline decoration */}
+                <motion.div 
+                  className="w-20 h-1 bg-red-500"
+                  initial={{ width: 0 }}
+                  whileInView={{ width: 80 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  whileHover={{ width: 100 }}
+                ></motion.div>
               </div>
-            ))}
+            </motion.div>
+
+            {/* Right Side - Testimonial Cards */}
+            <motion.div 
+              className="lg:col-span-3"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <div className="grid md:grid-cols-3 gap-6">
+                {(() => {
+                  const testimonialImages = [
+                    "/images/T1R.jpeg",
+                    "/images/T2R.jpeg",
+                    "/images/T3R.jpeg"
+                  ]
+                  const testimonials = t('servicesPage.testimonials.items', { returnObjects: true })
+                  return testimonials.map((testimonial, idx) => ({ ...testimonial, image: testimonialImages[idx] }))
+                })().map((testimonial, idx) => (
+                  <motion.div
+                    key={testimonial.name}
+                    className="bg-white rounded-xl p-6 shadow-md group"
+                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 + idx * 0.1 }}
+                    whileHover={{ 
+                      y: -10,
+                      scale: 1.02,
+                      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)"
+                    }}
+                  >
+                    {/* Profile Image and Info */}
+                    <motion.div 
+                      className="flex items-center gap-3 mb-4"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.4 + idx * 0.1 }}
+                    >
+                      <motion.img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-14 h-14 rounded-full object-cover"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ duration: 0.2 }}
+                      />
+                      <div>
+                        <motion.h4 
+                          className="font-bold text-gray-900"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {testimonial.name}
+                        </motion.h4>
+                        <motion.p 
+                          className="text-gray-500 text-sm"
+                          initial={{ opacity: 0.7 }}
+                          whileHover={{ opacity: 1 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          {testimonial.role}
+                        </motion.p>
+                      </div>
+                    </motion.div>
+                    
+                    {/* Testimonial Text */}
+                    <motion.p 
+                      className="text-gray-600 leading-relaxed text-sm"
+                      initial={{ opacity: 0, y: 15 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.5 + idx * 0.1 }}
+                    >
+                      {testimonial.text}
+                    </motion.p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -326,13 +510,45 @@ export default function Services() {
       {/* Property Gallery */}
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-white'}>
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('servicesPage.gallery.badge')}</span>
-            <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>{t('servicesPage.gallery.title')}</h2>
-            <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.span 
+              className="text-red-500 text-sm font-semibold tracking-wider uppercase"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              whileHover={{ scale: 1.1 }}
+            >
+              {t('servicesPage.gallery.badge')}
+            </motion.span>
+            <motion.h2 
+              className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}
+              style={{ fontFamily: 'serif' }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {t('servicesPage.gallery.title')}
+            </motion.h2>
+            <motion.p 
+              className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ y: -5 }}
+            >
               {t('servicesPage.gallery.subtitle')}
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -345,18 +561,51 @@ export default function Services() {
               '/images/L7.jpg',
               '/images/L8.jpg'
             ].map((src, idx) => (
-              <div key={idx} className="relative group overflow-hidden rounded-2xl shadow-lg">
-                <img
+              <motion.div 
+                key={idx} 
+                className="relative group overflow-hidden rounded-2xl shadow-lg"
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)"
+                }}
+              >
+                <motion.img
                   src={src}
                   alt={t('servicesPage.gallery.alt')}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-64 object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="font-bold text-lg">{t('servicesPage.gallery.propertyTitle', { number: idx + 1 })}</h3>
-                  <p className="text-sm text-red-300">{t('servicesPage.gallery.propertyPrice')}</p>
-                </div>
-              </div>
+                <motion.div 
+                  className="absolute inset-0 bg-black/0"
+                  whileHover={{ backgroundColor: "rgba(0,0,0,0.3)" }}
+                  transition={{ duration: 0.3 }}
+                />
+                <motion.div 
+                  className="absolute bottom-4 left-4 text-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileHover={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.h3 
+                    className="font-bold text-lg"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {t('servicesPage.gallery.propertyTitle', { number: idx + 1 })}
+                  </motion.h3>
+                  <motion.p 
+                    className="text-sm text-red-300"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {t('servicesPage.gallery.propertyPrice')}
+                  </motion.p>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -365,182 +614,367 @@ export default function Services() {
       {/* Why Choose Us */}
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-white'}>
         <div className="container mx-auto px-6">
-          <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('servicesPage.whyChooseUs.badge')}</span>
-            <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              {t('servicesPage.whyChooseUs.title')}
-            </h2>
-            <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              {t('servicesPage.whyChooseUs.subtitle')}
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Images with Overlap */}
+            <motion.div 
+              className="relative h-[600px]"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              {/* Top Large Image */}
+              <motion.div 
+                className="absolute top-0 left-0 w-[70%] h-[55%] overflow-hidden rounded-2xl shadow-xl z-10"
+                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ scale: 1.05, rotate: 2 }}
+              >
+                <img
+                  src="/images/Modern Penthouse.jpg"
+                  alt="Modern Architecture"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              {/* Bottom Right Overlapping Image */}
+              <motion.div 
+                className="absolute bottom-0 right-0 w-[65%] h-[55%] overflow-hidden rounded-2xl shadow-xl z-20"
+                initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                whileHover={{ scale: 1.05, rotate: -2 }}
+              >
+                <img
+                  src="/images/Luxury Villa.jpg"
+                  alt="Luxury Property"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            </motion.div>
+
+            {/* Right Side - Content */}
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              {/* Header */}
+              <motion.div 
+                className="space-y-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <motion.span 
+                  className="text-gray-500 text-sm font-semibold tracking-wider uppercase"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {t('servicesPage.whyChooseUs.badge')}
+                </motion.span>
+                <motion.h2 
+                  className={isDark ? 'text-4xl md:text-5xl font-bold text-white leading-tight' : 'text-4xl md:text-5xl font-bold text-gray-900 leading-tight'}
+                  style={{ fontFamily: 'serif' }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {t('servicesPage.whyChooseUs.title')}
+                </motion.h2>
+                <motion.p 
+                  className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                  whileHover={{ y: -5 }}
+                >
+                  {t('servicesPage.whyChooseUs.subtitle')}
+                </motion.p>
+              </motion.div>
+
+              {/* Feature Boxes */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Market Expertise Feature */}
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <motion.div 
+                    className="flex items-center gap-2"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <motion.div 
+                      className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0"
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.div>
+                    <motion.h3 
+                      className={isDark ? 'text-xl font-bold text-white' : 'text-xl font-bold text-gray-900'}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {t('servicesPage.features.marketExpertise.title')}
+                    </motion.h3>
+                  </motion.div>
+                  <motion.p 
+                    className={isDark ? 'text-gray-400 text-sm' : 'text-gray-600 text-sm'}
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {t('servicesPage.features.marketExpertise.description')}
+                  </motion.p>
+                </motion.div>
+
+                {/* Professional Network Feature */}
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.9 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <motion.div 
+                    className="flex items-center gap-2"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <motion.div 
+                      className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0"
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.div>
+                    <motion.h3 
+                      className={isDark ? 'text-xl font-bold text-white' : 'text-xl font-bold text-gray-900'}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {t('servicesPage.features.professionalNetwork.title')}
+                    </motion.h3>
+                  </motion.div>
+                  <motion.p 
+                    className={isDark ? 'text-gray-400 text-sm' : 'text-gray-600 text-sm'}
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {t('servicesPage.features.professionalNetwork.description')}
+                  </motion.p>
+                </motion.div>
+
+                {/* Personalized Service Feature */}
+                <motion.div 
+                  className="space-y-3"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.0 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <motion.div 
+                    className="flex items-center gap-2"
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <motion.div 
+                      className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0"
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </motion.div>
+                    <motion.h3 
+                      className={isDark ? 'text-xl font-bold text-white' : 'text-xl font-bold text-gray-900'}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {t('servicesPage.features.personalizedService.title')}
+                    </motion.h3>
+                  </motion.div>
+                  <motion.p 
+                    className={isDark ? 'text-gray-400 text-sm' : 'text-gray-600 text-sm'}
+                    initial={{ opacity: 0.8 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {t('servicesPage.features.personalizedService.description')}
+                  </motion.p>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
-
-          {/* Stats Section */}
-          <div className="grid md:grid-cols-4 gap-8 mb-20">
-            <div className="text-center">
-              <div className={isDark ? 'bg-gray-800 rounded-2xl p-8' : 'bg-gray-50 rounded-2xl p-8'}>
-                <div className="text-red-600 text-4xl font-bold mb-2">500+</div>
-                <div className={isDark ? 'text-white font-semibold text-lg' : 'text-black font-semibold text-lg'}>{t('servicesPage.stats.propertiesSold')}</div>
-                <div className={isDark ? 'text-gray-400 text-sm mt-2' : 'text-gray-600 text-sm mt-2'}>{t('servicesPage.stats.propertiesSoldDesc')}</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={isDark ? 'bg-gray-800 rounded-2xl p-8' : 'bg-gray-50 rounded-2xl p-8'}>
-                <div className="text-red-600 text-4xl font-bold mb-2">$2.5B+</div>
-                <div className={isDark ? 'text-white font-semibold text-lg' : 'text-black font-semibold text-lg'}>{t('servicesPage.stats.totalSales')}</div>
-                <div className={isDark ? 'text-gray-400 text-sm mt-2' : 'text-gray-600 text-sm mt-2'}>{t('servicesPage.stats.totalSalesDesc')}</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={isDark ? 'bg-gray-800 rounded-2xl p-8' : 'bg-gray-50 rounded-2xl p-8'}>
-                <div className="text-red-600 text-4xl font-bold mb-2">15+</div>
-                <div className={isDark ? 'text-white font-semibold text-lg' : 'text-black font-semibold text-lg'}>{t('servicesPage.stats.yearsExperience')}</div>
-                <div className={isDark ? 'text-gray-400 text-sm mt-2' : 'text-gray-600 text-sm mt-2'}>{t('servicesPage.stats.yearsExperienceDesc')}</div>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className={isDark ? 'bg-gray-800 rounded-2xl p-8' : 'bg-gray-50 rounded-2xl p-8'}>
-                <div className="text-red-600 text-4xl font-bold mb-2">98%</div>
-                <div className={isDark ? 'text-white font-semibold text-lg' : 'text-black font-semibold text-lg'}>{t('servicesPage.stats.clientSatisfaction')}</div>
-                <div className={isDark ? 'text-gray-400 text-sm mt-2' : 'text-gray-600 text-sm mt-2'}>{t('servicesPage.stats.clientSatisfactionDesc')}</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {/* Market Expertise */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.marketExpertise.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.marketExpertise.description')}
-              </p>
-            </div>
-
-            {/* Professional Network */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.professionalNetwork.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.professionalNetwork.description')}
-              </p>
-            </div>
-
-            {/* Personalized Service */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.personalizedService.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.personalizedService.description')}
-              </p>
-            </div>
-
-            {/* Technology Advantage */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.technologyAdvantage.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.technologyAdvantage.description')}
-              </p>
-            </div>
-
-            {/* Negotiation Skills */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.expertNegotiation.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.expertNegotiation.description')}
-              </p>
-            </div>
-
-            {/* 24/7 Support */}
-            <div className={isDark ? 'bg-gray-800 rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 hover:shadow-red-500/20 transition-all duration-300'}>
-              <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className={isDark ? 'text-xl font-bold text-white mb-4' : 'text-xl font-bold text-black mb-4'}>{t('servicesPage.features.support24.title')}</h3>
-              <p className={isDark ? 'text-gray-300 leading-relaxed' : 'text-gray-600 leading-relaxed'}>
-                {t('servicesPage.features.support24.description')}
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 
       
 
       {/* Our Office Section */}
-      <section className={`py-20 ${isDark ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Image */}
+        <motion.div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/images/67SCTA.jpg')`
+          }}
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        ></motion.div>
+        
+        {/* Overlay */}
+        <motion.div 
+          className="absolute inset-0 bg-black/60"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+        ></motion.div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Content */}
-            <div className="space-y-8">
-              <ScrollAnimation animation="slide-in-left" stagger="scroll-stagger-1">
-                <div className="space-y-4">
-                  <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('servicesPage.office.badge')}</span>
-                  <h2 className={`text-3xl md:text-4xl font-bold uppercase ${isDark ? 'text-white' : 'text-black'}`}>
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <motion.div 
+                className="space-y-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <motion.span 
+                  className="text-red-500 text-sm font-semibold tracking-wider uppercase"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {t('servicesPage.office.badge')}
+                </motion.span>
+                <motion.h2 
+                  className="text-3xl md:text-4xl font-bold uppercase text-white"
+                  style={{ fontFamily: 'serif' }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  whileHover={{ scale: 1.05 }}
+                >
                     {t('servicesPage.office.title')}
-                  </h2>
-                  <h3 className="text-xl md:text-2xl text-red-600 font-semibold">
+                </motion.h2>
+                <motion.h3 
+                  className="text-xl md:text-2xl text-red-400 font-semibold"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  whileHover={{ scale: 1.05 }}
+                >
                     {t('servicesPage.office.subtitle')}
-                  </h3>
-                </div>
-              </ScrollAnimation>
+                </motion.h3>
+              </motion.div>
               
-              <ScrollAnimation animation="slide-in-left" stagger="scroll-stagger-2">
-                <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-black'}`}>
+              <motion.p 
+                className="text-lg leading-relaxed text-gray-200"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                whileHover={{ y: -5 }}
+              >
                   {t('servicesPage.office.description')}
-                </p>
-              </ScrollAnimation>
+              </motion.p>
               
-              <ScrollAnimation animation="slide-in-left" stagger="scroll-stagger-3">
-                <a
+              <motion.a
                   href="/contact"
-                  className="btn-animate-strong rounded-lg px-8 py-4 font-bold text-lg transition-all duration-300 bg-red-500 text-white hover:bg-red-600 shadow-lg hover:shadow-xl mt-8 inline-block"
+                  className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mt-8 inline-block"
+                initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.7 }}
                 >
 {t('servicesPage.office.ctaReserve')}
-                </a>
-              </ScrollAnimation>
-            </div>
+              </motion.a>
+            </motion.div>
 
             {/* Right Side - Office Hours */}
-            <ScrollAnimation animation="slide-in-right" stagger="scroll-stagger-1">
-              <div className={`${isDark ? 'bg-gray-800 rounded-2xl p-8' : 'bg-gray-50 rounded-2xl p-8'}`}>
-                <h3 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-black'}`}>{t('servicesPage.office.hoursTitle')}</h3>
+            <motion.div 
+              className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)"
+              }}
+            >
+              <motion.h3 
+                className="text-2xl font-bold mb-6 text-white"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {t('servicesPage.office.hoursTitle')}
+              </motion.h3>
                 <div className="space-y-4">
                   {t('servicesPage.office.hours', { returnObjects: true }).map((schedule, idx) => (
-                    <div key={idx} className={`flex justify-between items-center py-3 border-b ${isDark ? 'border-gray-700 last:border-b-0' : 'border-gray-200 last:border-b-0'}`}>
-                      <span className={`font-medium ${isDark ? 'text-white' : 'text-black'}`}>{schedule.day}</span>
-                      <span className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{schedule.hours}</span>
-                    </div>
-                  ))}
-                </div>
+                  <motion.div 
+                    key={idx} 
+                    className="flex justify-between items-center py-3 border-b border-white/20 last:border-b-0"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.5 + idx * 0.1 }}
+                    whileHover={{ x: 5 }}
+                  >
+                    <motion.span 
+                      className="font-medium text-white"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {schedule.day}
+                    </motion.span>
+                    <motion.span 
+                      className="text-gray-200"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {schedule.hours}
+                    </motion.span>
+                  </motion.div>
+                ))}
               </div>
-            </ScrollAnimation>
+            </motion.div>
           </div>
         </div>
       </section>

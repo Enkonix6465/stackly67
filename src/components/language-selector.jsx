@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Globe } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
+import { useTheme } from './theme-provider';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,21 +18,33 @@ const languages = [
 export function LanguageSelector({ variant = 'default' }) {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage } = useLanguage();
+  const { theme } = useTheme();
 
   const currentLanguageData = languages.find(lang => lang.code === currentLanguage) || languages[0];
   
   // Different styles for different variants
-  const buttonStyles = variant === 'login' 
-    ? "inline-flex items-center gap-2 hover:text-gray-700 dark:hover:text-white text-gray-600 dark:text-gray-300 transition-colors px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-    : "inline-flex items-center gap-2 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5";
+  const getButtonStyles = () => {
+    if (variant === 'login') {
+      return `inline-flex items-center gap-2 transition-colors px-3 py-2 rounded-md ${
+        theme === 'dark' 
+          ? 'text-white hover:text-red-300 hover:bg-white/10' 
+          : 'text-gray-700 hover:text-red-600 hover:bg-gray-200'
+      }`;
+    }
+    return "inline-flex items-center gap-2 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors px-3 py-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5";
+  };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className={buttonStyles}>
-          <Globe className="h-4 w-4" />
-          <span className="text-sm">{currentLanguageData.flag}</span>
-          <span className="text-sm">{t('common.language')}</span>
+        <button className={getButtonStyles()}>
+          <Globe className="h-5 w-5" />
+          {variant !== 'login' && variant !== 'icon-only' && (
+            <>
+              <span className="text-sm">{currentLanguageData.flag}</span>
+              <span className="text-sm">{t('common.language')}</span>
+            </>
+          )}
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">

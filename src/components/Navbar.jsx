@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from './dropdown-menu'
 import { logoutUser } from '../utils/auth'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, LogOut } from 'lucide-react'
 
 
 export default function Navbar({ user }) {
@@ -130,7 +130,7 @@ export default function Navbar({ user }) {
         {/* Right Side - Fixed */}
         <div className="flex items-center gap-4">
           {/* Language Selector - Fixed Right */}
-          <LanguageSelector />
+          <LanguageSelector variant="icon-only" />
           
           {/* Theme Toggle */}
           <ThemeToggle />
@@ -150,8 +150,12 @@ export default function Navbar({ user }) {
           </div>
           
           {/* Logout Button - Right Corner */}
-          <button onClick={handleLogout} className="hover:text-red-500 dark:hover:text-red-400 transition-colors">
-            {t('nav.logout')}
+          <button 
+            onClick={handleLogout} 
+            className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+            aria-label="Logout"
+          >
+            <LogOut className="h-5 w-5" />
           </button>
         </div>
       </nav>

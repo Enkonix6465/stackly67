@@ -30,14 +30,15 @@
     "viewDetails": "View Details"
   },
   "login": {
-    "welcomeBack": "Welcome Back",
+    "welcomeBack": "Welcome",
     "loginToContinue": "Please sign in to your account to continue",
     "email": "Email Address",
     "emailPlaceholder": "Enter your email address",
     "password": "Password",
     "passwordPlaceholder": "Enter your password",
     "signIn": "Sign In",
-    "forgotPassword": "Forgot your password?",
+    "forgotPasswordText": "Forgot your password?",
+    "reset": "Reset",
     "noAccount": "Don't have an account?",
     "register": "Sign up here",
     "errorEmailPassword": "Please enter both email and password"
@@ -498,6 +499,33 @@
       "subtitle": "Your Gateway to Luxury Living",
       "description": "Experience the finest in real estate with our exclusive collection of luxury properties. From modern apartments to sprawling estates, we offer exceptional properties in the world's most prestigious locations.",
       "viewButton": "Explore Properties"
+    },
+    "professionalStats": {
+      "badge": "REAL ESTATE & PROPERTY",
+      "title": "We Are Professional Real Estate Excellence",
+      "description": "With years of expertise in luxury real estate, we deliver exceptional properties that exceed expectations. From modern apartments to prestigious villas, we build dreams and create lasting value for our clients.",
+      "buttons": {
+        "getQuotation": "Get a Quotation",
+        "ourServices": "Our Services"
+      },
+      "stats": {
+        "luxuryVillas": {
+          "label": "Luxury Villas",
+          "description": "Premium properties"
+        },
+        "apartments": {
+          "label": "Apartment Buildings",
+          "description": "Modern living spaces"
+        },
+        "commercial": {
+          "label": "Commercial Properties",
+          "description": "Business spaces"
+        },
+        "familyHomes": {
+          "label": "Family Homes",
+          "description": "Dream residences"
+        }
+      }
     },
     "whyChooseUs": {
       "title": "Why Choose Our Real Estate Services",
@@ -1168,9 +1196,67 @@
     "whyChooseUs": {
       "tagline": "Why Choose Us",
       "title": "Trusted Real Estate Experts",
+      "mainTitle": "Best Reasoned For Choose Our Service",
       "description1": "We provide comprehensive real estate services with a focus on client satisfaction and professional excellence.",
       "description2": "Our team of experts has years of experience in both local and international real estate markets.",
-      "scheduleConsultationButton": "Schedule Consultation"
+      "scheduleConsultationButton": "Schedule Consultation",
+      "feature1": {
+        "title": "Luxury Properties",
+        "description": "Access to exclusive luxury properties in prime locations. We curate the finest real estate portfolios tailored to your lifestyle."
+      },
+      "feature2": {
+        "title": "Expert Agents",
+        "description": "Professional real estate consultants with decades of experience. Personalized guidance throughout your buying journey."
+      },
+      "feature3": {
+        "title": "Trusted Transactions",
+        "description": "Secure and transparent property deals with full legal compliance. Your investment is protected every step of the way."
+      },
+      "feature4": {
+        "title": "Smart Investment",
+        "description": "Strategic property investment opportunities with high ROI potential. Build your real estate portfolio with confidence."
+      }
+    },
+    "marketInsights": {
+      "tagline": "Market Insights",
+      "title": "Real Estate Market Overview",
+      "subtitle": "Stay informed with the latest trends, statistics, and insights from the real estate market",
+      "stats": {
+        "stat1": {
+          "value": "15.8%",
+          "label": "Market Growth",
+          "description": "Year-over-year increase"
+        },
+        "stat2": {
+          "value": "2,450+",
+          "label": "Properties Listed",
+          "description": "Active listings available"
+        },
+        "stat3": {
+          "value": "$2.5M",
+          "label": "Average Price",
+          "description": "Luxury property segment"
+        },
+        "stat4": {
+          "value": "98%",
+          "label": "Client Satisfaction",
+          "description": "Based on client reviews"
+        }
+      },
+      "trends": {
+        "trend1": {
+          "title": "Rising Demand",
+          "description": "Luxury properties in prime locations are experiencing unprecedented demand with prices rising steadily."
+        },
+        "trend2": {
+          "title": "Urban Living",
+          "description": "Downtown condos and penthouses continue to attract young professionals seeking convenience and lifestyle."
+        },
+        "trend3": {
+          "title": "Smart Homes",
+          "description": "Properties with smart technology and eco-friendly features are commanding premium prices in the market."
+        }
+      }
     },
     "testimonials": {
       "tagline": "Client Testimonials",
@@ -1885,14 +1971,14 @@
   "aboutPage": {
     "hero": {
       "title": "About Our Real Estate Excellence",
-      "subtitle": "Discover the story behind our commitment to exceptional real estate services and client satisfaction",
+      "subtitle": "Discover the story behind our commitment to exceptional real estate services",
       "exploreButton": "Explore Our Story",
       "browseButton": "Browse Properties"
     },
     "journey": {
       "tagline": "Our Journey",
       "title": "Building Excellence Since 2006",
-      "subtitle": "From humble beginnings to becoming a trusted name in luxury real estate, our journey has been marked by dedication, integrity, and unwavering commitment to our clients.",
+      "subtitle": "From humble beginnings to becoming a trusted name in luxury real estate",
       "timeline": {
         "foundation": {
           "year": "2006",
