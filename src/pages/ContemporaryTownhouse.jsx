@@ -48,7 +48,7 @@ export default function ContemporaryTownhouse() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/67S2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -109,10 +109,10 @@ export default function ContemporaryTownhouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Urban Prime Locations
+                {t('contemporaryTownhousePage.features.items.primeUrbanLocation.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Located in the heart of vibrant urban districts with easy access to all city amenities.
+                {t('contemporaryTownhousePage.features.items.primeUrbanLocation.description')}
               </p>
             </div>
 
@@ -132,10 +132,10 @@ export default function ContemporaryTownhouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Modern Architecture
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Contemporary design with clean lines and premium finishes throughout.
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.description')}
               </p>
             </div>
 
@@ -153,10 +153,10 @@ export default function ContemporaryTownhouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Move-in Ready
+                {t('contemporaryTownhousePage.features.items.energyEfficient.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Turnkey properties ready for immediate occupancy with all modern conveniences.
+                {t('contemporaryTownhousePage.features.items.energyEfficient.description')}
               </p>
             </div>
 
@@ -220,10 +220,10 @@ export default function ContemporaryTownhouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Advanced Security
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                State-of-the-art security systems with 24/7 monitoring for peace of mind.
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.description')}
               </p>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function ContemporaryTownhouse() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                  Floor Plan
+                  {t('contemporaryTownhousePage.investment.collection.specs.sqft', 'Sq Ft')}
                 </div>
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function ContemporaryTownhouse() {
             {/* Property Details */}
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                Experience contemporary urban living in this meticulously designed townhouse. Every detail has been carefully crafted to provide modern comfort and style.
+                {t('contemporaryTownhousePage.features.subtitle')}
               </p>
 
               {/* Property Specifications */}
@@ -282,7 +282,7 @@ export default function ContemporaryTownhouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2,800</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Sq Ft
+                        {t('contemporaryTownhousePage.investment.collection.specs.sqft')}
                       </div>
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export default function ContemporaryTownhouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bedrooms
+                        {t('contemporaryTownhousePage.investment.collection.specs.bedrooms')}
                       </div>
                     </div>
                   </div>
@@ -384,7 +384,7 @@ export default function ContemporaryTownhouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3.5</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bathrooms
+                        {t('contemporaryTownhousePage.investment.collection.specs.bathrooms')}
                       </div>
                     </div>
                   </div>
@@ -413,7 +413,7 @@ export default function ContemporaryTownhouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Parking
+                        {t('contemporaryTownhousePage.investment.collection.specs.parking')}
                       </div>
                     </div>
                   </div>
@@ -422,12 +422,12 @@ export default function ContemporaryTownhouse() {
 
               {/* Key Features List */}
               <div className="space-y-3 mb-8">
-                {[
-                  'Open-concept floor plan with high ceilings',
-                  'Chef\'s kitchen with premium appliances',
-                  'Private rooftop terrace with city views',
-                  'Smart home automation throughout',
-                  'Walk-in closets in all bedrooms'
+                {[ 
+                  t('contemporaryTownhousePage.features.items.luxuryFinishes.description'),
+                  t('contemporaryTownhousePage.gallery.items.gourmetKitchen.title'),
+                  t('contemporaryTownhousePage.gallery.items.privateTerrace.title'),
+                  t('contemporaryTownhousePage.features.items.smartHomeTechnology.title'),
+                  t('contemporaryTownhousePage.features.items.modernArchitecture.title')
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -443,7 +443,7 @@ export default function ContemporaryTownhouse() {
               {/* CTA Button */}
               <div className="flex flex-wrap gap-4">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Schedule Tour
+                  {t('contemporaryTownhousePage.hero.ctaSchedule')}
                 </button>
               </div>
             </div>
@@ -458,12 +458,12 @@ export default function ContemporaryTownhouse() {
       >
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Premium Features</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Urban Living Redefined
+              {t('contemporaryTownhousePage.features.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Discover the exceptional amenities and features that make these townhouses stand out
+              {t('contemporaryTownhousePage.features.subtitle')}
             </p>
           </div>
 
@@ -473,23 +473,23 @@ export default function ContemporaryTownhouse() {
               {[
                 { 
                   src: '/images/67S21.jpg', 
-                  title: 'Modern Facade',
-                  subtitle: 'Contemporary Design'
+                  title: t('contemporaryTownhousePage.features.items.modernArchitecture.title'),
+                  subtitle: t('contemporaryTownhousePage.features.items.luxuryFinishes.description')
                 },
                 { 
                   src: '/images/67S22.jpg', 
-                  title: 'Open Living Spaces',
-                  subtitle: 'Light-Filled Interiors'
+                  title: t('contemporaryTownhousePage.features.items.primeUrbanLocation.title'),
+                  subtitle: t('contemporaryTownhousePage.features.items.primeUrbanLocation.description')
                 },
                 { 
                   src: '/images/67S23.jpg', 
-                  title: 'Designer Kitchen',
-                  subtitle: 'Premium Finishes'
+                  title: t('contemporaryTownhousePage.gallery.items.gourmetKitchen.title'),
+                  subtitle: t('contemporaryTownhousePage.features.items.luxuryFinishes.description')
                 },
                 { 
                   src: '/images/67S24.jpg', 
-                  title: 'Rooftop Terrace',
-                  subtitle: 'City Views'
+                  title: t('contemporaryTownhousePage.gallery.items.privateTerrace.title'),
+                  subtitle: t('contemporaryTownhousePage.gallery.items.privateTerrace.category')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -511,7 +511,7 @@ export default function ContemporaryTownhouse() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore', 'View More')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -532,12 +532,12 @@ export default function ContemporaryTownhouse() {
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Visual Tour</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
-              Explore Our Collection
+              {t('contemporaryTownhousePage.gallery.title')}
             </h2>
             <p className={isDark ? 'text-lg text-gray-400 max-w-2xl mx-auto' : 'text-lg text-gray-600 max-w-2xl mx-auto'}>
-              Take a virtual tour through our stunning contemporary townhouse properties
+              {t('contemporaryTownhousePage.gallery.subtitle')}
             </p>
           </div>
 
@@ -545,27 +545,27 @@ export default function ContemporaryTownhouse() {
             {[
               { 
                 src: '/images/67S25.jpg', 
-                title: 'Modern Exterior'
+                title: t('contemporaryTownhousePage.gallery.items.modernExterior.title')
               },
               { 
                 src: '/images/67S26.jpg', 
-                title: 'Living Room'
+                title: t('contemporaryTownhousePage.gallery.items.openLivingSpace.title')
               },
               { 
                 src: '/images/67S27.jpg', 
-                title: 'Designer Kitchen'
+                title: t('contemporaryTownhousePage.gallery.items.gourmetKitchen.title')
               },
               { 
                 src: '/images/67S28.jpg', 
-                title: 'Master Bedroom'
+                title: t('contemporaryTownhousePage.gallery.items.masterSuite.title')
               },
               { 
                 src: '/images/67S29.jpg', 
-                title: 'Rooftop Terrace'
+                title: t('contemporaryTownhousePage.gallery.items.privateTerrace.title')
               },
               { 
                 src: '/images/67S210.jpg', 
-                title: 'Spa Bathroom'
+                title: t('contemporaryTownhousePage.gallery.items.spaLikeBathroom.title')
               }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
@@ -596,12 +596,12 @@ export default function ContemporaryTownhouse() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Prime Urban Locations</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Live in the Heart of the City
+              {t('contemporaryTownhousePage.location.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Explore our exclusive townhouse locations in the most sought-after urban neighborhoods
+              {t('contemporaryTownhousePage.location.subtitle')}
             </p>
           </div>
 
@@ -617,31 +617,31 @@ export default function ContemporaryTownhouse() {
                   {[
                     {
                       image: '/images/Contemporary Townhouse.jpg',
-                      title: 'Brooklyn Heights',
-                      subtitle: 'New York, NY',
-                      description: 'Experience historic charm meets modern luxury in one of Brooklyn\'s most prestigious neighborhoods with stunning Manhattan skyline views.',
-                      highlights: ['Promenade Views', 'Historic District', 'A+ Schools', 'Subway Access']
+                      titleKey: 'contemporaryTownhousePage.location.locations.brooklynHeights.title',
+                      subtitleKey: 'contemporaryTownhousePage.location.locations.brooklynHeights.subtitle',
+                      descriptionKey: 'contemporaryTownhousePage.location.locations.brooklynHeights.description',
+                      highlightsKey: 'contemporaryTownhousePage.location.locations.brooklynHeights.highlights'
                     },
                     {
                       image: '/images/Modern Penthouse.jpg',
-                      title: 'Silver Lake',
-                      subtitle: 'Los Angeles, CA',
-                      description: 'Trendy hillside neighborhood offering artistic culture, boutique shops, and panoramic views of downtown LA and the Hollywood sign.',
-                      highlights: ['Reservoir Park', 'Art Scene', 'Sunset Views', 'Hipster Culture']
+                      titleKey: 'contemporaryTownhousePage.location.locations.silverLake.title',
+                      subtitleKey: 'contemporaryTownhousePage.location.locations.silverLake.subtitle',
+                      descriptionKey: 'contemporaryTownhousePage.location.locations.silverLake.description',
+                      highlightsKey: 'contemporaryTownhousePage.location.locations.silverLake.highlights'
                     },
                     {
                       image: '/images/Luxury Condo.jpg',
-                      title: 'South Loop',
-                      subtitle: 'Chicago, IL',
-                      description: 'Vibrant urban living steps from Museum Campus, lakefront parks, and world-class dining in Chicago\'s fastest-growing neighborhood.',
-                      highlights: ['Museum Campus', 'Lake Michigan', 'Grant Park', 'Loop Access']
+                      titleKey: 'contemporaryTownhousePage.location.locations.southLoop.title',
+                      subtitleKey: 'contemporaryTownhousePage.location.locations.southLoop.subtitle',
+                      descriptionKey: 'contemporaryTownhousePage.location.locations.southLoop.description',
+                      highlightsKey: 'contemporaryTownhousePage.location.locations.southLoop.highlights'
                     },
                     {
                       image: '/images/Waterfront Mansion.jpg',
-                      title: 'Mission District',
-                      subtitle: 'San Francisco, CA',
-                      description: 'San Francisco\'s most dynamic neighborhood featuring colorful murals, diverse cuisine, and unbeatable tech industry proximity.',
-                      highlights: ['Tech Hub', 'Street Art', 'Food Scene', 'BART Station']
+                      titleKey: 'contemporaryTownhousePage.location.locations.missionDistrict.title',
+                      subtitleKey: 'contemporaryTownhousePage.location.locations.missionDistrict.subtitle',
+                      descriptionKey: 'contemporaryTownhousePage.location.locations.missionDistrict.description',
+                      highlightsKey: 'contemporaryTownhousePage.location.locations.missionDistrict.highlights'
                     }
                   ].map((location, idx) => (
                     <div key={idx} className="w-full flex-shrink-0 relative">
@@ -651,13 +651,13 @@ export default function ContemporaryTownhouse() {
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                           <div className="max-w-2xl">
-                            <h3 className="text-4xl font-bold mb-2">{location.title}</h3>
-                            <p className="text-xl text-red-300 mb-4">{location.subtitle}</p>
-                            <p className="text-lg mb-6 opacity-90">{location.description}</p>
+                            <h3 className="text-4xl font-bold mb-2">{t(location.titleKey)}</h3>
+                            <p className="text-xl text-red-300 mb-4">{t(location.subtitleKey)}</p>
+                            <p className="text-lg mb-6 opacity-90">{t(location.descriptionKey)}</p>
                             
                             {/* Highlights */}
                             <div className="flex flex-wrap gap-3">
-                              {location.highlights.map((highlight, hIdx) => (
+                              {t(location.highlightsKey, { returnObjects: true }).map((highlight, hIdx) => (
                                 <span key={hIdx} className="bg-red-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                                   {highlight}
                                 </span>
@@ -711,12 +711,12 @@ export default function ContemporaryTownhouse() {
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Smart Investment</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Investment Opportunity
+              {t('contemporaryTownhousePage.investment.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Invest in prime urban real estate with exceptional returns and long-term value
+              {t('contemporaryTownhousePage.investment.subtitle')}
             </p>
           </div>
 
@@ -726,31 +726,31 @@ export default function ContemporaryTownhouse() {
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10">
-                  <h3 className="text-4xl font-bold mb-4">Featured Collection</h3>
-                  <div className="text-7xl font-bold mb-4">$1.25M</div>
-                  <p className="text-xl text-red-100 mb-8">Brooklyn Heights Signature Townhouse</p>
+                  <h3 className="text-4xl font-bold mb-4">{t('contemporaryTownhousePage.investment.collection.title')}</h3>
+                  <div className="text-7xl font-bold mb-4">{t('contemporaryTownhousePage.investment.collection.price')}</div>
+                  <p className="text-xl text-red-100 mb-8">{t('contemporaryTownhousePage.investment.collection.subtitle')}</p>
                   
                   <div className="grid md:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2,800</div>
-                      <div className="text-sm text-red-100">Sq Ft</div>
+                      <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.sqft')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">3</div>
-                      <div className="text-sm text-red-100">Bedrooms</div>
+                      <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">3.5</div>
-                      <div className="text-sm text-red-100">Bathrooms</div>
+                      <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2</div>
-                      <div className="text-sm text-red-100">Parking</div>
+                      <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.parking')}</div>
                     </div>
                   </div>
                   
                   <button className="bg-white text-red-600 px-8 py-4 font-bold text-lg rounded-xl hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                    Schedule Viewing
+                    {t('contemporaryTownhousePage.investment.collection.cta')}
                   </button>
                 </div>
               </div>
@@ -762,39 +762,39 @@ export default function ContemporaryTownhouse() {
             {[
               {
                 icon: "📈",
-                title: "Strong ROI",
-                value: "8.5%",
-                description: "Average annual appreciation in urban markets"
+                titleKey: 'contemporaryTownhousePage.investment.benefits.strongROI.title',
+                valueKey: 'contemporaryTownhousePage.investment.benefits.strongROI.value',
+                descriptionKey: 'contemporaryTownhousePage.investment.benefits.strongROI.description'
               },
               {
                 icon: "🏆",
-                title: "Prime Location",
-                value: "Top 5%",
-                description: "Located in most desirable neighborhoods"
+                titleKey: 'contemporaryTownhousePage.investment.benefits.primeLocation.title',
+                valueKey: 'contemporaryTownhousePage.investment.benefits.primeLocation.value',
+                descriptionKey: 'contemporaryTownhousePage.investment.benefits.primeLocation.description'
               },
               {
                 icon: "💰",
-                title: "Tax Advantages",
-                value: "Up to 30%",
-                description: "Potential tax savings and deductions"
+                titleKey: 'contemporaryTownhousePage.investment.benefits.taxAdvantages.title',
+                valueKey: 'contemporaryTownhousePage.investment.benefits.taxAdvantages.value',
+                descriptionKey: 'contemporaryTownhousePage.investment.benefits.taxAdvantages.description'
               },
               {
                 icon: "🌍",
-                title: "Urban Demand",
-                value: "92%",
-                description: "High occupancy rate in city centers"
+                titleKey: 'contemporaryTownhousePage.investment.benefits.urbanDemand.title',
+                valueKey: 'contemporaryTownhousePage.investment.benefits.urbanDemand.value',
+                descriptionKey: 'contemporaryTownhousePage.investment.benefits.urbanDemand.description'
               }
             ].map((benefit, idx) => (
               <div key={idx} className={isDark ? 'bg-gray-800 rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300 shadow-lg'}>
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h4 className={isDark ? 'text-xl font-bold text-white mb-2' : 'text-xl font-bold text-black mb-2'}>
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h4>
                 <div className={isDark ? 'text-3xl font-bold text-red-500 mb-2' : 'text-3xl font-bold text-red-600 mb-2'}>
-                  {benefit.value}
+                  {t(benefit.valueKey)}
                 </div>
                 <p className={isDark ? 'text-gray-300 text-sm' : 'text-gray-600 text-sm'}>
-                  {benefit.description}
+                  {t(benefit.descriptionKey)}
                 </p>
               </div>
             ))}
@@ -808,18 +808,18 @@ export default function ContemporaryTownhouse() {
         className="relative min-h-screen flex items-center justify-center"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/Contemporary Townhouse.jpg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/67S20.jpg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-            Ready to Find Your Dream Townhouse?
+            {t('contemporaryTownhousePage.contact.title')}
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-            Schedule a private tour or speak with our real estate experts to learn more about these exclusive properties
+            {t('contemporaryTownhousePage.contact.subtitle')}
           </p>
           
           <div className="flex justify-center">
@@ -827,7 +827,7 @@ export default function ContemporaryTownhouse() {
               onClick={() => navigate('/contact')}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Contact Us Today
+              {t('contemporaryTownhousePage.contact.cta.contactUs')}
             </button>
           </div>
         </div>

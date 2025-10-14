@@ -119,14 +119,59 @@
       "ctaExplore": "חקור תכונות",
       "ctaSchedule": "תזמן צפייה"
     },
+    "realEstateFeatures": {
+      "items": {
+        "homeLocations": {
+          "title": "מיקומי בתים:",
+          "description": "דויס אוטה אירורה דולור אין רפ אין וולופטטה וליט אסה סילום דולורה יו fugiat nulla pariatur."
+        },
+        "structure": {
+          "title": "מבנה:",
+          "description": "דויס אוטה אירורה דולור אין רפ אין וולופטטה וליט אסה סילום דולורה יו fugiat nulla pariatur."
+        },
+        "moveInNow": {
+          "title": "כניסה מיידית:",
+          "description": "דויס אוטה אירורה דולור אין רפ אין וולופטטה וליט אסה סילום דולורה יו fugiat nulla pariatur."
+        },
+        "homeSecurity": {
+          "title": "אבטחת בית:",
+          "description": "דויס אוטה אירורה דולור אין רפ אין וולופטטה וליט אסה סילום דולורה יו fugiat nulla pariatur."
+        }
+      }
+    },
+    "floorPlan": {
+      "badge": "תכנית קומה",
+      "description": "גלה את השילוב המושלם של אלגנטיות ופונקציונליות בוילה יוקרתית זו המעוצבת בקפידה. כל פרט תוכנן בקפידה כדי לספק חווית מגורים אולטימטיבית.",
+      "specs": {
+        "sqft": "רגל מרובע",
+        "bedrooms": "חדרי שינה",
+        "bathrooms": "חדרי רחצה",
+        "garage": "חניית רכב"
+      },
+      "features": {
+        "openConcept": "חלל מגורים ואוכל בקונספט פתוח",
+        "gourmetKitchen": "מטבח גורמה עם מכשירים פרימיום",
+        "masterSuite": "סוויטת מאסטר עם חדר רחצה כמו ספא",
+        "smartHome": "מערכת אוטומציה חכמה לבית",
+        "outdoorSpace": "מרחב מגורים חיצוני נרחב"
+      },
+      "cta": {
+        "schedule": "תזמן סיור"
+      }
+    },
     "features": {
       "badge": "תכונות פרימיום",
       "title": "שירותי יוקרה חסרי תחרות",
       "subtitle": "כל פרט עוצב בקפידה כדי לספק את החיים היוקרתיים האולטימטיביים",
+      "viewMore": "צפה עוד",
       "items": {
         "infinityPool": {
           "title": "בריכה אינסופית",
           "description": "בריכה אינסופית מרהיבה עם נופים פנורמיים ותכונות ספא משולבות"
+        },
+        "masterSuite": {
+          "title": "סוויטת מאסטר",
+          "description": "סוויטה ראשית עם חדר רחצה כמו ספא ולאונג' פרטי"
         },
         "wineCellar": {
           "title": "מרתף יין",

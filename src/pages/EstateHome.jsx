@@ -42,8 +42,8 @@ export default function EstateHome() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/VILLA.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/Estate Home.mp4" type="video/mp4" />
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -53,13 +53,13 @@ export default function EstateHome() {
         <div className="relative z-10 px-6 max-w-4xl">
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6" style={{ fontFamily: 'serif' }}>
-              Estate Home
+              {t('nav.estateHome')}
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <p className="mt-6 text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Discover magnificent estate homes offering unparalleled luxury and privacy in prestigious locations.
+              {t('luxuryVillasPage.location.subtitle')}
             </p>
           </ScrollAnimation>
           
@@ -69,14 +69,14 @@ export default function EstateHome() {
                 href="#features"
                 className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden"
               >
-                <span className="relative z-10">Explore Features</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaExplore')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a
                 href="#contact"
                 className="group bg-transparent text-white px-8 py-4 font-bold text-lg border-2 border-white rounded-lg transition-all duration-300 hover:bg-white hover:text-black relative overflow-hidden"
               >
-                <span className="relative z-10">Schedule Viewing</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaSchedule')}</span>
                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </a>
             </div>
@@ -104,10 +104,10 @@ export default function EstateHome() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Estate Living
+                {t('luxuryVillasPage.location.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Grand estate homes in the world's most prestigious communities
+                {t('luxuryVillasPage.location.subtitle')}
               </p>
             </div>
 
@@ -121,16 +121,16 @@ export default function EstateHome() {
                       <path fill="#83cbff" d="M27 14h-1c-.55 0-1-.45-1-1v-1c0-.55.45-1 1-1h1c.55 0 1 .45 1 1v1c0 .56-.45 1-1 1m1 4v-1c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1c.55 0 1-.44 1-1m0 5v-1c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1c.55 0 1-.44 1-1M7 22v1c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1v-1c0-.55.45-1 1-1h1c.55 0 1 .45 1 1M6 11H5c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1m0 5H5c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1"></path>
                       <path fill="#d3d3d3" d="M26 30h-7.013l-3.016-1.73L12.956 30H6V4.46C6 3.1 7.1 2 8.46 2h15.08C24.9 2 26 3.1 26 4.46z"></path>
                       <path fill="#1c1c1c" d="M19 30h-6v-3.75c0-.69.56-1.25 1.25-1.25h3.5c.69 0 1.26.56 1.26 1.26V30z"></path>
-                      <path fill="#83cbff" d="M14.5 18h-3c-.27 0-.5-.22-.5-.5v-2.01c0-.27.22-.5.5-.5h3.01c.27 0 .5.22.5.5v2.01a.51.51 0 0 1-.51.5m6.5-.49V15.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6 5V20.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m6 0V20.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6-15V5.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m6 0V5.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6 5V10.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m6 0V10.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5"></path>
+                      <path fill="#83cbff" d="M14.5 18h-3c-.27 0-.5-.22-.5-.5v-2.01c0-.27.22-.5.5-.5h3.01c.27 0 .5.22.5.5v2.01a.51.51 0 0 1-.51.5m6.5-.49V15.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6 5V20.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m6 0V20.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6-15V5.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m6 0V5.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5m-6 5V10.5c0-.27-.22-.5-.5-.5h-3c-.27 0-.5.22-.5.5v2.01c0 .27.22.5.5.5h3.01c.27-.01.49-.23.49-.5"></path>
                     </g>
                   </svg>
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Timeless Architecture
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Classic design with premium craftsmanship and attention to detail
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.description')}
               </p>
             </div>
 
@@ -148,10 +148,10 @@ export default function EstateHome() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Private Grounds
+                {t('luxuryVillasPage.features.items.landscapedGardens.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Expansive landscaped grounds with gardens and outdoor amenities
+                {t('luxuryVillasPage.features.items.landscapedGardens.description')}
               </p>
             </div>
 
@@ -215,10 +215,10 @@ export default function EstateHome() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Security & Privacy
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Advanced security systems with 24/7 monitoring and gated access
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.description')}
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function EstateHome() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                  Floor Plan
+                  {t('luxuryVillasPage.floorPlan.badge')}
                 </div>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function EstateHome() {
             {/* Property Details */}
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                Experience the grandeur of estate living with this magnificent property. Every detail has been meticulously crafted to provide the ultimate in elegance, privacy, and comfort.
+                {t('luxuryVillasPage.floorPlan.description')}
               </p>
 
               {/* Property Specifications */}
@@ -277,7 +277,7 @@ export default function EstateHome() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>6,500</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Sq Ft
+                        {t('luxuryVillasPage.floorPlan.specs.sqft')}
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function EstateHome() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>6</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bedrooms
+                        {t('luxuryVillasPage.floorPlan.specs.bedrooms')}
                       </div>
                     </div>
                   </div>
@@ -379,7 +379,7 @@ export default function EstateHome() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>8</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bathrooms
+                        {t('luxuryVillasPage.floorPlan.specs.bathrooms')}
                       </div>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export default function EstateHome() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Car Garage
+                        {t('luxuryVillasPage.floorPlan.specs.garage')}
                       </div>
                     </div>
                   </div>
@@ -418,11 +418,11 @@ export default function EstateHome() {
               {/* Key Features List */}
               <div className="space-y-3 mb-8">
                 {[
-                  'Grand entrance foyer with marble flooring',
-                  'Formal dining room seating 20+ guests',
-                  'Private library with fireplace',
-                  'Expansive landscaped grounds',
-                  'Guest house and staff quarters'
+                  t('luxuryVillasPage.floorPlan.features.openConcept'),
+                  t('luxuryVillasPage.floorPlan.features.gourmetKitchen'),
+                  t('luxuryVillasPage.floorPlan.features.masterSuite'),
+                  t('luxuryVillasPage.floorPlan.features.outdoorSpace'),
+                  t('luxuryVillasPage.features.items.privateGym?.title', 'Private Gym')
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -438,7 +438,7 @@ export default function EstateHome() {
               {/* CTA Button */}
               <div className="flex flex-wrap gap-4">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Schedule Tour
+                  {t('luxuryVillasPage.floorPlan.cta.schedule')}
                 </button>
               </div>
             </div>
@@ -453,12 +453,12 @@ export default function EstateHome() {
       >
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Estate Features</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Unparalleled Estate Amenities
+              {t('luxuryVillasPage.features.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Experience the ultimate in estate living with world-class amenities
+              {t('luxuryVillasPage.features.subtitle')}
             </p>
           </div>
 
@@ -467,24 +467,24 @@ export default function EstateHome() {
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
                 { 
-                  src: '/images/Estate Home.jpg', 
-                  title: 'Grand Living Spaces',
-                  subtitle: 'Elegant Interiors'
+                  src: '/images/67S61.jpg', 
+                  title: t('luxuryVillasPage.gallery.items.livingArea.title'),
+                  subtitle: t('luxuryVillasPage.gallery.subtitle')
                 },
                 { 
-                  src: '/images/Luxury Villa.jpg', 
-                  title: 'Formal Dining',
-                  subtitle: 'Entertainment Ready'
+                  src: '/images/67S62.jpg', 
+                  title: t('luxuryVillasPage.gallery.items.grandEntrance.title'),
+                  subtitle: t('luxuryVillasPage.gallery.viewDetails')
                 },
                 { 
-                  src: '/images/Waterfront Mansion.jpg', 
-                  title: 'Landscaped Gardens',
-                  subtitle: 'Private Grounds'
+                  src: '/images/67S63.jpg', 
+                  title: t('luxuryVillasPage.features.items.landscapedGardens.title'),
+                  subtitle: t('luxuryVillasPage.features.items.landscapedGardens.description')
                 },
                 { 
-                  src: '/images/Modern Penthouse.jpg', 
-                  title: 'Master Suite',
-                  subtitle: 'Luxurious Retreat'
+                  src: '/images/67S64.jpg', 
+                  title: t('luxuryVillasPage.features.items.masterSuite.title'),
+                  subtitle: t('luxuryVillasPage.features.items.masterSuite.description')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -506,7 +506,7 @@ export default function EstateHome() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -527,41 +527,23 @@ export default function EstateHome() {
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Visual Tour</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
-              Explore Estate Home Gallery
+              {t('luxuryVillasPage.gallery.title')}
             </h2>
             <p className={isDark ? 'text-lg text-gray-400 max-w-2xl mx-auto' : 'text-lg text-gray-600 max-w-2xl mx-auto'}>
-              Take a virtual journey through our magnificent estate properties
+              {t('luxuryVillasPage.gallery.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { 
-                src: '/images/Estate Home.jpg', 
-                title: 'Grand Estate'
-              },
-              { 
-                src: '/images/Luxury Villa.jpg', 
-                title: 'Master Suite'
-              },
-              { 
-                src: '/images/Waterfront Mansion.jpg', 
-                title: 'Formal Dining'
-              },
-              { 
-                src: '/images/Contemporary Townhouse.jpg', 
-                title: 'Living Area'
-              },
-              { 
-                src: '/images/Modern Penthouse.jpg', 
-                title: 'Library Study'
-              },
-              { 
-                src: '/images/Luxury Condo.jpg', 
-                title: 'Gardens'
-              }
+              { src: '/images/67S65.jpg', title: t('luxuryVillasPage.gallery.items.gardenTerrace.title') },
+              { src: '/images/67S66.jpg', title: t('luxuryVillasPage.gallery.items.masterSuite.title') },
+              { src: '/images/67S67.jpg', title: t('luxuryVillasPage.gallery.items.grandEntrance.title') },
+              { src: '/images/67S68.jpg', title: t('luxuryVillasPage.gallery.items.livingArea.title') },
+              { src: '/images/67S69.jpg', title: t('luxuryVillasPage.gallery.items.modernKitchen.title') },
+              { src: '/images/67S210.jpg', title: t('luxuryVillasPage.gallery.items.oceanView.title') }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-xl">
@@ -585,12 +567,12 @@ export default function EstateHome() {
       <section className={isDark ? 'py-24 bg-black relative overflow-hidden' : 'py-24 bg-gray-100 relative overflow-hidden'}>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Prime Location</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Exclusive Estate Communities
+              {t('luxuryVillasPage.location.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Located in the most prestigious estate communities with unparalleled privacy and luxury
+              {t('luxuryVillasPage.location.subtitle')}
             </p>
           </div>
 
@@ -606,31 +588,31 @@ export default function EstateHome() {
                   {[
                     {
                       image: '/images/Estate Home.jpg',
-                      title: 'Hamptons',
-                      subtitle: 'New York',
-                      description: 'Exclusive beachfront estates with unparalleled privacy and elegance',
-                      highlights: ['Ocean Views', 'Private Beaches', 'Wine Country', 'Art Galleries']
+                      titleKey: 'luxuryVillasPage.location.locations.hamptons.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.hamptons.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.hamptons.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.hamptons.highlights'
                     },
                     {
                       image: '/images/Luxury Villa.jpg',
-                      title: 'Beverly Hills',
-                      subtitle: 'California',
-                      description: 'The epitome of luxury living in one of the world\'s most prestigious addresses',
-                      highlights: ['Rodeo Drive', 'Hollywood Hills', 'Celebrity Neighbors', 'Luxury Shopping']
+                      titleKey: 'luxuryVillasPage.location.locations.beverlyHills.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.beverlyHills.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.beverlyHills.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.beverlyHills.highlights'
                     },
                     {
                       image: '/images/Waterfront Mansion.jpg',
-                      title: 'Miami Beach',
-                      subtitle: 'Florida',
-                      description: 'Oceanfront luxury with year-round sunshine and vibrant nightlife',
-                      highlights: ['South Beach', 'Art Deco', 'Marina', 'Nightlife']
+                      titleKey: 'luxuryVillasPage.location.locations.miamiBeach.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.miamiBeach.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.miamiBeach.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.miamiBeach.highlights'
                     },
                     {
                       image: '/images/Modern Penthouse.jpg',
-                      title: 'Manhattan',
-                      subtitle: 'New York',
-                      description: 'Urban sophistication meets timeless elegance in the heart of NYC',
-                      highlights: ['Central Park', 'Fifth Avenue', 'Broadway', 'Fine Dining']
+                      titleKey: 'luxuryVillasPage.location.locations.manhattan.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.manhattan.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.manhattan.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.manhattan.highlights'
                     }
                   ].map((location, idx) => (
                     <div key={idx} className="w-full flex-shrink-0 relative">
@@ -640,13 +622,13 @@ export default function EstateHome() {
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                           <div className="max-w-2xl">
-                            <h3 className="text-4xl font-bold mb-2">{location.title}</h3>
-                            <p className="text-xl text-red-300 mb-4">{location.subtitle}</p>
-                            <p className="text-lg mb-6 opacity-90">{location.description}</p>
+                            <h3 className="text-4xl font-bold mb-2">{t(location.titleKey)}</h3>
+                            <p className="text-xl text-red-300 mb-4">{t(location.subtitleKey)}</p>
+                            <p className="text-lg mb-6 opacity-90">{t(location.descriptionKey)}</p>
                             
                             {/* Highlights */}
                             <div className="flex flex-wrap gap-3">
-                              {location.highlights.map((highlight, hIdx) => (
+                              {t(location.highlightsKey, { returnObjects: true }).map((highlight, hIdx) => (
                                 <span key={hIdx} className="bg-red-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                                   {highlight}
                                 </span>
@@ -702,18 +684,18 @@ export default function EstateHome() {
         className="relative min-h-screen flex items-center justify-center"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/Estate Home.jpg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/67S20.jpg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-            Schedule Your Private Estate Tour
+            {t('luxuryVillasPage.contact.title')}
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-            Experience estate living firsthand with a personalized tour of our magnificent estate collection
+            {t('luxuryVillasPage.contact.subtitle')}
           </p>
           
           <div className="flex justify-center">
@@ -721,7 +703,7 @@ export default function EstateHome() {
               onClick={() => navigate('/contact')}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Contact Us Now
+              {t('luxuryVillasPage.contact.cta.contactUs')}
             </button>
           </div>
         </div>

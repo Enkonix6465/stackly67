@@ -48,7 +48,7 @@ export default function LuxuryVilla() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/67S1.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -473,23 +473,23 @@ export default function LuxuryVilla() {
               {[
                 { 
                   src: '/images/Luxury Villa.jpg', 
-                  title: 'Infinity Pool & Spa',
-                  subtitle: 'Resort-Style Living'
+                  title: t('luxuryVillasPage.features.items.infinityPool.title'),
+                  subtitle: t('luxuryVillasPage.features.items.infinityPool.description')
                 },
                 { 
                   src: '/images/67S11.jpg', 
-                  title: 'Gourmet Kitchen',
-                  subtitle: 'Premium Appliances'
+                  title: t('luxuryVillasPage.features.items.wineCellar.title'),
+                  subtitle: t('luxuryVillasPage.features.items.wineCellar.description')
                 },
                 { 
                   src: '/images/67S12.jpg', 
-                  title: 'Master Suite',
-                  subtitle: 'Luxury Retreat'
+                  title: t('luxuryVillasPage.features.items.masterSuite.title'),
+                  subtitle: t('luxuryVillasPage.features.items.masterSuite.description')
                 },
                 { 
                   src: '/images/67S13.jpg', 
-                  title: 'Private Terrace',
-                  subtitle: 'Outdoor Entertainment'
+                  title: t('luxuryVillasPage.features.items.landscapedGardens.title'),
+                  subtitle: t('luxuryVillasPage.features.items.landscapedGardens.description')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -511,7 +511,7 @@ export default function LuxuryVilla() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore', 'View More')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -545,27 +545,27 @@ export default function LuxuryVilla() {
             {[
               {
                 src: '/images/67S14.jpg',
-                title: 'Grand Entrance'
+                title: t('luxuryVillasPage.gallery.items.grandEntrance.title')
               },
               {
                 src: '/images/67S15.jpg',
-                title: 'Master Suite'
+                title: t('luxuryVillasPage.gallery.items.masterSuite.title')
               },
               {
                 src: '/images/67S16.jpg',
-                title: 'Living Area'
+                title: t('luxuryVillasPage.gallery.items.livingArea.title')
               },
               {
                 src: '/images/67S17.jpg',
-                title: 'Ocean View'
+                title: t('luxuryVillasPage.gallery.items.oceanView.title')
               },
               {
                 src: '/images/67S18.jpg',
-                title: 'Modern Kitchen'
+                title: t('luxuryVillasPage.gallery.items.modernKitchen.title')
               },
               {
                 src: '/images/67S19.jpg',
-                title: 'Garden Terrace'
+                title: t('luxuryVillasPage.gallery.items.gardenTerrace.title')
               }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
@@ -577,7 +577,7 @@ export default function LuxuryVilla() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <h3 className="text-white font-semibold text-lg">{item.title}</h3>
+                      <h3 className="text-white font-semibold text-lg">{item.title}</h3>
                   </div>
                 </div>
               </div>

@@ -411,26 +411,16 @@ export default function Blog() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="relative py-20 text-white overflow-hidden">
-        {/* Background Video */}
-        <motion.video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 2, ease: "easeOut" }}
-        >
-          <source src="/Rservices.mp4" type="video/mp4" />
-          {t('common.videoNotSupported')}
-        </motion.video>
-
-        {/* Red Overlay */}
+      <section className="relative py-20 text-white overflow-hidden" style={{
+        backgroundImage: 'url(/images/67Blog.jpg)',
+        backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+        {/* Dark Overlay */}
         <motion.div 
-          className="absolute inset-0 bg-red-900/70"
+          className="absolute inset-0 bg-black/60"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

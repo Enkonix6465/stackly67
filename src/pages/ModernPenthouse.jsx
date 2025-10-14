@@ -42,8 +42,8 @@ export default function ModernPenthouse() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/VILLA.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/67S4.mp4" type="video/mp4" />
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -53,13 +53,13 @@ export default function ModernPenthouse() {
         <div className="relative z-10 px-6 max-w-4xl">
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6" style={{ fontFamily: 'serif' }}>
-              Modern Penthouse
+              {t('nav.modernPenthouse')}
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <p className="mt-6 text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Discover extraordinary modern penthouses in the world's most prestigious urban locations.
+              {t('luxuryCondoPage.hero.description')}
             </p>
           </ScrollAnimation>
           
@@ -69,14 +69,14 @@ export default function ModernPenthouse() {
                 href="#features"
                 className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden"
               >
-                <span className="relative z-10">Explore Features</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaExplore')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a
                 href="#contact"
                 className="group bg-transparent text-white px-8 py-4 font-bold text-lg border-2 border-white rounded-lg transition-all duration-300 hover:bg-white hover:text-black relative overflow-hidden"
               >
-                <span className="relative z-10">Schedule Viewing</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaSchedule')}</span>
                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </a>
             </div>
@@ -104,10 +104,10 @@ export default function ModernPenthouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Sky High Living
+                {t('luxuryCondoPage.features.items.cityViews.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Premium penthouses in the most prestigious urban locations worldwide
+                {t('luxuryCondoPage.features.items.cityViews.description')}
               </p>
             </div>
 
@@ -127,10 +127,10 @@ export default function ModernPenthouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Modern Architecture
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Contemporary design with cutting-edge architectural excellence
+                {t('contemporaryTownhousePage.features.items.modernArchitecture.description')}
               </p>
             </div>
 
@@ -148,10 +148,10 @@ export default function ModernPenthouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Luxury Amenities
+                {t('luxuryCondoPage.features.badge')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                World-class facilities and services at your fingertips
+                {t('luxuryCondoPage.features.subtitle')}
               </p>
             </div>
 
@@ -215,10 +215,10 @@ export default function ModernPenthouse() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Smart Security
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Advanced security systems and 24/7 concierge service
+                {t('contemporaryTownhousePage.features.items.smartHomeTechnology.description')}
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function ModernPenthouse() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                  Floor Plan
+                  {t('luxuryVillasPage.floorPlan.badge')}
                 </div>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function ModernPenthouse() {
             {/* Property Details */}
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                Experience the pinnacle of urban luxury in this meticulously designed modern penthouse. Every detail reflects contemporary elegance and sophisticated functionality.
+                {t('luxuryCondoPage.features.subtitle')}
               </p>
 
               {/* Property Specifications */}
@@ -277,7 +277,7 @@ export default function ModernPenthouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3,200</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Sq Ft
+                        {t('luxuryCondoPage.investment.collection.specs.sqft')}
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function ModernPenthouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bedrooms
+                        {t('luxuryCondoPage.investment.collection.specs.bedrooms')}
                       </div>
                     </div>
                   </div>
@@ -379,7 +379,7 @@ export default function ModernPenthouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>4</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bathrooms
+                        {t('luxuryCondoPage.investment.collection.specs.bathrooms')}
                       </div>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export default function ModernPenthouse() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Parking
+                        {t('contemporaryTownhousePage.investment.collection.specs.parking')}
                       </div>
                     </div>
                   </div>
@@ -418,11 +418,11 @@ export default function ModernPenthouse() {
               {/* Key Features List */}
               <div className="space-y-3 mb-8">
                 {[
-                  'Floor-to-ceiling windows with panoramic views',
-                  'Chef-inspired kitchen with premium appliances',
-                  'Master suite with spa-inspired bathroom',
-                  'Smart home automation and security',
-                  'Private rooftop terrace with outdoor kitchen'
+                  t('luxuryCondoPage.features.items.cityViews.description'),
+                  t('luxuryCondoPage.features.items.privateDining.description'),
+                  t('luxuryVillasPage.features.items.masterSuite.description'),
+                  t('contemporaryTownhousePage.features.items.smartHomeTechnology.description'),
+                  t('luxuryCondoPage.features.items.rooftopPool.description')
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -438,7 +438,7 @@ export default function ModernPenthouse() {
               {/* CTA Button */}
               <div className="flex flex-wrap gap-4">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Schedule Tour
+                  {t('luxuryVillasPage.floorPlan.cta.schedule')}
                 </button>
               </div>
             </div>
@@ -453,12 +453,12 @@ export default function ModernPenthouse() {
       >
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Premium Features</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Unparalleled Luxury Amenities
+              {t('luxuryVillasPage.features.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Experience a lifestyle beyond imagination with world-class amenities
+              {t('luxuryVillasPage.features.subtitle')}
             </p>
           </div>
 
@@ -467,24 +467,24 @@ export default function ModernPenthouse() {
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
                 { 
-                  src: '/images/Modern Penthouse.jpg', 
-                  title: 'Rooftop Pool & Lounge',
-                  subtitle: 'Sky-High Relaxation'
+                  src: '/images/67S41.jpg', 
+                  title: t('luxuryCondoPage.features.items.rooftopPool.title'),
+                  subtitle: t('luxuryCondoPage.features.items.rooftopPool.description')
                 },
                 { 
-                  src: '/images/Luxury Villa.jpg', 
-                  title: 'Chef-Inspired Kitchen',
-                  subtitle: 'Culinary Excellence'
+                  src: '/images/67S42.jpg', 
+                  title: t('luxuryCondoPage.features.items.privateDining.title'),
+                  subtitle: t('luxuryCondoPage.features.items.privateDining.description')
                 },
                 { 
-                  src: '/images/Contemporary Townhouse.jpg', 
-                  title: 'Master Retreat',
-                  subtitle: 'Private Sanctuary'
+                  src: '/images/67S43.jpg', 
+                  title: t('luxuryVillasPage.features.items.masterSuite.title'),
+                  subtitle: t('luxuryVillasPage.features.items.masterSuite.description')
                 },
                 { 
-                  src: '/images/Waterfront Mansion.jpg', 
-                  title: 'Private Terrace',
-                  subtitle: 'Outdoor Entertainment'
+                  src: '/images/67S44.jpg', 
+                  title: t('contemporaryTownhousePage.gallery.items.privateTerrace.title'),
+                  subtitle: t('luxuryCondoPage.features.items.cityViews.description')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -506,7 +506,7 @@ export default function ModernPenthouse() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -527,41 +527,23 @@ export default function ModernPenthouse() {
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Visual Tour</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
-              Explore Our Penthouse Collection
+              {t('luxuryCondoPage.gallery.title')}
             </h2>
             <p className={isDark ? 'text-lg text-gray-400 max-w-2xl mx-auto' : 'text-lg text-gray-600 max-w-2xl mx-auto'}>
-              Take a virtual journey through our most prestigious properties
+              {t('luxuryCondoPage.gallery.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { 
-                src: '/images/Modern Penthouse.jpg', 
-                title: 'Grand Living Space'
-              },
-              { 
-                src: '/images/Luxury Villa.jpg', 
-                title: 'Master Suite'
-              },
-              { 
-                src: '/images/Contemporary Townhouse.jpg', 
-                title: 'Gourmet Kitchen'
-              },
-              { 
-                src: '/images/Waterfront Mansion.jpg', 
-                title: 'Skyline View'
-              },
-              { 
-                src: '/images/Luxury Condo.jpg', 
-                title: 'Modern Bathroom'
-              },
-              { 
-                src: '/images/Estate Home.jpg', 
-                title: 'Rooftop Terrace'
-              }
+              { src: '/images/67S45.jpg', title: t('luxuryCondoPage.gallery.items.modernPenthouse.title') },
+              { src: '/images/67S46.jpg', title: t('luxuryCondoPage.gallery.items.executiveSuite.title') },
+              { src: '/images/67S47.jpg', title: t('luxuryCondoPage.gallery.items.waterfrontCondo.title') },
+              { src: '/images/67S48.jpg', title: t('luxuryCondoPage.gallery.items.skyVilla.title') },
+              { src: '/images/67S49.jpg', title: t('luxuryCondoPage.gallery.items.designerLoft.title') },
+              { src: '/images/67S410.jpg', title: t('luxuryCondoPage.gallery.items.presidentialSuite.title') }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-xl">
@@ -592,12 +574,12 @@ export default function ModernPenthouse() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Prime Location</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Exclusive Urban Amenities
+              {t('luxuryCondoPage.location.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Located in the heart of prestigious urban communities with world-class amenities
+              {t('luxuryCondoPage.location.subtitle')}
             </p>
           </div>
 
@@ -613,31 +595,31 @@ export default function ModernPenthouse() {
                   {[
                     {
                       image: '/images/Modern Penthouse.jpg',
-                      title: 'Manhattan',
-                      subtitle: 'New York',
-                      description: 'Urban sophistication meets timeless elegance in the heart of NYC',
-                      highlights: ['Central Park', 'Fifth Avenue', 'Broadway', 'Fine Dining']
+                      titleKey: 'luxuryCondoPage.location.locations.manhattan.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.manhattan.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.manhattan.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.manhattan.highlights'
                     },
                     {
                       image: '/images/Luxury Villa.jpg',
-                      title: 'Downtown LA',
-                      subtitle: 'California',
-                      description: 'Modern living in the heart of Los Angeles with stunning city views',
-                      highlights: ['Arts District', 'Concert Halls', 'Tech Hub', 'Nightlife']
+                      titleKey: 'luxuryCondoPage.location.locations.downtownLA.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.downtownLA.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.downtownLA.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.downtownLA.highlights'
                     },
                     {
                       image: '/images/Waterfront Mansion.jpg',
-                      title: 'Miami',
-                      subtitle: 'Florida',
-                      description: 'Contemporary luxury with ocean views and vibrant urban lifestyle',
-                      highlights: ['South Beach', 'Art Basel', 'Design District', 'Waterfront']
+                      titleKey: 'luxuryCondoPage.location.locations.miamiBeach.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.miamiBeach.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.miamiBeach.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.miamiBeach.highlights'
                     },
                     {
                       image: '/images/Estate Home.jpg',
-                      title: 'Chicago',
-                      subtitle: 'Illinois',
-                      description: 'Architectural excellence meets modern comfort in the Windy City',
-                      highlights: ['Millennium Park', 'Magnificent Mile', 'Lakefront', 'Cultural District']
+                      titleKey: 'luxuryCondoPage.location.locations.goldCoast.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.goldCoast.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.goldCoast.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.goldCoast.highlights'
                     }
                   ].map((location, idx) => (
                     <div key={idx} className="w-full flex-shrink-0 relative">
@@ -647,13 +629,13 @@ export default function ModernPenthouse() {
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                           <div className="max-w-2xl">
-                            <h3 className="text-4xl font-bold mb-2">{location.title}</h3>
-                            <p className="text-xl text-red-300 mb-4">{location.subtitle}</p>
-                            <p className="text-lg mb-6 opacity-90">{location.description}</p>
+                            <h3 className="text-4xl font-bold mb-2">{t(location.titleKey)}</h3>
+                            <p className="text-xl text-red-300 mb-4">{t(location.subtitleKey)}</p>
+                            <p className="text-lg mb-6 opacity-90">{t(location.descriptionKey)}</p>
                             
                             {/* Highlights */}
                             <div className="flex flex-wrap gap-3">
-                              {location.highlights.map((highlight, hIdx) => (
+                              {t(location.highlightsKey, { returnObjects: true }).map((highlight, hIdx) => (
                                 <span key={hIdx} className="bg-red-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                                   {highlight}
                                 </span>
@@ -708,12 +690,12 @@ export default function ModernPenthouse() {
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Investment Opportunity</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Your Gateway to Modern Luxury Living
+              {t('luxuryCondoPage.investment.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Invest in one of the world's most prestigious urban addresses with exceptional returns and unparalleled lifestyle
+              {t('luxuryCondoPage.investment.subtitle')}
             </p>
           </div>
 
@@ -723,31 +705,31 @@ export default function ModernPenthouse() {
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10">
-                  <h3 className="text-4xl font-bold mb-4">Exclusive Penthouse Collection</h3>
-                  <div className="text-7xl font-bold mb-4">$3,800,000</div>
-                  <p className="text-xl text-red-100 mb-8">Starting Investment</p>
+                  <h3 className="text-4xl font-bold mb-4">{t('luxuryCondoPage.investment.collection.title')}</h3>
+                  <div className="text-7xl font-bold mb-4">{t('luxuryCondoPage.investment.collection.price')}</div>
+                  <p className="text-xl text-red-100 mb-8">{t('luxuryCondoPage.investment.collection.subtitle')}</p>
                   
                   <div className="grid md:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">3,200</div>
-                      <div className="text-sm text-red-100">Sq Ft</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.sqft')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">3</div>
-                      <div className="text-sm text-red-100">Bedrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">4</div>
-                      <div className="text-sm text-red-100">Bathrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2</div>
-                      <div className="text-sm text-red-100">Parking</div>
+                      <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.parking')}</div>
                     </div>
                   </div>
                   
                   <button className="bg-white text-red-600 px-8 py-4 font-bold text-lg rounded-xl hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                    Get Investment Details
+                    {t('luxuryCondoPage.investment.collection.cta')}
                   </button>
                 </div>
               </div>
@@ -756,42 +738,42 @@ export default function ModernPenthouse() {
 
           {/* Investment Benefits Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
+            {[ 
               {
                 icon: "📈",
-                title: "Strong ROI",
-                value: "10-15%",
-                description: "Annual appreciation rate"
+                titleKey: 'luxuryCondoPage.investment.benefits.strongROI.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.strongROI.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.strongROI.description'
               },
               {
                 icon: "🏆",
-                title: "Prime Location",
-                value: "Manhattan",
-                description: "World's most prestigious address"
+                titleKey: 'luxuryCondoPage.investment.benefits.primeLocation.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.primeLocation.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.primeLocation.description'
               },
               {
                 icon: "💰",
-                title: "Tax Advantages",
-                value: "Significant",
-                description: "Property tax benefits"
+                titleKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.description'
               },
               {
                 icon: "🌍",
-                title: "Global Demand",
-                value: "High",
-                description: "International buyer appeal"
+                titleKey: 'luxuryCondoPage.investment.benefits.globalDemand.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.globalDemand.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.globalDemand.description'
               }
             ].map((benefit, idx) => (
               <div key={idx} className={isDark ? 'bg-gray-800 rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300 shadow-lg'}>
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h4 className={isDark ? 'text-xl font-bold text-white mb-2' : 'text-xl font-bold text-black mb-2'}>
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h4>
                 <div className={isDark ? 'text-3xl font-bold text-red-500 mb-2' : 'text-3xl font-bold text-red-600 mb-2'}>
-                  {benefit.value}
+                  {t(benefit.valueKey)}
                 </div>
                 <p className={isDark ? 'text-gray-300 text-sm' : 'text-gray-600 text-sm'}>
-                  {benefit.description}
+                  {t(benefit.descriptionKey)}
                 </p>
               </div>
             ))}
@@ -805,18 +787,18 @@ export default function ModernPenthouse() {
         className="relative min-h-screen flex items-center justify-center"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/Modern Penthouse.jpg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/67S20.jpg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-            Schedule Your Private Viewing
+            {t('luxuryCondoPage.contact.title')}
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-            Experience modern luxury living firsthand with a personalized tour of our penthouse collection
+            {t('luxuryCondoPage.contact.subtitle')}
           </p>
           
           <div className="flex justify-center">
@@ -824,7 +806,7 @@ export default function ModernPenthouse() {
               onClick={() => navigate('/contact')}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Contact Us Now
+              {t('luxuryCondoPage.contact.cta.contactUs')}
             </button>
           </div>
         </div>

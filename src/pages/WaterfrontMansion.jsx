@@ -42,8 +42,8 @@ export default function WaterfrontMansion() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/VILLA.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/Waterfront Mansion.mp4" type="video/mp4" />
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -53,13 +53,13 @@ export default function WaterfrontMansion() {
         <div className="relative z-10 px-6 max-w-4xl">
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6" style={{ fontFamily: 'serif' }}>
-              Waterfront Mansion
+              {t('nav.waterfrontMansion')}
             </h1>
           </ScrollAnimation>
           
           <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <p className="mt-6 text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Experience unparalleled luxury living with breathtaking waterfront views and exclusive beachfront access.
+              {t('luxuryCondoPage.location.subtitle')}
             </p>
           </ScrollAnimation>
           
@@ -69,14 +69,14 @@ export default function WaterfrontMansion() {
                 href="#features"
                 className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 relative overflow-hidden"
               >
-                <span className="relative z-10">Explore Features</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaExplore')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
               <a
                 href="#contact"
                 className="group bg-transparent text-white px-8 py-4 font-bold text-lg border-2 border-white rounded-lg transition-all duration-300 hover:bg-white hover:text-black relative overflow-hidden"
               >
-                <span className="relative z-10">Schedule Viewing</span>
+                <span className="relative z-10">{t('luxuryCondoPage.hero.ctaSchedule')}</span>
                 <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </a>
             </div>
@@ -104,10 +104,10 @@ export default function WaterfrontMansion() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Waterfront Living
+                {t('luxuryVillasPage.location.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Exclusive oceanfront mansions in the world's most prestigious coastal locations
+                {t('luxuryVillasPage.location.subtitle')}
               </p>
             </div>
 
@@ -127,10 +127,10 @@ export default function WaterfrontMansion() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Luxury Design
+                {t('luxuryVillasPage.features.items.landscapedGardens.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Timeless architecture with premium finishes and attention to detail
+                {t('luxuryVillasPage.features.items.landscapedGardens.description')}
               </p>
             </div>
 
@@ -148,10 +148,10 @@ export default function WaterfrontMansion() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Private Beach Access
+                {t('luxuryCondoPage.features.items.rooftopPool.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Direct access to pristine private beaches and waterfront amenities
+                {t('luxuryCondoPage.features.items.rooftopPool.description')}
               </p>
             </div>
 
@@ -215,10 +215,10 @@ export default function WaterfrontMansion() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Marina & Yacht
+                {t('luxuryCondoPage.location.locations.miamiBeach.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Private marina with deep-water dock and yacht services
+                {t('luxuryCondoPage.location.locations.miamiBeach.description')}
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function WaterfrontMansion() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                  Floor Plan
+                  {t('luxuryVillasPage.floorPlan.badge')}
                 </div>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function WaterfrontMansion() {
             {/* Property Details */}
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                Experience the ultimate in waterfront luxury with this spectacular oceanfront mansion. Every detail has been meticulously designed to maximize ocean views and coastal living.
+                {t('luxuryVillasPage.floorPlan.description')}
               </p>
 
               {/* Property Specifications */}
@@ -277,7 +277,7 @@ export default function WaterfrontMansion() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>12,500</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Sq Ft
+                        {t('luxuryVillasPage.floorPlan.specs.sqft')}
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function WaterfrontMansion() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>8</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bedrooms
+                        {t('luxuryVillasPage.floorPlan.specs.bedrooms')}
                       </div>
                     </div>
                   </div>
@@ -379,7 +379,7 @@ export default function WaterfrontMansion() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>10</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bathrooms
+                        {t('luxuryVillasPage.floorPlan.specs.bathrooms')}
                       </div>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export default function WaterfrontMansion() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>4</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Car Garage
+                        {t('luxuryVillasPage.floorPlan.specs.garage')}
                       </div>
                     </div>
                   </div>
@@ -418,11 +418,11 @@ export default function WaterfrontMansion() {
               {/* Key Features List */}
               <div className="space-y-3 mb-8">
                 {[
-                  'Panoramic ocean views from every room',
-                  'Direct private beach access with cabana',
-                  'Infinity pool overlooking the water',
-                  'Private deep-water dock for yachts',
-                  'Smart home and advanced security systems'
+                  t('luxuryVillasPage.floorPlan.features.openConcept'),
+                  t('luxuryVillasPage.floorPlan.features.gourmetKitchen'),
+                  t('luxuryVillasPage.floorPlan.features.masterSuite'),
+                  t('luxuryVillasPage.floorPlan.features.smartHome'),
+                  t('luxuryVillasPage.floorPlan.features.outdoorSpace')
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -438,7 +438,7 @@ export default function WaterfrontMansion() {
               {/* CTA Button */}
               <div className="flex flex-wrap gap-4">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Schedule Tour
+                  {t('luxuryVillasPage.floorPlan.cta.schedule')}
                 </button>
               </div>
             </div>
@@ -453,12 +453,12 @@ export default function WaterfrontMansion() {
       >
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Waterfront Features</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Unparalleled Ocean Amenities
+              {t('luxuryVillasPage.features.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Experience the ultimate coastal lifestyle with world-class waterfront amenities
+              {t('luxuryVillasPage.features.subtitle')}
             </p>
           </div>
 
@@ -467,24 +467,24 @@ export default function WaterfrontMansion() {
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
                 { 
-                  src: '/images/Waterfront Mansion.jpg', 
-                  title: 'Infinity Pool & Ocean Views',
-                  subtitle: 'Endless Horizon'
+                  src: '/images/67S51.jpg', 
+                  title: t('luxuryVillasPage.features.items.infinityPool.title'),
+                  subtitle: t('luxuryVillasPage.features.items.infinityPool.description')
                 },
                 { 
-                  src: '/images/Luxury Villa.jpg', 
-                  title: 'Private Beach Access',
-                  subtitle: 'Exclusive Shoreline'
+                  src: '/images/67S52.jpg', 
+                  title: t('contemporaryTownhousePage.gallery.items.privateTerrace.title'),
+                  subtitle: t('luxuryVillasPage.location.subtitle')
                 },
                 { 
-                  src: '/images/Modern Penthouse.jpg', 
-                  title: 'Deep-Water Marina',
-                  subtitle: 'Yacht Paradise'
+                  src: '/images/67S53.jpg', 
+                  title: t('luxuryCondoPage.location.locations.miamiBeach.title'),
+                  subtitle: t('luxuryCondoPage.location.locations.miamiBeach.subtitle')
                 },
                 { 
-                  src: '/images/Contemporary Townhouse.jpg', 
-                  title: 'Sunset Terrace',
-                  subtitle: 'Coastal Entertainment'
+                  src: '/images/67S54.jpg', 
+                  title: t('luxuryVillasPage.features.items.landscapedGardens.title'),
+                  subtitle: t('luxuryVillasPage.features.items.landscapedGardens.description')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -506,7 +506,7 @@ export default function WaterfrontMansion() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -527,41 +527,23 @@ export default function WaterfrontMansion() {
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Visual Tour</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
-              Explore Waterfront Mansion Gallery
+              {t('luxuryVillasPage.gallery.title')}
             </h2>
             <p className={isDark ? 'text-lg text-gray-400 max-w-2xl mx-auto' : 'text-lg text-gray-600 max-w-2xl mx-auto'}>
-              Take a virtual journey through our exceptional oceanfront estates
+              {t('luxuryVillasPage.gallery.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { 
-                src: '/images/Waterfront Mansion.jpg', 
-                title: 'Oceanfront Living'
-              },
-              { 
-                src: '/images/Luxury Villa.jpg', 
-                title: 'Master Estate'
-              },
-              { 
-                src: '/images/Modern Penthouse.jpg', 
-                title: 'Coastal Kitchen'
-              },
-              { 
-                src: '/images/Contemporary Townhouse.jpg', 
-                title: 'Beach View'
-              },
-              { 
-                src: '/images/Luxury Condo.jpg', 
-                title: 'Marina Access'
-              },
-              { 
-                src: '/images/Estate Home.jpg', 
-                title: 'Sunset Deck'
-              }
+              { src: '/images/67S55.jpg', title: t('luxuryVillasPage.gallery.items.oceanView.title') },
+              { src: '/images/67S56.jpg', title: t('luxuryVillasPage.gallery.items.masterSuite.title') },
+              { src: '/images/67S57.jpg', title: t('luxuryVillasPage.gallery.items.modernKitchen.title') },
+              { src: '/images/67S58.jpg', title: t('luxuryVillasPage.gallery.items.gardenTerrace.title') },
+              { src: '/images/67S59.jpg', title: t('luxuryVillasPage.gallery.items.grandEntrance.title') },
+              { src: '/images/67S210.jpg', title: t('luxuryVillasPage.gallery.items.livingArea.title') }
             ].map((item, idx) => (
               <div key={idx} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-xl">
@@ -592,12 +574,12 @@ export default function WaterfrontMansion() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Prime Waterfront</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Exclusive Coastal Communities
+              {t('luxuryVillasPage.location.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Located in the world's most prestigious waterfront destinations with unparalleled ocean access
+              {t('luxuryVillasPage.location.subtitle')}
             </p>
           </div>
 
@@ -613,31 +595,31 @@ export default function WaterfrontMansion() {
                   {[
                     {
                       image: '/images/Waterfront Mansion.jpg',
-                      title: 'Malibu',
-                      subtitle: 'California',
-                      description: 'Iconic beachfront living with dramatic cliffs and pristine beaches',
-                      highlights: ['Private Beaches', 'Celebrity Neighbors', 'Surfing', 'Sunset Views']
+                      titleKey: 'luxuryVillasPage.location.locations.miamiBeach.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.miamiBeach.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.miamiBeach.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.miamiBeach.highlights'
                     },
                     {
                       image: '/images/Luxury Villa.jpg',
-                      title: 'Hamptons',
-                      subtitle: 'New York',
-                      description: 'Exclusive summer retreat with historic charm and oceanfront estates',
-                      highlights: ['Wine Country', 'Art Galleries', 'Private Beaches', 'Historic Estates']
+                      titleKey: 'luxuryVillasPage.location.locations.hamptons.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.hamptons.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.hamptons.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.hamptons.highlights'
                     },
                     {
                       image: '/images/Modern Penthouse.jpg',
-                      title: 'Miami Beach',
-                      subtitle: 'Florida',
-                      description: 'Tropical paradise with year-round sunshine and vibrant waterfront lifestyle',
-                      highlights: ['South Beach', 'Art Deco', 'Marina District', 'Nightlife']
+                      titleKey: 'luxuryVillasPage.location.locations.manhattan.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.manhattan.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.manhattan.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.manhattan.highlights'
                     },
                     {
                       image: '/images/Estate Home.jpg',
-                      title: 'Monaco',
-                      subtitle: 'French Riviera',
-                      description: 'Ultimate luxury waterfront living in the heart of the Mediterranean',
-                      highlights: ['Monte Carlo', 'Yacht Harbor', 'Formula 1', 'Casino']
+                      titleKey: 'luxuryVillasPage.location.locations.beverlyHills.title',
+                      subtitleKey: 'luxuryVillasPage.location.locations.beverlyHills.subtitle',
+                      descriptionKey: 'luxuryVillasPage.location.locations.beverlyHills.description',
+                      highlightsKey: 'luxuryVillasPage.location.locations.beverlyHills.highlights'
                     }
                   ].map((location, idx) => (
                     <div key={idx} className="w-full flex-shrink-0 relative">
@@ -647,13 +629,13 @@ export default function WaterfrontMansion() {
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                           <div className="max-w-2xl">
-                            <h3 className="text-4xl font-bold mb-2">{location.title}</h3>
-                            <p className="text-xl text-red-300 mb-4">{location.subtitle}</p>
-                            <p className="text-lg mb-6 opacity-90">{location.description}</p>
+                            <h3 className="text-4xl font-bold mb-2">{t(location.titleKey)}</h3>
+                            <p className="text-xl text-red-300 mb-4">{t(location.subtitleKey)}</p>
+                            <p className="text-lg mb-6 opacity-90">{t(location.descriptionKey)}</p>
                             
                             {/* Highlights */}
                             <div className="flex flex-wrap gap-3">
-                              {location.highlights.map((highlight, hIdx) => (
+                              {t(location.highlightsKey, { returnObjects: true }).map((highlight, hIdx) => (
                                 <span key={hIdx} className="bg-red-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                                   {highlight}
                                 </span>
@@ -708,12 +690,12 @@ export default function WaterfrontMansion() {
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Oceanfront Investment</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Your Gateway to Waterfront Luxury
+              {t('luxuryVillasPage.investment.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Invest in the world's most exclusive waterfront properties with exceptional returns and unparalleled oceanfront lifestyle
+              {t('luxuryVillasPage.investment.subtitle')}
             </p>
           </div>
 
@@ -723,31 +705,31 @@ export default function WaterfrontMansion() {
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10">
-                  <h3 className="text-4xl font-bold mb-4">Exclusive Waterfront Collection</h3>
-                  <div className="text-7xl font-bold mb-4">$8,500,000</div>
-                  <p className="text-xl text-red-100 mb-8">Starting Investment</p>
+                  <h3 className="text-4xl font-bold mb-4">{t('luxuryVillasPage.investment.collection.title')}</h3>
+                  <div className="text-7xl font-bold mb-4">{t('luxuryVillasPage.investment.collection.price')}</div>
+                  <p className="text-xl text-red-100 mb-8">{t('luxuryVillasPage.investment.collection.subtitle')}</p>
                   
                   <div className="grid md:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">12,500</div>
-                      <div className="text-sm text-red-100">Sq Ft</div>
+                      <div className="text-sm text-red-100">{t('luxuryVillasPage.investment.collection.specs.sqft')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">8</div>
-                      <div className="text-sm text-red-100">Bedrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryVillasPage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">10</div>
-                      <div className="text-sm text-red-100">Bathrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryVillasPage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2.5</div>
-                      <div className="text-sm text-red-100">Acres</div>
+                      <div className="text-sm text-red-100">{t('luxuryVillasPage.investment.collection.specs.acres')}</div>
                     </div>
                   </div>
                   
                   <button className="bg-white text-red-600 px-8 py-4 font-bold text-lg rounded-xl hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                    Get Investment Details
+                    {t('luxuryVillasPage.investment.collection.cta')}
                   </button>
                 </div>
               </div>
@@ -759,39 +741,39 @@ export default function WaterfrontMansion() {
             {[
               {
                 icon: "📈",
-                title: "Premium ROI",
-                value: "12-18%",
-                description: "Annual appreciation rate"
+                titleKey: 'luxuryVillasPage.investment.benefits.strongROI.title',
+                valueKey: 'luxuryVillasPage.investment.benefits.strongROI.value',
+                descriptionKey: 'luxuryVillasPage.investment.benefits.strongROI.description'
               },
               {
                 icon: "🏆",
-                title: "Oceanfront Location",
-                value: "Malibu",
-                description: "World's most exclusive beachfront"
+                titleKey: 'luxuryVillasPage.investment.benefits.primeLocation.title',
+                valueKey: 'luxuryVillasPage.investment.benefits.primeLocation.value',
+                descriptionKey: 'luxuryVillasPage.investment.benefits.primeLocation.description'
               },
               {
                 icon: "💰",
-                title: "Tax Benefits",
-                value: "Significant",
-                description: "Waterfront property advantages"
+                titleKey: 'luxuryVillasPage.investment.benefits.taxAdvantages.title',
+                valueKey: 'luxuryVillasPage.investment.benefits.taxAdvantages.value',
+                descriptionKey: 'luxuryVillasPage.investment.benefits.taxAdvantages.description'
               },
               {
                 icon: "🌍",
-                title: "Global Appeal",
-                value: "Ultra High",
-                description: "International luxury buyers"
+                titleKey: 'luxuryVillasPage.investment.benefits.globalDemand.title',
+                valueKey: 'luxuryVillasPage.investment.benefits.globalDemand.value',
+                descriptionKey: 'luxuryVillasPage.investment.benefits.globalDemand.description'
               }
             ].map((benefit, idx) => (
               <div key={idx} className={isDark ? 'bg-gray-800 rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300 shadow-lg'}>
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h4 className={isDark ? 'text-xl font-bold text-white mb-2' : 'text-xl font-bold text-black mb-2'}>
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h4>
                 <div className={isDark ? 'text-3xl font-bold text-red-500 mb-2' : 'text-3xl font-bold text-red-600 mb-2'}>
-                  {benefit.value}
+                  {t(benefit.valueKey)}
                 </div>
                 <p className={isDark ? 'text-gray-300 text-sm' : 'text-gray-600 text-sm'}>
-                  {benefit.description}
+                  {t(benefit.descriptionKey)}
                 </p>
               </div>
             ))}
@@ -806,18 +788,18 @@ export default function WaterfrontMansion() {
         className="relative min-h-screen flex items-center justify-center"
       >
         {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/Waterfront Mansion.jpg')" }}>
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('/images/67S20.jpg')" }}>
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
-          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+          <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-            Schedule Your Private Oceanfront Tour
+            {t('luxuryVillasPage.contact.title')}
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
-            Experience waterfront luxury firsthand with a personalized tour of our exclusive mansion collection
+            {t('luxuryVillasPage.contact.subtitle')}
           </p>
           
           <div className="flex justify-center">
@@ -825,7 +807,7 @@ export default function WaterfrontMansion() {
               onClick={() => navigate('/contact')}
               className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              Contact Us Now
+              {t('luxuryVillasPage.contact.cta.contactUs')}
             </button>
           </div>
         </div>

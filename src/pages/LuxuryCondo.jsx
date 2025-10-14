@@ -47,8 +47,8 @@ export default function LuxuryCondo() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/VILLA.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/67S3.mp4" type="video/mp4" />
+          {t('common.videoNotSupported')}
         </video>
 
         {/* Dynamic Overlay */}
@@ -109,10 +109,10 @@ export default function LuxuryCondo() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Premium Locations
+                {t('luxuryCondoPage.location.badge')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Located in the most prestigious high-rise buildings in prime downtown districts.
+                {t('luxuryCondoPage.location.subtitle')}
               </p>
             </div>
 
@@ -132,10 +132,10 @@ export default function LuxuryCondo() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                High-Rise Luxury
+                {t('luxuryCondoPage.features.items.cityViews.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Sophisticated tower living with world-class amenities and breathtaking views.
+                {t('luxuryCondoPage.features.items.cityViews.description')}
               </p>
             </div>
 
@@ -153,10 +153,10 @@ export default function LuxuryCondo() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Full-Service Living
+                {t('luxuryCondoPage.features.items.conciergeServices.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                24/7 concierge, doorman, and building staff for ultimate convenience.
+                {t('luxuryCondoPage.features.items.conciergeServices.description')}
               </p>
             </div>
 
@@ -220,10 +220,10 @@ export default function LuxuryCondo() {
                 </div>
               </div>
               <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                Premium Security
+                {t('luxuryCondoPage.features.items.fitnessCenter.title')}
               </h3>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'} leading-relaxed px-2`}>
-                Advanced security systems with restricted elevator access and surveillance.
+                {t('luxuryCondoPage.features.items.fitnessCenter.description')}
               </p>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function LuxuryCondo() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2,200</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Sq Ft
+                        {t('luxuryCondoPage.investment.collection.specs.sqft')}
                       </div>
                     </div>
                   </div>
@@ -308,7 +308,7 @@ export default function LuxuryCondo() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bedrooms
+                        {t('luxuryCondoPage.investment.collection.specs.bedrooms')}
                       </div>
                     </div>
                   </div>
@@ -384,7 +384,7 @@ export default function LuxuryCondo() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2.5</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Bathrooms
+                        {t('luxuryCondoPage.investment.collection.specs.bathrooms')}
                       </div>
                     </div>
                   </div>
@@ -413,7 +413,7 @@ export default function LuxuryCondo() {
                     <div>
                       <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>40th</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        Floor
+                        {t('luxuryCondoPage.investment.collection.specs.floor')}
                       </div>
                     </div>
                   </div>
@@ -423,11 +423,11 @@ export default function LuxuryCondo() {
               {/* Key Features List */}
               <div className="space-y-3 mb-8">
                 {[
-                  'Floor-to-ceiling windows with panoramic views',
-                  'Gourmet kitchen with Italian cabinetry',
-                  'Master suite with spa bathroom and walk-in closet',
-                  'Smart home system with app control',
-                  'Private balcony with stunning city skyline'
+                  t('luxuryCondoPage.features.items.cityViews.description'),
+                  t('luxuryCondoPage.features.items.privateDining.title'),
+                  t('luxuryCondoPage.features.items.rooftopPool.title'),
+                  t('luxuryCondoPage.features.items.fitnessCenter.title'),
+                  t('luxuryCondoPage.features.items.valetParking.title')
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
@@ -443,7 +443,7 @@ export default function LuxuryCondo() {
               {/* CTA Button */}
               <div className="flex flex-wrap gap-4">
                 <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Schedule Tour
+                  {t('luxuryCondoPage.hero.ctaSchedule')}
                 </button>
               </div>
             </div>
@@ -464,12 +464,12 @@ export default function LuxuryCondo() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">Premium Features</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Elevated Living Experience
+              {t('luxuryCondoPage.features.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Discover the luxury amenities and features that define high-rise condo living
+              {t('luxuryCondoPage.features.subtitle')}
             </p>
           </div>
 
@@ -478,24 +478,24 @@ export default function LuxuryCondo() {
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
                 { 
-                  src: '/images/Modern Penthouse.jpg', 
-                  title: 'Sky Lounge',
-                  subtitle: 'Rooftop Amenities'
+                  src: '/images/67S31.jpg', 
+                  title: t('luxuryCondoPage.features.items.rooftopDining.title'),
+                  subtitle: t('luxuryCondoPage.features.items.rooftopDining.description')
                 },
                 { 
-                  src: '/images/Luxury Condo.jpg', 
-                  title: 'Infinity Pool',
-                  subtitle: 'Panoramic Views'
+                  src: '/images/67S32.jpg', 
+                  title: t('luxuryCondoPage.features.items.rooftopPool.title'),
+                  subtitle: t('luxuryCondoPage.features.items.rooftopPool.description')
                 },
                 { 
-                  src: '/images/Luxury Villa.jpg', 
-                  title: 'Fitness Center',
-                  subtitle: 'State-of-the-Art'
+                  src: '/images/67S33.jpg', 
+                  title: t('luxuryCondoPage.features.items.fitnessCenter.title'),
+                  subtitle: t('luxuryCondoPage.features.items.fitnessCenter.description')
                 },
                 { 
-                  src: '/images/Estate Home.jpg', 
-                  title: 'Private Lounge',
-                  subtitle: 'Resident Exclusive'
+                  src: '/images/67S34.jpg', 
+                  title: t('luxuryCondoPage.features.items.privateDining.title'),
+                  subtitle: t('luxuryCondoPage.features.items.privateDining.description')
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[280px] snap-start group cursor-pointer">
@@ -517,7 +517,7 @@ export default function LuxuryCondo() {
                       
                       {/* View More Link */}
                       <button className="mt-4 text-white text-sm font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        View More
+                        {t('luxuryVillasPage.features.viewMore', 'View More')}
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -539,24 +539,24 @@ export default function LuxuryCondo() {
         <div className="container mx-auto px-6">
           <ScrollAnimation>
             <div className="text-center mb-16">
-              <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">VISUAL TOUR</span>
+              <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.gallery.badge')}</span>
               <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-                Luxury Condo Gallery
+                {t('luxuryCondoPage.gallery.title')}
               </h2>
               <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-                Experience sophistication and luxury in every detail
+                {t('luxuryCondoPage.gallery.subtitle')}
               </p>
             </div>
           </ScrollAnimation>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { src: '/images/Modern Penthouse.jpg', title: 'Sky-High Views' },
-              { src: '/images/Luxury Villa.jpg', title: 'Designer Living Room' },
-              { src: '/images/Waterfront Mansion.jpg', title: 'Gourmet Kitchen' },
-              { src: '/images/Estate Home.jpg', title: 'Master Bedroom Suite' },
-              { src: '/images/Modern Penthouse.jpg', title: 'Spa Bathroom' },
-              { src: '/images/Luxury Villa.jpg', title: 'Private Terrace' }
+              { src: '/images/67S35.jpg', title: t('luxuryCondoPage.gallery.items.modernPenthouse.title') },
+              { src: '/images/67S36.jpg', title: t('luxuryCondoPage.gallery.items.executiveSuite.title') },
+              { src: '/images/67S37.jpg', title: t('luxuryCondoPage.gallery.items.waterfrontCondo.title') },
+              { src: '/images/63S38.jpg', title: t('luxuryCondoPage.gallery.items.skyVilla.title') },
+              { src: '/images/63S39.jpg', title: t('luxuryCondoPage.gallery.items.designerLoft.title') },
+              { src: '/images/67S310.jpg', title: t('luxuryCondoPage.gallery.items.presidentialSuite.title') }
             ].map((item, idx) => (
               <ScrollAnimation key={idx} delay={idx * 100}>
                 <div className={`group relative overflow-hidden rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2`}>
@@ -582,12 +582,12 @@ export default function LuxuryCondo() {
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-white'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">PREMIUM LOCATIONS</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              High-Rise Living at Its Finest
+              {t('luxuryCondoPage.location.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Discover luxury condos in the most prestigious urban destinations
+              {t('luxuryCondoPage.location.subtitle')}
             </p>
           </div>
 
@@ -603,31 +603,31 @@ export default function LuxuryCondo() {
                   {[
                     {
                       image: '/images/Modern Penthouse.jpg',
-                      title: 'Manhattan Skyline',
-                      subtitle: 'Midtown Luxury Tower',
-                      description: 'Experience breathtaking city views from your private residence high above Manhattan. Prime location near Central Park and Fifth Avenue shopping.',
-                      highlights: ['Central Park Views', 'Doorman Service', 'Rooftop Pool', 'Private Gym']
+                      titleKey: 'luxuryCondoPage.location.locations.manhattan.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.manhattan.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.manhattan.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.manhattan.highlights'
                     },
                     {
                       image: '/images/Luxury Villa.jpg',
-                      title: 'Downtown LA',
-                      subtitle: 'Arts District Living',
-                      description: 'Modern luxury condos in the heart of LA\'s vibrant arts district. Walk to galleries, restaurants, and entertainment venues.',
-                      highlights: ['City Lights', 'Valet Parking', 'Sky Lounge', 'Concierge']
+                      titleKey: 'luxuryCondoPage.location.locations.downtownLA.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.downtownLA.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.downtownLA.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.downtownLA.highlights'
                     },
                     {
                       image: '/images/Waterfront Mansion.jpg',
-                      title: 'Miami Beach',
-                      subtitle: 'Oceanfront Residences',
-                      description: 'Stunning beachfront condos with direct ocean access. Enjoy resort-style living with white sand beaches at your doorstep.',
-                      highlights: ['Ocean Views', 'Private Beach', 'Spa Services', 'Marina Access']
+                      titleKey: 'luxuryCondoPage.location.locations.miamiBeach.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.miamiBeach.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.miamiBeach.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.miamiBeach.highlights'
                     },
                     {
                       image: '/images/Estate Home.jpg',
-                      title: 'Gold Coast Chicago',
-                      subtitle: 'Lakefront Elegance',
-                      description: 'Prestigious lakefront living with panoramic views of Lake Michigan. Steps from the Magnificent Mile and world-class dining.',
-                      highlights: ['Lake Views', 'Wine Cellar', 'Theater Room', 'Pet Spa']
+                      titleKey: 'luxuryCondoPage.location.locations.goldCoast.title',
+                      subtitleKey: 'luxuryCondoPage.location.locations.goldCoast.subtitle',
+                      descriptionKey: 'luxuryCondoPage.location.locations.goldCoast.description',
+                      highlightsKey: 'luxuryCondoPage.location.locations.goldCoast.highlights'
                     }
                   ].map((location, idx) => (
                     <div key={idx} className="w-full flex-shrink-0 relative">
@@ -637,13 +637,13 @@ export default function LuxuryCondo() {
                         {/* Content */}
                         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                           <div className="max-w-2xl">
-                            <h3 className="text-4xl font-bold mb-2">{location.title}</h3>
-                            <p className="text-xl text-red-300 mb-4">{location.subtitle}</p>
-                            <p className="text-lg mb-6 opacity-90">{location.description}</p>
+                            <h3 className="text-4xl font-bold mb-2">{t(location.titleKey)}</h3>
+                            <p className="text-xl text-red-300 mb-4">{t(location.subtitleKey)}</p>
+                            <p className="text-lg mb-6 opacity-90">{t(location.descriptionKey)}</p>
                             
                             {/* Highlights */}
                             <div className="flex flex-wrap gap-3">
-                              {location.highlights.map((highlight, hIdx) => (
+                              {t(location.highlightsKey, { returnObjects: true }).map((highlight, hIdx) => (
                                 <span key={hIdx} className="bg-red-600/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
                                   {highlight}
                                 </span>
@@ -697,12 +697,12 @@ export default function LuxuryCondo() {
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">SMART INVESTMENT</span>
+            <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
-              Luxury Condo Investment
+              {t('luxuryCondoPage.investment.title')}
             </h2>
             <p className={isDark ? 'text-xl text-gray-300 max-w-3xl mx-auto' : 'text-xl text-gray-600 max-w-3xl mx-auto'}>
-              Secure your future with premium high-rise real estate in prime metropolitan locations
+              {t('luxuryCondoPage.investment.subtitle')}
             </p>
           </div>
 
@@ -712,31 +712,31 @@ export default function LuxuryCondo() {
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10">
-                  <h3 className="text-4xl font-bold mb-4">Manhattan Premium Suite</h3>
-                  <div className="text-7xl font-bold mb-4">$2.8M</div>
-                  <p className="text-xl text-red-100 mb-8">Exclusive High-Rise Luxury Living</p>
+                  <h3 className="text-4xl font-bold mb-4">{t('luxuryCondoPage.investment.collection.title')}</h3>
+                  <div className="text-7xl font-bold mb-4">{t('luxuryCondoPage.investment.collection.price')}</div>
+                  <p className="text-xl text-red-100 mb-8">{t('luxuryCondoPage.investment.collection.subtitle')}</p>
                   
                   <div className="grid md:grid-cols-4 gap-6 mb-8">
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2,200</div>
-                      <div className="text-sm text-red-100">Sq Ft</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.sqft')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2</div>
-                      <div className="text-sm text-red-100">Bedrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">2.5</div>
-                      <div className="text-sm text-red-100">Bathrooms</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
                       <div className="text-2xl font-bold">40th</div>
-                      <div className="text-sm text-red-100">Floor</div>
+                      <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.floor')}</div>
                     </div>
                   </div>
                   
                   <button className="bg-white text-red-600 px-8 py-4 font-bold text-lg rounded-xl hover:bg-gray-100 transition-colors duration-300 shadow-lg">
-                    Schedule Private Viewing
+                    {t('luxuryCondoPage.investment.collection.cta')}
                   </button>
                 </div>
               </div>
@@ -748,39 +748,39 @@ export default function LuxuryCondo() {
             {[
               {
                 icon: "📈",
-                title: "Strong ROI",
-                value: "9.2%",
-                description: "Annual appreciation in luxury condo markets"
+                titleKey: 'luxuryCondoPage.investment.benefits.strongROI.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.strongROI.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.strongROI.description'
               },
               {
                 icon: "🏆",
-                title: "Prime Location",
-                value: "Top 3%",
-                description: "Most sought-after urban addresses"
+                titleKey: 'luxuryCondoPage.investment.benefits.primeLocation.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.primeLocation.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.primeLocation.description'
               },
               {
                 icon: "💰",
-                title: "Tax Benefits",
-                value: "Up to 35%",
-                description: "Property tax advantages and incentives"
+                titleKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.taxAdvantages.description'
               },
               {
                 icon: "🌍",
-                title: "Global Demand",
-                value: "95%",
-                description: "Occupancy rate in premium towers"
+                titleKey: 'luxuryCondoPage.investment.benefits.globalDemand.title',
+                valueKey: 'luxuryCondoPage.investment.benefits.globalDemand.value',
+                descriptionKey: 'luxuryCondoPage.investment.benefits.globalDemand.description'
               }
             ].map((benefit, idx) => (
               <div key={idx} className={isDark ? 'bg-gray-800 rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300' : 'bg-white rounded-2xl p-8 text-center hover:shadow-red-500/20 transition-all duration-300 shadow-lg'}>
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h4 className={isDark ? 'text-xl font-bold text-white mb-2' : 'text-xl font-bold text-black mb-2'}>
-                  {benefit.title}
+                  {t(benefit.titleKey)}
                 </h4>
                 <div className={isDark ? 'text-3xl font-bold text-red-500 mb-2' : 'text-3xl font-bold text-red-600 mb-2'}>
-                  {benefit.value}
+                  {t(benefit.valueKey)}
                 </div>
                 <p className={isDark ? 'text-gray-300 text-sm' : 'text-gray-600 text-sm'}>
-                  {benefit.description}
+                  {t(benefit.descriptionKey)}
                 </p>
               </div>
             ))}
@@ -796,7 +796,7 @@ export default function LuxuryCondo() {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/Modern Penthouse.jpg')" }}
+          style={{ backgroundImage: "url('/images/67S20.jpg')" }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -805,16 +805,16 @@ export default function LuxuryCondo() {
         <div className="relative z-10 text-center text-white px-6">
           <ScrollAnimation>
             <h2 className="text-6xl md:text-7xl font-bold mb-6">
-              Your Luxury Condo Awaits
+              {t('luxuryCondoPage.contact.title')}
             </h2>
             <p className="text-2xl md:text-3xl mb-12 text-gray-200 max-w-3xl mx-auto">
-              Schedule a private tour and experience high-rise luxury living
+              {t('luxuryCondoPage.contact.subtitle')}
             </p>
             <button
               onClick={() => navigate('/contact')}
               className="bg-red-600 hover:bg-red-700 text-white px-12 py-5 text-xl font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-red-500/50 transform hover:scale-105"
             >
-              Contact Us Today
+              {t('luxuryCondoPage.contact.cta.contactUs')}
             </button>
           </ScrollAnimation>
         </div>

@@ -119,15 +119,60 @@
       "ctaExplore": "Explore Features",
       "ctaSchedule": "Schedule Viewing"
       },
+      "realEstateFeatures": {
+        "items": {
+          "homeLocations": {
+            "title": "Home locations:",
+            "description": "Duis aute irure dolor in rep in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          },
+          "structure": {
+            "title": "Structure:",
+            "description": "Duis aute irure dolor in rep in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          },
+          "moveInNow": {
+            "title": "Move in now:",
+            "description": "Duis aute irure dolor in rep in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          },
+          "homeSecurity": {
+            "title": "Home security:",
+            "description": "Duis aute irure dolor in rep in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          }
+        }
+      },
+      "floorPlan": {
+        "badge": "Floor Plan",
+        "description": "Discover the perfect blend of elegance and functionality in this meticulously designed luxury villa. Every detail has been carefully planned to provide the ultimate living experience.",
+        "specs": {
+          "sqft": "Sq Ft",
+          "bedrooms": "Bedrooms",
+          "bathrooms": "Bathrooms",
+          "garage": "Car Garage"
+        },
+        "features": {
+          "openConcept": "Open-concept living and dining area",
+          "gourmetKitchen": "Gourmet kitchen with premium appliances",
+          "masterSuite": "Master suite with spa-like bathroom",
+          "smartHome": "Smart home automation system",
+          "outdoorSpace": "Expansive outdoor living space"
+        },
+        "cta": {
+          "schedule": "Schedule Tour"
+        }
+      },
       "features": {
       "badge": "Premium Features",
       "title": "Unparalleled Luxury Amenities",
       "subtitle": "Every detail has been carefully crafted to provide the ultimate in luxury living",
+        "viewMore": "View More",
       "items": {
         "infinityPool": {
           "title": "Infinity Pool",
           "description": "Stunning infinity pool with panoramic views and integrated spa features"
         },
+          "masterSuite": {
+            "title": "Master Suite",
+            "description": "Primary suite with spa-like bathroom and private lounge"
+          },
         "wineCellar": {
           "title": "Wine Cellar",
           "description": "Temperature-controlled wine cellar with capacity for 500+ bottles"
