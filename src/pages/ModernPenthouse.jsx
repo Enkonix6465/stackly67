@@ -89,6 +89,7 @@ export default function ModernPenthouse() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Sky High Living */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -110,8 +111,10 @@ export default function ModernPenthouse() {
                 {t('luxuryCondoPage.features.items.cityViews.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Modern Architecture */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -133,8 +136,10 @@ export default function ModernPenthouse() {
                 {t('contemporaryTownhousePage.features.items.modernArchitecture.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Luxury Amenities */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-3">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -154,8 +159,10 @@ export default function ModernPenthouse() {
                 {t('luxuryCondoPage.features.subtitle')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Smart Security */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-4">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -221,6 +228,7 @@ export default function ModernPenthouse() {
                 {t('contemporaryTownhousePage.features.items.smartHomeTechnology.description')}
               </p>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -230,6 +238,7 @@ export default function ModernPenthouse() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Floor Plan Image */}
+            <ScrollAnimation animation="slide-in-left">
             <div className="order-2 lg:order-1 flex">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full flex items-center">
                 <img 
@@ -242,8 +251,10 @@ export default function ModernPenthouse() {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
 
             {/* Property Details */}
+            <ScrollAnimation animation="slide-in-right">
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
                 {t('luxuryCondoPage.features.subtitle')}
@@ -442,6 +453,7 @@ export default function ModernPenthouse() {
                 </button>
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -452,6 +464,7 @@ export default function ModernPenthouse() {
         className={isDark ? 'py-24 bg-black relative overflow-hidden' : 'py-24 bg-gray-50 relative overflow-hidden'}
       >
         <div className="container mx-auto px-6 relative z-10">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-16">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryVillasPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -461,8 +474,10 @@ export default function ModernPenthouse() {
               {t('luxuryVillasPage.features.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Horizontal Scrolling Gallery */}
+          <ScrollAnimation animation="slide-up">
           <div className="relative">
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
@@ -520,12 +535,14 @@ export default function ModernPenthouse() {
               ))}
               </div>
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Visual Tour Gallery Section */}
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-12">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
@@ -535,7 +552,9 @@ export default function ModernPenthouse() {
               {t('luxuryCondoPage.gallery.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
+          <ScrollAnimation animation="zoom-in">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { src: '/images/67S45.jpg', title: t('luxuryCondoPage.gallery.items.modernPenthouse.title') },
@@ -560,12 +579,13 @@ export default function ModernPenthouse() {
               </div>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
 
       {/* Location & Amenities Section */}
-      <section className={isDark ? 'py-24 bg-gray-900 relative overflow-hidden' : 'py-24 bg-white relative overflow-hidden'}>
+      <section className={isDark ? 'py-24 bg-gray-800 relative overflow-hidden' : 'py-24 bg-gray-200 relative overflow-hidden'}>
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 bg-red-500/5 rounded-full blur-3xl"></div>
@@ -573,6 +593,7 @@ export default function ModernPenthouse() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -582,8 +603,10 @@ export default function ModernPenthouse() {
               {t('luxuryCondoPage.location.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Location Carousel */}
+          <ScrollAnimation animation="scale-in">
           <div className="max-w-6xl mx-auto mb-16">
             <div className="relative">
               {/* Main Carousel Container */}
@@ -682,6 +705,7 @@ export default function ModernPenthouse() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
 
         </div>
       </section>
@@ -689,6 +713,7 @@ export default function ModernPenthouse() {
       {/* Investment Opportunity Section */}
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -698,8 +723,10 @@ export default function ModernPenthouse() {
               {t('luxuryCondoPage.investment.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Hero Pricing Card */}
+          <ScrollAnimation animation="zoom-in">
           <div className="max-w-4xl mx-auto mb-16">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
@@ -735,8 +762,10 @@ export default function ModernPenthouse() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
 
           {/* Investment Benefits Grid */}
+          <ScrollAnimation animation="slide-up">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[ 
               {
@@ -778,6 +807,7 @@ export default function ModernPenthouse() {
               </div>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -792,6 +822,7 @@ export default function ModernPenthouse() {
         </div>
         
         {/* Content */}
+        <ScrollAnimation animation="fade-in">
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
           <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
@@ -810,6 +841,7 @@ export default function ModernPenthouse() {
             </button>
           </div>
         </div>
+        </ScrollAnimation>
       </section>
 
       <Footer />

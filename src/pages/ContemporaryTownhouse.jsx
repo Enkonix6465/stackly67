@@ -94,6 +94,7 @@ export default function ContemporaryTownhouse() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Home locations */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -115,8 +116,10 @@ export default function ContemporaryTownhouse() {
                 {t('contemporaryTownhousePage.features.items.primeUrbanLocation.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Structure */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -138,8 +141,10 @@ export default function ContemporaryTownhouse() {
                 {t('contemporaryTownhousePage.features.items.modernArchitecture.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Move in ready */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-3">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -159,8 +164,10 @@ export default function ContemporaryTownhouse() {
                 {t('contemporaryTownhousePage.features.items.energyEfficient.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Home security */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-4">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -226,6 +233,7 @@ export default function ContemporaryTownhouse() {
                 {t('contemporaryTownhousePage.features.items.smartHomeTechnology.description')}
               </p>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -235,20 +243,23 @@ export default function ContemporaryTownhouse() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Floor Plan Image */}
+            <ScrollAnimation animation="slide-in-left">
             <div className="order-2 lg:order-1 flex">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full flex items-center">
                 <img 
-                  src="/images/FP1.jpg" 
+                  src="/images/67S2.jpg" 
                   alt="Townhouse Floor Plan"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-sm">
-                  {t('contemporaryTownhousePage.investment.collection.specs.sqft', 'Sq Ft')}
+                  Floor Plan
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
 
             {/* Property Details */}
+            <ScrollAnimation animation="slide-in-right">
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
                 {t('contemporaryTownhousePage.features.subtitle')}
@@ -382,7 +393,7 @@ export default function ContemporaryTownhouse() {
                       </svg>
                     </div>
                     <div>
-                      <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3.5</div>
+                      <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>3</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('contemporaryTownhousePage.investment.collection.specs.bathrooms')}
                       </div>
@@ -447,6 +458,7 @@ export default function ContemporaryTownhouse() {
                 </button>
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -457,6 +469,7 @@ export default function ContemporaryTownhouse() {
         className={isDark ? 'py-24 bg-black relative overflow-hidden' : 'py-24 bg-gray-50 relative overflow-hidden'}
       >
         <div className="container mx-auto px-6 relative z-10">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-16">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -466,8 +479,10 @@ export default function ContemporaryTownhouse() {
               {t('contemporaryTownhousePage.features.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Horizontal Scrolling Gallery */}
+          <ScrollAnimation animation="slide-up">
           <div className="relative">
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
@@ -525,12 +540,14 @@ export default function ContemporaryTownhouse() {
               ))}
               </div>
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Visual Tour Gallery Section */}
       <section className={isDark ? 'py-20 bg-gray-900' : 'py-20 bg-white'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-12">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.gallery.badge')}</span>
             <h2 className={isDark ? 'text-4xl font-bold text-white mt-4 mb-4' : 'text-4xl font-bold text-black mt-4 mb-4'}>
@@ -540,7 +557,9 @@ export default function ContemporaryTownhouse() {
               {t('contemporaryTownhousePage.gallery.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
+          <ScrollAnimation animation="zoom-in">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { 
@@ -583,11 +602,12 @@ export default function ContemporaryTownhouse() {
               </div>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Location & Amenities Section */}
-      <section className={isDark ? 'py-24 bg-gray-900 relative overflow-hidden' : 'py-24 bg-white relative overflow-hidden'}>
+      <section className={isDark ? 'py-24 bg-gray-800 relative overflow-hidden' : 'py-24 bg-gray-200 relative overflow-hidden'}>
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-10 left-10 w-64 h-64 bg-red-500/5 rounded-full blur-3xl"></div>
@@ -595,6 +615,7 @@ export default function ContemporaryTownhouse() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -604,8 +625,10 @@ export default function ContemporaryTownhouse() {
               {t('contemporaryTownhousePage.location.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Location Carousel */}
+          <ScrollAnimation animation="scale-in">
           <div className="max-w-6xl mx-auto mb-16">
             <div className="relative">
               {/* Main Carousel Container */}
@@ -704,12 +727,14 @@ export default function ContemporaryTownhouse() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Investment Opportunity Section */}
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -719,8 +744,10 @@ export default function ContemporaryTownhouse() {
               {t('contemporaryTownhousePage.investment.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Hero Pricing Card */}
+          <ScrollAnimation animation="zoom-in">
           <div className="max-w-4xl mx-auto mb-16">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
@@ -740,7 +767,7 @@ export default function ContemporaryTownhouse() {
                       <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                      <div className="text-2xl font-bold">3.5</div>
+                      <div className="text-2xl font-bold">3</div>
                       <div className="text-sm text-red-100">{t('contemporaryTownhousePage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
@@ -756,8 +783,10 @@ export default function ContemporaryTownhouse() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
 
           {/* Investment Benefits Grid */}
+          <ScrollAnimation animation="slide-up">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -799,6 +828,7 @@ export default function ContemporaryTownhouse() {
               </div>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -813,6 +843,7 @@ export default function ContemporaryTownhouse() {
         </div>
         
         {/* Content */}
+        <ScrollAnimation animation="fade-in">
         <div className="relative z-10 container mx-auto px-6 py-24 text-center">
           <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('contemporaryTownhousePage.contact.badge')}</span>
           <h2 className="text-5xl font-bold text-white mt-4 mb-6">
@@ -831,6 +862,7 @@ export default function ContemporaryTownhouse() {
             </button>
           </div>
         </div>
+        </ScrollAnimation>
       </section>
 
       <Footer />

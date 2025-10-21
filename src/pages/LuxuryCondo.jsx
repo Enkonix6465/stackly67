@@ -94,6 +94,7 @@ export default function LuxuryCondo() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Skyline Views */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-1">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -115,8 +116,10 @@ export default function LuxuryCondo() {
                 {t('luxuryCondoPage.location.subtitle')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* High-Rise Living */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-2">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -138,8 +141,10 @@ export default function LuxuryCondo() {
                 {t('luxuryCondoPage.features.items.cityViews.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Full-Service Building */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-3">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -159,8 +164,10 @@ export default function LuxuryCondo() {
                 {t('luxuryCondoPage.features.items.conciergeServices.description')}
               </p>
             </div>
+            </ScrollAnimation>
 
             {/* Security */}
+            <ScrollAnimation animation="fade-in" stagger="scroll-stagger-4">
             <div className="text-center">
               <div className="mb-4 flex justify-center">
                 <div className="flex items-center justify-center">
@@ -226,6 +233,7 @@ export default function LuxuryCondo() {
                 {t('luxuryCondoPage.features.items.fitnessCenter.description')}
               </p>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -235,6 +243,7 @@ export default function LuxuryCondo() {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Floor Plan Image */}
+            <ScrollAnimation animation="slide-in-left">
             <div className="order-2 lg:order-1 flex">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full flex items-center">
                 <img 
@@ -247,8 +256,10 @@ export default function LuxuryCondo() {
                 </div>
               </div>
             </div>
+            </ScrollAnimation>
 
             {/* Property Details */}
+            <ScrollAnimation animation="slide-in-right">
             <div className="order-1 lg:order-2 flex flex-col justify-center">
               <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
                 Experience elevated living in this stunning luxury condo featuring floor-to-ceiling windows, premium finishes, and unparalleled city views.
@@ -382,7 +393,7 @@ export default function LuxuryCondo() {
                       </svg>
                     </div>
                     <div>
-                      <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2.5</div>
+                      <div className={`text-2xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>2</div>
                       <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                         {t('luxuryCondoPage.investment.collection.specs.bathrooms')}
                       </div>
@@ -447,6 +458,7 @@ export default function LuxuryCondo() {
                 </button>
               </div>
             </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>
@@ -463,6 +475,7 @@ export default function LuxuryCondo() {
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-16">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.features.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -472,8 +485,10 @@ export default function LuxuryCondo() {
               {t('luxuryCondoPage.features.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Horizontal Scrolling Gallery */}
+          <ScrollAnimation animation="slide-up">
           <div className="relative">
             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               {[
@@ -531,6 +546,7 @@ export default function LuxuryCondo() {
               ))}
               </div>
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -549,6 +565,7 @@ export default function LuxuryCondo() {
             </div>
           </ScrollAnimation>
 
+          <ScrollAnimation animation="zoom-in">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { src: '/images/67S35.jpg', title: t('luxuryCondoPage.gallery.items.modernPenthouse.title') },
@@ -558,8 +575,7 @@ export default function LuxuryCondo() {
               { src: '/images/63S39.jpg', title: t('luxuryCondoPage.gallery.items.designerLoft.title') },
               { src: '/images/67S310.jpg', title: t('luxuryCondoPage.gallery.items.presidentialSuite.title') }
             ].map((item, idx) => (
-              <ScrollAnimation key={idx} delay={idx * 100}>
-                <div className={`group relative overflow-hidden rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2`}>
+                <div key={idx} className={`group relative overflow-hidden rounded-2xl ${isDark ? 'bg-gray-800' : 'bg-white'} shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2`}>
                   <div className="relative overflow-hidden h-64">
                     <img
                       src={item.src}
@@ -572,15 +588,16 @@ export default function LuxuryCondo() {
                     </div>
                   </div>
                 </div>
-              </ScrollAnimation>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Location & Amenities Section */}
-      <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-white'}>
+      <section className={isDark ? 'py-24 bg-gray-800' : 'py-24 bg-gray-200'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.location.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -590,8 +607,10 @@ export default function LuxuryCondo() {
               {t('luxuryCondoPage.location.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Location Carousel */}
+          <ScrollAnimation animation="scale-in">
           <div className="max-w-6xl mx-auto">
             <div className="relative">
               {/* Main Carousel Container */}
@@ -690,12 +709,14 @@ export default function LuxuryCondo() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
       {/* Investment Opportunity Section */}
       <section className={isDark ? 'py-24 bg-gray-900' : 'py-24 bg-gray-50'}>
         <div className="container mx-auto px-6">
+          <ScrollAnimation animation="fade-in">
           <div className="text-center mb-20">
             <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">{t('luxuryCondoPage.investment.badge')}</span>
             <h2 className={isDark ? 'text-5xl font-bold text-white mt-4 mb-6' : 'text-5xl font-bold text-black mt-4 mb-6'}>
@@ -705,8 +726,10 @@ export default function LuxuryCondo() {
               {t('luxuryCondoPage.investment.subtitle')}
             </p>
           </div>
+          </ScrollAnimation>
 
           {/* Hero Pricing Card */}
+          <ScrollAnimation animation="zoom-in">
           <div className="max-w-4xl mx-auto mb-16">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <div className="relative bg-gradient-to-br from-red-600 to-red-800 p-12 text-center text-white">
@@ -726,7 +749,7 @@ export default function LuxuryCondo() {
                       <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bedrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                      <div className="text-2xl font-bold">2.5</div>
+                      <div className="text-2xl font-bold">2</div>
                       <div className="text-sm text-red-100">{t('luxuryCondoPage.investment.collection.specs.bathrooms')}</div>
                     </div>
                     <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
@@ -742,8 +765,10 @@ export default function LuxuryCondo() {
               </div>
             </div>
           </div>
+          </ScrollAnimation>
 
           {/* Investment Benefits Grid */}
+          <ScrollAnimation animation="slide-up">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
@@ -785,6 +810,7 @@ export default function LuxuryCondo() {
               </div>
             ))}
           </div>
+          </ScrollAnimation>
         </div>
       </section>
 
