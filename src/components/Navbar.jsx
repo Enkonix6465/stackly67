@@ -16,6 +16,7 @@ import { ChevronDown, LogOut } from 'lucide-react'
 export default function Navbar({ user }) {
   const { t } = useTranslation()
   const [isDark, setIsDark] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     // Check if 'dark' class is present on <html>
@@ -26,6 +27,17 @@ export default function Navbar({ user }) {
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
     return () => observer.disconnect()
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('nav')) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+    document.addEventListener('click', handleClickOutside)
+    return () => document.removeEventListener('click', handleClickOutside)
+  }, [isMobileMenuOpen])
 
   const handleLogout = () => {
     // Clear user session from localStorage
@@ -154,14 +166,126 @@ export default function Navbar({ user }) {
           </button>
           
           {/* Mobile Menu Button - Last on Mobile */}
-          <button className="md:hidden order-5 inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/10 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5" aria-label="Menu">
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden order-5 inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/10 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5" 
+            aria-label="Menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu Panel */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-black/10 dark:border-white/10 shadow-lg">
+            <ul className="flex flex-col p-4 space-y-3">
+              {/* Home Dropdown */}
+              <li className="border-b border-black/5 dark:border-white/5 pb-2">
+                <div className="font-semibold text-sm text-gray-500 dark:text-gray-400 mb-2">{t('nav.home')}</div>
+                <button 
+                  onClick={() => { navigate('/home'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.home1')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/home2'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.home2')}
+                </button>
+              </li>
+
+              {/* About */}
+              <li>
+                <button 
+                  onClick={() => { navigate('/about'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors font-medium"
+                >
+                  {t('nav.about')}
+                </button>
+              </li>
+
+              {/* Services Dropdown */}
+              <li className="border-b border-black/5 dark:border-white/5 pb-2">
+                <div className="font-semibold text-sm text-gray-500 dark:text-gray-400 mb-2">{t('nav.services')}</div>
+                <button 
+                  onClick={() => { navigate('/services'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors text-red-600 dark:text-red-400 font-semibold"
+                >
+                  {t('nav.allServices')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/luxury-villa'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.luxuryVillas')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/services/contemporary-townhouse'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.contemporaryTownhouse')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/services/luxury-condo'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.luxuryCondo')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/services/modern-penthouse'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.modernPenthouse')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/services/waterfront-mansion'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.waterfrontMansion')}
+                </button>
+                <button 
+                  onClick={() => { navigate('/services/estate-home'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors"
+                >
+                  {t('nav.estateHome')}
+                </button>
+              </li>
+
+              {/* Blog */}
+              <li>
+                <button 
+                  onClick={() => { navigate('/blog'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors font-medium"
+                >
+                  {t('nav.blog')}
+                </button>
+              </li>
+
+              {/* Contact */}
+              <li>
+                <button 
+                  onClick={() => { navigate('/contact'); setIsMobileMenuOpen(false); }}
+                  className="block w-full text-left px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-md transition-colors font-medium"
+                >
+                  {t('nav.contact')}
+                </button>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
     </header>
   )
