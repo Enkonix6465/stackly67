@@ -129,33 +129,37 @@ export default function Navbar({ user }) {
         </ul>
         {/* Right Side - Fixed */}
         <div className="flex items-center gap-4">
-          {/* Language Selector - Fixed Right */}
-          <LanguageSelector variant="icon-only" />
-          
+          {/* Language Selector */}
+          <div className="order-1 md:order-0">
+            <LanguageSelector variant="icon-only" />
+          </div>
+
           {/* Theme Toggle */}
-          <ThemeToggle />
+          <div className="order-2 md:order-1">
+            <ThemeToggle />
+          </div>
+
+          {/* User Avatar */}
+          <div className="h-9 w-9 rounded-full bg-red-500 dark:bg-red-600 text-white grid place-items-center font-semibold select-none order-3 md:order-2">
+            {initials}
+          </div>
           
-          {/* Mobile Menu Button */}
-          <button className="md:hidden inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/10 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5" aria-label="Menu">
+          {/* Logout Button */}
+          <button 
+            onClick={handleLogout} 
+            className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5 order-4 md:order-3"
+            aria-label="Logout"
+          >
+            <LogOut className="h-5 w-5" />
+          </button>
+          
+          {/* Mobile Menu Button - Last on Mobile */}
+          <button className="md:hidden order-5 inline-flex items-center justify-center rounded-md border border-black/10 dark:border-white/10 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/5" aria-label="Menu">
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
-          </button>
-
-          {/* User Avatar */}
-          <div className="h-9 w-9 rounded-full bg-red-500 dark:bg-red-600 text-white grid place-items-center font-semibold select-none">
-            {initials}
-          </div>
-          
-          {/* Logout Button - Right Corner */}
-          <button 
-            onClick={handleLogout} 
-            className="hover:text-red-500 dark:hover:text-red-400 transition-colors p-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5"
-            aria-label="Logout"
-          >
-            <LogOut className="h-5 w-5" />
           </button>
         </div>
       </nav>
